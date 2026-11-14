@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 暗色主题下状态栏图标改为浅色，否则深色图标会融进深色背景 -->
+    <style name="Theme.LearningLoop" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

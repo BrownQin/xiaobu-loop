@@ -1,7 +1,22 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
+}
+
+// 上报端点只允许 HTTPS；未配置时留空，App 完全不发送统计数据
+val telemetryWebhook: String =
+    (project.findProperty("telemetryWebhook") as String?)?.trim().orEmpty()
+require(telemetryWebhook.isEmpty() || telemetryWebhook.startsWith("https://")) {
+    "telemetryWebhook 必须是 https:// 地址，避免明文传输统计数据"
+}
+
+// 可选 release 签名：把 keystore.properties 放在 android-app 根目录（已在 .gitignore 中）
+val keystorePropsFile = rootProject.file("keystore.properties")
+val keystoreProps = Properties().apply {
+    if (keystorePropsFile.exists()) keystorePropsFile.inputStream().use { load(it) }
 }
 
 android {
@@ -12,14 +27,14 @@ android {
         applicationId = "com.learningloop.app"
         minSdk = 24
         targetSdk = 34
-        versionCode = 16
-        versionName = "0.15.0"
+        versionCode = 17
+        versionName = "0.16.0"
 
         // 匿名统计接收端点：不传则留空，App 完全不发送统计数据
         buildConfigField(
             "String",
             "TELEMETRY_WEBHOOK",
-            "\"${project.findProperty("telemetryWebhook") ?: ""}\""
+            "\"$telemetryWebhook\""
         )
         buildConfigField(
             "String",
@@ -31,13 +46,29 @@ android {
         vectorDrawables { useSupportLibrary = true }
     }
 
+    signingConfigs {
+        if (keystorePropsFile.exists()) {
+            create("release") {
+                storeFile = rootProject.file(keystoreProps.getProperty("storeFile"))
+                storePassword = keystoreProps.getProperty("storePassword")
+                keyAlias = keystoreProps.getProperty("keyAlias")
+                keyPassword = keystoreProps.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            // 混淆 + 资源裁剪：提高反编译成本，保护题库与算法实现
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            if (keystorePropsFile.exists()) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
 

@@ -34,7 +34,7 @@ android-app/
 ├── app/
 │   ├── build.gradle.kts            # app 模块依赖集中地
 │   ├── src/main/
-│   │   ├── AndroidManifest.xml     # 声明 INTERNET / RECORD_AUDIO 权限
+│   │   ├── AndroidManifest.xml     # 仅声明 INTERNET / ACCESS_NETWORK_STATE 权限
 │   │   ├── java/com/learningloop/app/
 │   │   │   ├── MainActivity.kt     # 入口 + 页面状态机 + ViewModel
 │   │   │   ├── SeedData.kt         # 30 道二年级语文数学种子题
@@ -65,7 +65,7 @@ android-app/
 | 数据全部本地 Room | `data/AppDatabase.kt` |
 | AdaptiveAssessmentEngine "极度精炼" 注释 | `engine/AdaptiveAssessmentEngine.kt` 文件头注释 |
 | LLM 离线降级 | `llm/LLMClient.kt` 中 `fallbackGentleFeedback / fallbackAssessmentReport` |
-| 语音输入占位 | `ui/child/QuizScreen.kt` 中 `// TODO:` 注释 + Manifest RECORD_AUDIO 权限 |
+| 语音输入占位 | `ui/child/QuizScreen.kt` 中保留读题按钮；不申请录音权限 |
 | 积分公式：base10 + 连击倍率 + 进步奖励 | `engine/PointIncentiveEngine.kt` |
 | 题库 ≥30 题 (语文 15 + 数学 15) | `SeedData.kt` |
 
@@ -94,12 +94,16 @@ android-app/
 cd android-app
 ./gradlew :app:assembleDebug
 # 输出: app/build/outputs/apk/debug/app-debug.apk
+
+# 发布包：R8 混淆 + 资源裁剪（需 keystore.properties 才会签名）
+./gradlew :app:assembleRelease
+# 输出: app/build/outputs/apk/release/app-release.apk
 ```
 
 ## 七、已知 MVP 简化点（上线前要补上）
 
 - **导航**: 用 `sealed class Screen` + 条件渲染，正式版应切换到 Navigation Compose；
 - **网络 LLM**: `LLMClient` 的 `endpoint` / `apiKey` 目前是 null，接入真实服务时在 `MainActivity.initDependencies` 里传入即可；
-- **语音输入**: Manifest 已声明权限，UI 上有占位按钮，接 `SpeechRecognizer` 或 Whisper on-device 即可；
+- **语音输入**: UI 上有读题与占位交互，接入 `SpeechRecognizer` 时再按最小必要原则声明录音权限；
 - **多孩子**: 目前 `userId` 固定为 1L，所有表都带了 userId 字段，扩多用户只需加一个选择器；
 - **题库丰富**: SeedData 30 题是启动基础，正式版应配套一个"同步题库"按钮从远端 JSON 拉取。

@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
@@ -198,8 +199,8 @@ fun QuizScreen(
                 onClick = { speakQuestion(current) },
                 modifier = Modifier.height(56.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = LearningColors.SecondaryLight.copy(alpha = 0.3f),
-                    contentColor = Color.Black
+                    containerColor = LearningColors.SecondaryLight,
+                    contentColor = LearningColors.OnSecondary
                 )
             ) { Text("🔊 读题", fontSize = 16.sp) }
 
@@ -229,6 +230,7 @@ private fun AnswerArea(question: Question, value: String, onValueChange: (String
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
+                            .heightIn(min = 48.dp)
                             .clip(RoundedCornerShape(14.dp))
                             .background(
                                 if (selected) LearningColors.PrimaryLight.copy(alpha = 0.3f)
@@ -255,7 +257,8 @@ private fun AnswerArea(question: Question, value: String, onValueChange: (String
                         ) {
                             Text(
                                 key, fontWeight = FontWeight.Bold,
-                                color = if (selected) Color.White else MaterialTheme.colorScheme.onSurfaceVariant
+                                color = if (selected) MaterialTheme.colorScheme.onPrimary
+                                        else MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
                         Spacer(Modifier.width(10.dp))
@@ -287,7 +290,8 @@ private fun BadgeText(text: String, bg: Color) {
             .clip(RoundedCornerShape(8.dp))
             .background(bg.copy(alpha = 0.25f))
             .padding(horizontal = 10.dp, vertical = 4.dp)
-    ) { Text(text, fontSize = 13.sp, fontWeight = FontWeight.Medium, color = bg) }
+    ) { Text(text, fontSize = 13.sp, fontWeight = FontWeight.Medium,
+            color = MaterialTheme.colorScheme.onSurface) }
 }
 
 private fun subjectLabel(subject: String, stage: String): String = when (subject) {

@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.sizeIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -128,12 +129,18 @@ fun ChildHomeScreen(
                         color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
                     )
                 }
-                Text(
-                    text = "⚙ 管理",
-                    fontSize = 13.sp,
-                    color = LearningColors.PrimaryLight,
-                    modifier = Modifier.clickable { onOpenParentDashboard() }
-                )
+                Box(
+                    modifier = Modifier
+                        .sizeIn(minWidth = 48.dp, minHeight = 48.dp)
+                        .clickable { onOpenParentDashboard() },
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "⚙ 管理",
+                        fontSize = 13.sp,
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.75f)
+                    )
+                }
             }
 
             // 星星卡片：点进去就是兑换商城
@@ -159,7 +166,11 @@ fun ChildHomeScreen(
                             fontWeight = FontWeight.Bold
                         )
                     }
-                    Text("去兑换 →", fontSize = 13.sp, color = LearningColors.PrimaryLight)
+                    Text(
+                        "去兑换 →",
+                        fontSize = 13.sp,
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
+                    )
                 }
             }
 
@@ -204,7 +215,7 @@ fun ChildHomeScreen(
                         Text(
                             "今天的挑战",
                             fontSize = 12.sp,
-                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f)
+                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
                         )
                         Text(
                             "${plan.topicName} · ${plan.anchorName}",
@@ -214,7 +225,7 @@ fun ChildHomeScreen(
                         Text(
                             "${plan.levelLabel}层 · ${plan.reason}",
                             fontSize = 12.sp,
-                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.65f)
+                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
                         )
                         Text(
                             "只有 ${plan.questions.size} 道题，做完就结束",
@@ -322,7 +333,7 @@ private fun ChildSwitcherDialog(
                             Text(
                                 text = "${child.grade.ifBlank { "未填年级" }} · ${Stage.label(child.stage)}",
                                 fontSize = 12.sp,
-                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.55f)
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
                             )
                         }
                         if (child.id == activeId) {
@@ -384,7 +395,7 @@ private fun ActionCard(
             Column(modifier = Modifier.padding(start = 12.dp)) {
                 Text(title, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium)
                 Text(subtitle, style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f))
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f))
             }
         }
     }

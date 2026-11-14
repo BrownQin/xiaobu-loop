@@ -29,19 +29,33 @@ object LearningColors {
     val CorrectGreen  = Color(0xFF66BB6A)
     val WrongRed      = Color(0xFFEF5350)
     val AccentStar    = Color(0xFFFFCA28)
+
+    /** 品牌色上的文字：深棕，明暗主题都有足够对比度 */
+    val OnPrimary = Color(0xFF3E2723)
+    /** 蓝色按钮上的文字 */
+    val OnSecondary = Color(0xFF0D2A33)
 }
 
+/**
+ * 注意：页面里大量使用 LearningColors.PrimaryLight 作为按钮容器色，
+ * 因此两套主题的 primary 都取同一个值，让 contentColorFor() 能返回 onPrimary，
+ * 避免暗色主题下出现「白字 + 浅橙底」的低对比组合。
+ */
 private val LightScheme = lightColorScheme(
     primary = LearningColors.PrimaryLight,
+    onPrimary = LearningColors.OnPrimary,
     secondary = LearningColors.SecondaryLight,
+    onSecondary = LearningColors.OnSecondary,
     tertiary = LearningColors.TertiaryLight,
     background = LearningColors.BackgroundLight,
     surface = LearningColors.SurfaceLight
 )
 
 private val DarkScheme = darkColorScheme(
-    primary = LearningColors.PrimaryDark,
-    secondary = LearningColors.SecondaryDark,
+    primary = LearningColors.PrimaryLight,
+    onPrimary = LearningColors.OnPrimary,
+    secondary = LearningColors.SecondaryLight,
+    onSecondary = LearningColors.OnSecondary,
     tertiary = LearningColors.TertiaryDark,
     background = LearningColors.BackgroundDark,
     surface = LearningColors.SurfaceDark

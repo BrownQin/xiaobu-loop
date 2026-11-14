@@ -73,6 +73,7 @@ import com.learningloop.app.engine.TelemetryReporter
 import com.learningloop.app.engine.Verdict
 import com.learningloop.app.engine.WrongQuestionLoop
 import com.learningloop.app.llm.LLMClient
+import com.learningloop.app.ui.PrivacyConsentScreen
 import com.learningloop.app.ui.child.ChildHomeScreen
 import com.learningloop.app.ui.child.QuizScreen
 import com.learningloop.app.ui.child.QuizSummaryScreen
@@ -149,6 +150,7 @@ class MainActivity : ComponentActivity() {
 // ==================== 页面状态机 ====================
 
 sealed class Screen {
+    data object PrivacyConsent : Screen()
     data object ChildHome : Screen()
     data object Quiz : Screen()
     data class Result(
@@ -247,7 +249,7 @@ class LearningViewModel : ViewModel() {
     val hasAnyRecord: StateFlow<Boolean> = _hasAnyRecord.asStateFlow()
 
     /** 匿名使用统计开关，家长可在管理页关闭 */
-    private val _telemetryEnabled = MutableStateFlow(true)
+    private val _telemetryEnabled = MutableStateFlow(false)
     val telemetryEnabled: StateFlow<Boolean> = _telemetryEnabled.asStateFlow()
 
     private val _wrongCount = MutableStateFlow(0)
@@ -281,7 +283,12 @@ class LearningViewModel : ViewModel() {
         this.store = store
         this.appContext = context
         _activeId.value = store.activeChildId
-        _telemetryEnabled.value = context?.let { TelemetryStore.enabled(it) } ?: true
+        _telemetryEnabled.value = context?.let { TelemetryStore.enabled(it) } ?: false
+
+        // 首次启动先做隐私告知与选择，未同意不进主界面、也不采集
+        if (context != null && !TelemetryStore.consentGiven(context)) {
+            _screen.value = Screen.PrivacyConsent
+        }
 
         viewModelScope.launch {
             db.questionDao().observeAll().collect { _allQuestions.value = it }
@@ -361,6 +368,8 @@ class LearningViewModel : ViewModel() {
         val ctx = appContext ?: return
         val d = dbInstance ?: return
         if (_children.value.isEmpty()) return
+        // 未同意或已关闭时不消耗「首次」标记，等真正启用后再补记
+        if (!TelemetryStore.enabled(ctx)) return
         telemetryStarted = true
         val reporter = telemetry ?: TelemetryReporter(d, ctx).also { telemetry = it }
         viewModelScope.launch {
@@ -378,7 +387,18 @@ class LearningViewModel : ViewModel() {
         val d = dbInstance ?: return
         if (!enabled) {
             viewModelScope.launch { withContext(Dispatchers.IO) { d.telemetryEventDao().clear() } }
+        } else {
+            maybeStartTelemetry()
         }
+    }
+
+    /** 首次隐私选择：两个选项都会进入主界面，区别只是是否开启匿名统计 */
+    fun acceptConsent(allowTelemetry: Boolean) {
+        val ctx = appContext ?: return
+        TelemetryStore.setConsent(ctx, allowTelemetry)
+        _telemetryEnabled.value = allowTelemetry
+        if (allowTelemetry) maybeStartTelemetry()
+        _screen.value = Screen.ChildHome
     }
 
     // ---------- 导航 ----------
@@ -815,8 +835,12 @@ class LearningViewModel : ViewModel() {
     }
 
     /** 隐私政策对所有人开放，不额外要求家长密码 */
-    fun openPrivacy(fromAbout: Boolean = false) {
-        privacyReturn = if (fromAbout) Screen.About else Screen.Manage
+    fun openPrivacy(fromAbout: Boolean = false, fromConsent: Boolean = false) {
+        privacyReturn = when {
+            fromConsent -> Screen.PrivacyConsent
+            fromAbout -> Screen.About
+            else -> Screen.Manage
+        }
         _screen.value = Screen.Privacy
     }
 
@@ -984,6 +1008,8 @@ fun AppRoot(vm: LearningViewModel, pinStore: ParentPinStore) {
 
     BackHandler(enabled = screen != Screen.ChildHome) {
         when (screen) {
+            // 首次隐私选择不可跳过：返回键留在本页
+            is Screen.PrivacyConsent -> Unit
             is Screen.Quiz, is Screen.Result -> vm.exitQuiz()
             is Screen.ChildProfileEdit -> vm.openChildManage()
             is Screen.Manage -> vm.goHome()
@@ -1000,6 +1026,12 @@ fun AppRoot(vm: LearningViewModel, pinStore: ParentPinStore) {
     }
 
     when (val s = screen) {
+        is Screen.PrivacyConsent -> PrivacyConsentScreen(
+            onAgreeWithTelemetry = { vm.acceptConsent(true) },
+            onLocalOnly = { vm.acceptConsent(false) },
+            onOpenPolicy = { vm.openPrivacy(fromConsent = true) }
+        )
+
         is Screen.ChildHome -> ChildHomeScreen(
             childName = profile?.name ?: "小朋友",
             avatar = profile?.avatar ?: "🧒",
@@ -1249,7 +1281,7 @@ fun ScreenHeader(title: String, subtitle: String? = null, onBack: () -> Unit) {
     ) {
         Button(
             onClick = onBack,
-            modifier = Modifier.size(width = 64.dp, height = 40.dp),
+            modifier = Modifier.size(width = 64.dp, height = 48.dp),
             contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp),
             colors = ButtonDefaults.buttonColors(
                 containerColor = MaterialTheme.colorScheme.surfaceVariant,

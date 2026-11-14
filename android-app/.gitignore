@@ -1,0 +1,20 @@
+# Gradle / Android
+.gradle/
+build/
+local.properties
+app/release/
+*.apk
+*.aab
+
+# IDE
+.idea/
+*.iml
+
+# 签名与密钥：绝不入库
+keystore.properties
+*.jks
+*.keystore
+signing/
+
+# 混淆映射（包含类结构信息，只自己留存）
+mapping.txt

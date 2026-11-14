@@ -41,6 +41,36 @@ MVP 阶段统一 `0.x.y`，正式发布后升级为 `1.0.0`。
 
 ---
 
+## v0.16.0 — 2026-11-14
+
+### 合规（隐私同意）
+- 首次启动新增隐私告知与选择页：未做出选择前不进入主界面、不产生也不发送任何统计事件；返回键不可跳过。
+- 两个选项：`同意并开启匿名统计` 与 `仅本地使用（不发送统计）`，后者不影响任何学习功能。
+- `TelemetryStore` 增加 `privacy_consent_v1` 标记；`enabled()` 改为「已同意且开关开启」双重判断。
+- 家长区「匿名使用统计」开关保留，关闭即撤回同意并清空待发送队列；再次开启会补记首次事件。
+- 隐私政策补充：权限清单、第三方共享声明、撤回同意、未成年人监护人条款、联系方式占位。
+
+### 安全
+- 移除未使用的 `RECORD_AUDIO` 权限；现在仅保留 `INTERNET` 与 `ACCESS_NETWORK_STATE`。
+- `allowBackup=false`、`fullBackupContent=false`，并新增 `data_extraction_rules.xml` 排除云备份与设备迁移。
+- `usesCleartextTraffic=false`；构建期校验 `telemetryWebhook` 必须为 HTTPS。
+- 新增 `project-docs/SECURITY.md`：威胁模型、Webhook 被提取后的影响与中继方案、密钥与 mapping 管理规范。
+- 新增 `.gitignore`：keystore、签名配置、mapping、构建产物不入库（本地已生成签名密钥，未提交）。
+
+### 构建（知识产权保护）
+- release 开启 R8 混淆（`isMinifyEnabled=true`）与 `shrinkResources=true`。
+- 新增 `app/proguard-rules.pro`：Room、协程、kotlinx.serialization、OkHttp 保留规则。
+- 支持可选 release 签名：读取 `keystore.properties`，缺失时仍可构建未签名包。
+- 版本号 0.16.0 / versionCode 17。
+
+### UX（规范与懒人原则）
+- 明暗主题的 `primary` 统一，修复暗色模式下浅橙按钮配白字、对比度不足的问题；新增 `values-night/themes.xml` 修复状态栏图标可见性。
+- `ScreenHeader` 返回按钮高度 40dp → 48dp；首页「管理」入口与题目选项补足 48dp 触控区域。
+- 管理页「匿名使用统计」整行可点；次级说明文字透明度 0.5/0.55 → 0.7，提高可读性。
+- 做题页「读题」按钮改为实色蓝底深色字；题目标签文字改用高对比度前景色。
+
+---
+
 ## v0.15.0 — 2026-11-14
 
 ### 新增（隐私政策）

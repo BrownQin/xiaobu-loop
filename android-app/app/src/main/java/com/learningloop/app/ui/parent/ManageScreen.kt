@@ -136,7 +136,7 @@ fun AdjustPointsScreen(
                 Text(
                     "用于即时肯定主动行为，也可对违反约定做少量扣减。单次最多 10 颗。",
                     fontSize = 12.sp,
-                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.55f)
+                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
                 )
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     listOf(1L, 2L, 5L).forEach { v ->
@@ -199,7 +199,7 @@ private fun ManageCard(title: String, content: @Composable () -> Unit) {
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f)
+                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
             )
             content()
         }
@@ -222,10 +222,10 @@ private fun ManageItem(emoji: String, title: String, desc: String, onClick: () -
             Text(
                 desc,
                 fontSize = 12.sp,
-                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.55f)
+                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
             )
         }
-        Text("›", fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.35f))
+        Text("›", fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f))
     }
 }
 
@@ -240,6 +240,7 @@ private fun ManageToggle(
     Row(
         modifier = Modifier
             .fillMaxWidth()
+            .clickable { onCheckedChange(!checked) }
             .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp)
@@ -250,9 +251,10 @@ private fun ManageToggle(
             Text(
                 desc,
                 fontSize = 12.sp,
-                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.55f)
+                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
             )
         }
-        Switch(checked = checked, onCheckedChange = onCheckedChange)
+        // 整行可点，减少家长的操作精度要求
+        Switch(checked = checked, onCheckedChange = null)
     }
 }
