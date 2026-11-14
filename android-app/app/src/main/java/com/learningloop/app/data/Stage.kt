@@ -4,7 +4,7 @@ package com.learningloop.app.data
  * 学段：决定题库范围、锚点集合与首页入口文案。
  *
  * - KG：幼儿园中班 / 大班（4-6 岁），题目以看图、数数、听说为主；
- * - PRIMARY_LOW：小学一二年级，对应统编教材。
+ * - PRIMARY_LOW：幼小衔接至小学二年级，对标主流小学低年级核心素养。
  */
 object Stage {
 

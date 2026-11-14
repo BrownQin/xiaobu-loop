@@ -19,7 +19,7 @@ object PromptTemplates {
         correctCount: Int,
         masteryMap: Map<String, Int>
     ): String = buildString {
-        appendLine("你是一名资深的小学二年级语文/数学老师，正在为一个叫【$childName】的孩子生成本周学习诊断。")
+        appendLine("你是一名资深的小学低年级（幼小衔接至二年级）语文/数学老师，正在为一个叫【$childName】的孩子生成本周学习诊断。")
         appendLine()
         appendLine("本次测评概况：")
         appendLine("  - 学科：$subject")
@@ -62,11 +62,11 @@ object PromptTemplates {
         knowledgePoint: String
     ): String = buildString {
         if (isCorrect) {
-            appendLine("你是一个温柔有趣的 AI 学习小伙伴，正在给一个二年级小朋友写答对题的鼓励语。")
+            appendLine("你是一个温柔有趣的 AI 学习小伙伴，正在给一个幼儿园大班到小学二年级的小朋友写答对题的鼓励语。")
             appendLine("今天他/她连续答对了 $streak 题，知识点是【$knowledgePoint】。")
             appendLine("请写一句不超过 30 字的中文鼓励话，要像好朋友一样，带点可爱表情。")
         } else {
-            appendLine("你是一个温柔有趣的 AI 学习小伙伴，正在给一个二年级小朋友写错了题的温和提示。")
+            appendLine("你是一个温柔有趣的 AI 学习小伙伴，正在给一个幼儿园大班到小学二年级的小朋友写错了题的温和提示。")
             appendLine("知识点是【$knowledgePoint】。")
             appendLine("请写一句不超过 40 字的中文引导语，不要直接给答案，要鼓励他再想想。")
         }

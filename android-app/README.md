@@ -1,10 +1,10 @@
-# 智能伴学 · 二年级语文数学 伴学 MVP
+# 小步 · 幼小衔接与小学低年级伴学 MVP
 
 一个完全离线运行的 Android Kotlin 应用骨架，采用 **Kotlin + Jetpack Compose + Material3 + Room + Lifecycle ViewModel**。
 
 ## 一、设计理念
 
-二年级孩子的有效专注窗口只有 10~15 分钟，题海战术反而是反教育的。本 MVP 围绕"**极度精炼测评 + 错题闭环 + 积分激励**"三件事，让每一次答题都产生实际的掌握度增量：
+低龄孩子的有效专注窗口只有 10~15 分钟，题海战术反而是反教育的。小步面向幼小衔接与小学低年级，不预设成绩起点，围绕"**极度精炼测评 + 错题闭环 + 积分激励**"三件事，让每一次答题都产生实际的掌握度增量：
 
 | 模块 | 做了什么 |
 |---|---|
@@ -37,7 +37,7 @@ android-app/
 │   │   ├── AndroidManifest.xml     # 仅声明 INTERNET / ACCESS_NETWORK_STATE 权限
 │   │   ├── java/com/learningloop/app/
 │   │   │   ├── MainActivity.kt     # 入口 + 页面状态机 + ViewModel
-│   │   │   ├── SeedData.kt         # 30 道二年级语文数学种子题
+│   │   │   ├── SeedData.kt         # 低年级语文 / 数学种子题
 │   │   │   ├── data/
 │   │   │   │   ├── AppDatabase.kt
 │   │   │   │   ├── entity/         # Question / WrongAnswer / LearningRecord

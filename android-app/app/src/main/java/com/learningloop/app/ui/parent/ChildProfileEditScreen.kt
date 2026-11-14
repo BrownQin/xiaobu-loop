@@ -73,7 +73,7 @@ fun ChildProfileEditScreen(
                     // 填「幼儿园中班」这类描述时自动切到幼儿园题库
                     stage = Stage.fromGrade(it)
                 },
-                label = { Text("年级，如 二年级 / 幼儿园中班") },
+                label = { Text("年级，如 一年级 / 幼儿园大班") },
                 modifier = Modifier.fillMaxWidth(),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
             )

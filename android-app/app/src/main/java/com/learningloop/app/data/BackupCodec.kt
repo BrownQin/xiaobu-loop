@@ -171,7 +171,7 @@ object BackupCodec {
                 ChildProfile(
                     id = o.optLong("id", 0L),
                     name = o.optString("name", "小朋友"),
-                    grade = o.optString("grade", "二年级"),
+                    grade = o.optString("grade", "一年级"),
                     avatar = o.optString("avatar", "🧒"),
                     totalPoints = o.optLong("totalPoints", 0L),
                     currentLevel = o.optInt("currentLevel", 1),

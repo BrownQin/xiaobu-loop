@@ -18,8 +18,8 @@ data class ChildProfile(
 
     val name: String = "小朋友",
 
-    /** 年级：如 "二年级" */
-    val grade: String = "二年级",
+    /** 年级：如 "一年级"、"幼儿园大班" */
+    val grade: String = "一年级",
 
     /** 头像 emoji 或 URL，MVP 用 emoji */
     val avatar: String = "🧒",
