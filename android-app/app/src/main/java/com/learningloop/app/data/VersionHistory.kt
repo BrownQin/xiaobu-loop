@@ -15,6 +15,17 @@ object VersionHistory {
 
     val entries: List<VersionEntry> = listOf(
         VersionEntry(
+            version = "0.17.0",
+            date = "2026-11-14",
+            highlights = listOf(
+                "首次打开直接进入学习，不再弹隐私确认页",
+                "匿名使用统计开关并入隐私政策页，关闭后不影响任何学习功能",
+                "星星调整改为奖励 / 扣减方向与固定颗数点选，不再需要手输数字",
+                "奖励新增与编辑支持常用图标网格选择，保留已有自定义图标",
+                "关于页新增 GitHub / Gitee 入口，方便查看源码与反馈交流"
+            )
+        ),
+        VersionEntry(
             version = "0.16.0",
             date = "2026-11-14",
             highlights = listOf(

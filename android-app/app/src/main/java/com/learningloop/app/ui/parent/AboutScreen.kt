@@ -1,5 +1,7 @@
 package com.learningloop.app.ui.parent
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -18,12 +20,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.learningloop.app.BuildConfig
 import com.learningloop.app.ScreenHeader
-import com.learningloop.app.ui.theme.LearningColors
 
 /**
  * 关于小步：面向家长和孩子解释 App 在做什么、术语是什么意思、为什么这样设计。
@@ -31,6 +33,8 @@ import com.learningloop.app.ui.theme.LearningColors
  */
 @Composable
 fun AboutScreen(onBack: () -> Unit = {}, onOpenPrivacy: () -> Unit = {}) {
+    val context = LocalContext.current
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -109,7 +113,7 @@ fun AboutScreen(onBack: () -> Unit = {}, onOpenPrivacy: () -> Unit = {}) {
             listOf(
                 "题库、答题记录、星星和奖励都只存在本机数据库里。",
                 "只有家长主动导出时，数据才会以文件形式离开设备。",
-                "匿名使用统计只在首次隐私告知中选择同意后才会开启，只上报事件级数据，不含孩子与作答内容，可随时关闭。",
+                "匿名使用统计只上报事件级数据，不含孩子与作答内容，可在隐私政策页随时关闭。",
                 "联网只用于匿名统计与可选的 AI 反馈文案，孩子做题本身完全离线。"
             )
         )
@@ -141,11 +145,75 @@ fun AboutScreen(onBack: () -> Unit = {}, onOpenPrivacy: () -> Unit = {}) {
             }
         }
 
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(16.dp),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
+        ) {
+            Column(modifier = Modifier.padding(vertical = 8.dp)) {
+                Text(
+                    "开源与反馈",
+                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp),
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold
+                )
+                AboutLink(
+                    title = "GitHub",
+                    url = "github.com/BrownQin/xiaobu-loop",
+                    onClick = {
+                        context.startActivity(
+                            Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse("https://github.com/BrownQin/xiaobu-loop")
+                            )
+                        )
+                    }
+                )
+                AboutLink(
+                    title = "Gitee",
+                    url = "gitee.com/nmd568/xiaobu-loop",
+                    onClick = {
+                        context.startActivity(
+                            Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse("https://gitee.com/nmd568/xiaobu-loop")
+                            )
+                        )
+                    }
+                )
+            }
+        }
+
         Text(
             text = "小步 v${BuildConfig.VERSION_NAME} · 本地伴学",
             modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
             fontSize = 12.sp,
             color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.45f)
+        )
+    }
+}
+
+@Composable
+private fun AboutLink(title: String, url: String, onClick: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onClick() }
+            .padding(horizontal = 14.dp, vertical = 10.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(title, fontSize = 15.sp, fontWeight = FontWeight.Medium)
+            Text(
+                "$url · 反馈交流",
+                fontSize = 12.sp,
+                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.55f)
+            )
+        }
+        Text(
+            "›",
+            fontSize = 18.sp,
+            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.35f)
         )
     }
 }

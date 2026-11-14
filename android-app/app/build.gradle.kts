@@ -27,8 +27,8 @@ android {
         applicationId = "com.learningloop.app"
         minSdk = 24
         targetSdk = 34
-        versionCode = 17
-        versionName = "0.16.0"
+        versionCode = 18
+        versionName = "0.17.0"
 
         // 匿名统计接收端点：不传则留空，App 完全不发送统计数据
         buildConfigField(

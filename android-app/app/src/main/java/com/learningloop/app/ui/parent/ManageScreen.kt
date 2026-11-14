@@ -16,11 +16,10 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -54,8 +53,6 @@ fun ManageScreen(
     onExportLog: () -> Unit = {},
     onOpenVersions: () -> Unit = {},
     onOpenAbout: () -> Unit = {},
-    telemetryEnabled: Boolean = true,
-    onToggleTelemetry: (Boolean) -> Unit = {},
     onOpenPrivacy: () -> Unit = {},
     onBack: () -> Unit = {}
 ) {
@@ -89,13 +86,6 @@ fun ManageScreen(
 
         ManageCard("说明") {
             ManageItem("🔒", "隐私政策", "采集什么、不采集什么、如何关闭", onOpenPrivacy)
-            ManageToggle(
-                emoji = "📶",
-                title = "匿名使用统计",
-                desc = "只报事件级数据，不含孩子与作答内容",
-                checked = telemetryEnabled,
-                onCheckedChange = onToggleTelemetry
-            )
             ManageItem("📋", "更新记录", "每个版本改了什么", onOpenVersions)
             ManageItem("ℹ️", "关于小步", "术语与设计原理", onOpenAbout)
         }
@@ -110,7 +100,8 @@ fun AdjustPointsScreen(
     onAdjust: (Long, String) -> Unit,
     onBack: () -> Unit = {}
 ) {
-    var amount by remember { mutableStateOf("") }
+    var isReward by remember { mutableStateOf(true) }
+    var selectedAmount by remember { mutableStateOf(1L) }
     var reason by remember { mutableStateOf("") }
     var hint by remember { mutableStateOf<String?>(null) }
 
@@ -138,21 +129,40 @@ fun AdjustPointsScreen(
                     fontSize = 12.sp,
                     color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
                 )
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    listOf(1L, 2L, 5L).forEach { v ->
-                        TextButton(onClick = { amount = v.toString() }) { Text("+$v") }
-                    }
-                    TextButton(onClick = { amount = "-1" }) { Text("-1") }
+                Text("调整方式", fontSize = 13.sp, fontWeight = FontWeight.Medium)
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    FilterChip(
+                        selected = isReward,
+                        onClick = { isReward = true },
+                        label = { Text("奖励星星") },
+                        modifier = Modifier.weight(1f)
+                    )
+                    FilterChip(
+                        selected = !isReward,
+                        onClick = { isReward = false },
+                        label = { Text("扣减星星") },
+                        modifier = Modifier.weight(1f)
+                    )
                 }
-                OutlinedTextField(
-                    value = amount,
-                    onValueChange = { s ->
-                        amount = s.filter { it.isDigit() || it == '-' }.take(3)
-                    },
-                    label = { Text("颗数（正数奖励 / 负数扣减）") },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
+                Text("选择颗数", fontSize = 13.sp, fontWeight = FontWeight.Medium)
+                listOf(1L, 2L, 3L, 5L, 8L, 10L).chunked(3).forEach { options ->
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        options.forEach { value ->
+                            FilterChip(
+                                selected = selectedAmount == value,
+                                onClick = { selectedAmount = value },
+                                label = { Text("$value 颗") },
+                                modifier = Modifier.weight(1f)
+                            )
+                        }
+                    }
+                }
                 OutlinedTextField(
                     value = reason,
                     onValueChange = { reason = it.take(20) },
@@ -162,22 +172,20 @@ fun AdjustPointsScreen(
                 )
                 Button(
                     onClick = {
-                        val delta = amount.toLongOrNull()
-                        hint = when {
-                            delta == null || delta == 0L -> "请输入非 0 的颗数"
-                            delta > 10 || delta < -10 -> "单次最多 10 颗"
-                            else -> {
-                                onAdjust(delta, reason.trim())
-                                amount = ""
-                                reason = ""
-                                if (delta > 0) "已发放 $delta 颗星" else "已扣减 ${-delta} 颗星"
-                            }
-                        }
+                        val delta = if (isReward) selectedAmount else -selectedAmount
+                        onAdjust(delta, reason.trim())
+                        reason = ""
+                        hint = if (delta > 0) "已发放 $delta 颗星" else "已扣减 ${-delta} 颗星"
                     },
                     modifier = Modifier.fillMaxWidth().height(46.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = LearningColors.PrimaryLight),
                     shape = RoundedCornerShape(12.dp)
-                ) { Text("确认调整", fontWeight = FontWeight.Bold) }
+                ) {
+                    Text(
+                        if (isReward) "确认发放 $selectedAmount 颗星" else "确认扣减 $selectedAmount 颗星",
+                        fontWeight = FontWeight.Bold
+                    )
+                }
                 hint?.let {
                     Text(it, fontSize = 12.sp, color = LearningColors.CorrectGreen)
                 }
@@ -226,35 +234,5 @@ private fun ManageItem(emoji: String, title: String, desc: String, onClick: () -
             )
         }
         Text("›", fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f))
-    }
-}
-
-@Composable
-private fun ManageToggle(
-    emoji: String,
-    title: String,
-    desc: String,
-    checked: Boolean,
-    onCheckedChange: (Boolean) -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable { onCheckedChange(!checked) }
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        Text(emoji, fontSize = 20.sp)
-        Column(modifier = Modifier.weight(1f)) {
-            Text(title, fontSize = 15.sp, fontWeight = FontWeight.Medium)
-            Text(
-                desc,
-                fontSize = 12.sp,
-                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
-            )
-        }
-        // 整行可点，减少家长的操作精度要求
-        Switch(checked = checked, onCheckedChange = null)
     }
 }

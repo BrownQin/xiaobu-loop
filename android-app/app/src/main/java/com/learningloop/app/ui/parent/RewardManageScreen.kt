@@ -1,7 +1,10 @@
 package com.learningloop.app.ui.parent
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -36,6 +39,12 @@ import androidx.compose.ui.unit.sp
 import com.learningloop.app.ScreenHeader
 import com.learningloop.app.data.entity.RewardItem
 import com.learningloop.app.ui.theme.LearningColors
+
+private val REWARD_EMOJIS = listOf(
+    "🎁", "🧸", "🎮", "📚",
+    "🎨", "⚽", "🚲", "🍦",
+    "🍰", "🎬", "🎵", "🧩"
+)
 
 /**
  * 家长端奖励管理：完全由家长自定义奖励名称、所需积分、图标与是否上架。
@@ -140,12 +149,18 @@ private fun RewardEditDialog(
     var emoji by remember { mutableStateOf(initial.emoji) }
     var points by remember { mutableStateOf(initial.points.toString()) }
     var desc by remember { mutableStateOf(initial.description) }
+    val emojiOptions = remember(initial.emoji) {
+        (listOf(initial.emoji.ifBlank { "🎁" }) + REWARD_EMOJIS).distinct()
+    }
 
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text(if (initial.id > 0) "编辑奖励" else "添加奖励") },
         text = {
-            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            Column(
+                modifier = Modifier.verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
                 OutlinedTextField(
                     value = name,
                     onValueChange = { name = it },
@@ -153,13 +168,47 @@ private fun RewardEditDialog(
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
-                OutlinedTextField(
-                    value = emoji,
-                    onValueChange = { emoji = it },
-                    label = { Text("图标（emoji）") },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
+                Text(
+                    "选择图标（当前 $emoji）",
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.Medium
                 )
+                emojiOptions.chunked(4).forEach { options ->
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        options.forEach { option ->
+                            val selected = emoji == option
+                            Card(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .height(48.dp)
+                                    .clickable { emoji = option },
+                                shape = RoundedCornerShape(10.dp),
+                                colors = CardDefaults.cardColors(
+                                    containerColor = if (selected) {
+                                        MaterialTheme.colorScheme.primaryContainer
+                                    } else {
+                                        MaterialTheme.colorScheme.surfaceVariant
+                                    }
+                                ),
+                                border = if (selected) {
+                                    BorderStroke(2.dp, MaterialTheme.colorScheme.primary)
+                                } else {
+                                    null
+                                }
+                            ) {
+                                Box(
+                                    modifier = Modifier.fillMaxSize(),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Text(option, fontSize = 24.sp)
+                                }
+                            }
+                        }
+                        repeat(4 - options.size) {
+                            Spacer(modifier = Modifier.weight(1f))
+                        }
+                    }
+                }
                 OutlinedTextField(
                     value = points,
                     onValueChange = { points = it.filter { c -> c.isDigit() } },

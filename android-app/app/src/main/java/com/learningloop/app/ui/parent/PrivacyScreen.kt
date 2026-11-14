@@ -1,8 +1,10 @@
 package com.learningloop.app.ui.parent
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -12,8 +14,10 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -28,7 +32,11 @@ import com.learningloop.app.data.TelemetryStore
  * 离线可查，不需要联网。
  */
 @Composable
-fun PrivacyScreen(onBack: () -> Unit = {}) {
+fun PrivacyScreen(
+    telemetryEnabled: Boolean,
+    onToggleTelemetry: (Boolean) -> Unit,
+    onBack: () -> Unit = {}
+) {
     val context = LocalContext.current
     val installId = TelemetryStore.installId(context)
 
@@ -56,9 +64,9 @@ fun PrivacyScreen(onBack: () -> Unit = {}) {
         )
 
         PrivacyCard(
-            "二、匿名使用统计（经你同意后才开启）",
+            "二、匿名使用统计",
             listOf(
-                "首次启动会先做隐私告知，只有选择「同意并开启匿名统计」后才会发送。",
+                "首次打开直接进入学习，不弹隐私确认；最小统计默认开启，可在下方关闭。",
                 "为判断版本是否被使用、有没有人卡在启动或测评环节，App 会发送事件级匿名数据。",
                 "采集字段只有 6 个：事件名、安装随机 ID、版本号、渠道、学段、时间戳。",
                 "事件只有 4 种：首次启动、当天首次打开、完成练习、完成摸底测评。",
@@ -66,6 +74,30 @@ fun PrivacyScreen(onBack: () -> Unit = {}) {
                 "学段仅用于判断题目难度是否匹配，不包含年级、班级、学校等身份信息。"
             )
         )
+
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(16.dp),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
+        ) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onToggleTelemetry(!telemetryEnabled) }
+                    .padding(horizontal = 14.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text("匿名使用统计", fontSize = 14.sp, fontWeight = FontWeight.Medium)
+                    Text(
+                        "仅事件级数据，可在本页随时关闭",
+                        fontSize = 12.sp,
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.55f)
+                    )
+                }
+                Switch(checked = telemetryEnabled, onCheckedChange = null)
+            }
+        }
 
         PrivacyCard(
             "三、明确不采集",
@@ -78,11 +110,11 @@ fun PrivacyScreen(onBack: () -> Unit = {}) {
         )
 
         PrivacyCard(
-            "四、关闭与撤回同意",
+            "四、关闭统计",
             listOf(
-                "家长区 → 管理 → 说明 → 关闭「匿名使用统计」，即可撤回同意。",
+                "关闭本页的「匿名使用统计」开关即可。",
                 "关闭后立即停止产生与发送新事件，本地待发送队列会被清空。",
-                "撤回统计同意不影响任何学习功能，也可以继续只在本地使用。",
+                "关闭统计不影响任何学习功能，也可以继续只在本地使用。",
                 "在系统设置中清除 App 数据，会同时删除安装标识与全部本地记录。"
             )
         )
