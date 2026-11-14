@@ -48,7 +48,9 @@ import com.learningloop.app.data.AppDatabase
 import com.learningloop.app.data.BackupCodec
 import com.learningloop.app.data.DefaultRewards
 import com.learningloop.app.data.DiagnosticsExporter
+import com.learningloop.app.data.GradeLadder
 import com.learningloop.app.data.ParentPinStore
+import com.learningloop.app.data.QualitySettings
 import com.learningloop.app.data.QuestionCsv
 import com.learningloop.app.data.Stage
 import com.learningloop.app.data.entity.AnchorState
@@ -60,7 +62,9 @@ import com.learningloop.app.engine.AdaptiveAssessmentEngine
 import com.learningloop.app.engine.AnchorBktEngine
 import com.learningloop.app.engine.AnchorLoopEngine
 import com.learningloop.app.engine.AnswerJudge
+import com.learningloop.app.engine.DiagnosticEngine
 import com.learningloop.app.engine.GrowthCurveAnalyzer
+import com.learningloop.app.engine.ItemQualityAnalyzer
 import com.learningloop.app.engine.LoopPlan
 import com.learningloop.app.engine.PointIncentiveEngine
 import com.learningloop.app.engine.SignalAnalyzer
@@ -152,7 +156,12 @@ sealed class Screen {
         val explanation: String,
         val feedback: String
     ) : Screen()
-    data class Summary(val total: Int, val correct: Int, val points: Long) : Screen()
+    data class Summary(
+        val total: Int,
+        val correct: Int,
+        val points: Long,
+        val ladder: GradeLadder.Status? = null
+    ) : Screen()
     data object Reward : Screen()
     data object ParentDashboard : Screen()
     data object Manage : Screen()
@@ -225,6 +234,14 @@ class LearningViewModel : ViewModel() {
     private val _anchorStates = MutableStateFlow<List<AnchorState>>(emptyList())
     val anchorStates: StateFlow<List<AnchorState>> = _anchorStates.asStateFlow()
 
+    /** 当前年级阶梯结论，首页与报告共用 */
+    private val _ladder = MutableStateFlow<GradeLadder.Status?>(null)
+    val ladder: StateFlow<GradeLadder.Status?> = _ladder.asStateFlow()
+
+    /** 当前孩子是否做过题：没做过就先引导一次摸底测评 */
+    private val _hasAnyRecord = MutableStateFlow(false)
+    val hasAnyRecord: StateFlow<Boolean> = _hasAnyRecord.asStateFlow()
+
     private val _wrongCount = MutableStateFlow(0)
     val wrongCount: StateFlow<Int> = _wrongCount.asStateFlow()
 
@@ -232,6 +249,10 @@ class LearningViewModel : ViewModel() {
     private var quizEarned = 0L
     private var lastSubject: String? = null
     private var comboStreak = 0
+
+    /** 本次做题的入口：普通练习 / 今日 Loop / 摸底测评 */
+    private enum class QuizMode { NORMAL, LOOP, DIAGNOSTIC }
+    private var quizMode = QuizMode.NORMAL
 
     /** 本次会话是否已通过家长密码验证（回首页即失效） */
     private var parentVerified = false
@@ -291,16 +312,26 @@ class LearningViewModel : ViewModel() {
         viewModelScope.launch { _wrongCount.value = dao.countActive(uid) }
     }
 
-    /** 刷新当前孩子的锚点状态与今日计划 */
+    /** 刷新当前孩子的锚点状态、年级阶梯与今日计划 */
     private fun refreshAnchorData() {
         val d = dbInstance ?: return
         val uid = currentUserId()
         viewModelScope.launch {
             val stage = currentStage()
             withContext(Dispatchers.IO) { AnchorSeeder.run(d, uid, stage, appContext) }
-            _anchorStates.value = d.anchorStateDao().listByUser(uid)
+            val states = d.anchorStateDao().listByUser(uid)
+            _anchorStates.value = states
+            _ladder.value = GradeLadder.of(states, stage)
+            _hasAnyRecord.value = d.learningRecordDao().countByUser(uid) > 0
             _todayPlan.value = withContext(Dispatchers.IO) {
                 AnchorLoopEngine.plan(d, uid, stage, maxQuestions = 3)
+            }
+            // 用最新作答证据刷新题目质量结论（家长可关闭自动排除）
+            val autoExclude = appContext?.let { QualitySettings.autoExclude(it) } ?: true
+            withContext(Dispatchers.IO) {
+                ItemQualityAnalyzer.refreshStates(
+                    d.questionDao(), d.learningRecordDao(), uid, autoExclude
+                )
             }
         }
     }
@@ -405,6 +436,7 @@ class LearningViewModel : ViewModel() {
             return
         }
         lastSubject = subject
+        quizMode = if (loop) QuizMode.LOOP else QuizMode.NORMAL
         val uid = currentUserId()
         val stage = currentStage()
         viewModelScope.launch {
@@ -431,6 +463,42 @@ class LearningViewModel : ViewModel() {
             if (qs.isEmpty()) {
                 _quizQuestions.value = emptyList()
                 _quizError.value = "题库暂时不可用，请稍后重试"
+                _screen.value = Screen.Quiz
+            } else {
+                _quizQuestions.value = qs
+                _quizIndex.value = 0
+                quizCorrect = 0
+                quizEarned = 0L
+                comboStreak = 0
+                _screen.value = Screen.Quiz
+            }
+        }
+    }
+
+    /**
+     * 摸底测评：12 题，跨板块取样，摸清当前年级水平。
+     * 新孩子首次进入时自动引导，家长也可以随时重测。
+     */
+    fun startDiagnostic() {
+        val d = dbInstance
+        if (d == null || _children.value.isEmpty()) {
+            startQuiz(subject = null)
+            return
+        }
+        quizMode = QuizMode.DIAGNOSTIC
+        lastSubject = null
+        val uid = currentUserId()
+        val stage = currentStage()
+        viewModelScope.launch {
+            _quizLoading.value = true
+            _quizError.value = null
+            val qs = withContext(Dispatchers.IO) {
+                DiagnosticEngine.generate(d, stage, DiagnosticEngine.DEFAULT_COUNT)
+            }
+            _quizLoading.value = false
+            if (qs.isEmpty()) {
+                _quizQuestions.value = emptyList()
+                _quizError.value = "题库暂时不可用，请稍后再试"
                 _screen.value = Screen.Quiz
             } else {
                 _quizQuestions.value = qs
@@ -545,16 +613,25 @@ class LearningViewModel : ViewModel() {
     private fun settleQuiz() {
         val d = dbInstance ?: run { goHome(); return }
         val uid = currentUserId()
+        val wasDiagnostic = quizMode == QuizMode.DIAGNOSTIC
         viewModelScope.launch {
             val bonus = PointIncentiveEngine(
                 d.childProfileDao(), d.pointLogDao(), d.knowledgeMasteryDao()
             ).maybeWeeklyProgressBonus(uid)
             if (bonus > 0) quizEarned += bonus
+            val stage = currentStage()
+            val states = d.anchorStateDao().listByUser(uid)
+            _anchorStates.value = states
+            val ladder = GradeLadder.of(states, stage)
+            _ladder.value = ladder
+            _hasAnyRecord.value = d.learningRecordDao().countByUser(uid) > 0
             _screen.value = Screen.Summary(
                 total = _quizQuestions.value.size,
                 correct = quizCorrect,
-                points = quizEarned
+                points = quizEarned,
+                ladder = if (wasDiagnostic) ladder else null
             )
+            quizMode = QuizMode.NORMAL
         }
     }
 
@@ -756,6 +833,8 @@ fun AppRoot(vm: LearningViewModel, pinStore: ParentPinStore) {
     val uiMessage by vm.uiMessage.collectAsState()
     val todayPlan by vm.todayPlan.collectAsState()
     val anchorStates by vm.anchorStates.collectAsState()
+    val ladder by vm.ladder.collectAsState()
+    val hasAnyRecord by vm.hasAnyRecord.collectAsState()
 
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
@@ -867,11 +946,14 @@ fun AppRoot(vm: LearningViewModel, pinStore: ParentPinStore) {
             wrongCount = wrongCount,
             stage = profile?.stage ?: Stage.PRIMARY_LOW,
             todayPlan = todayPlan,
+            levelText = ladder?.headline,
+            showDiagnosticEntry = !hasAnyRecord,
             children = children,
             activeId = activeId,
             onSelectChild = { id -> vm.switchChild(id) },
             onStartQuiz = { subject -> vm.startQuiz(subject) },
             onStartToday = { vm.startQuiz(subject = null, loop = true) },
+            onStartDiagnostic = { vm.startDiagnostic() },
             onOpenWrongBook = { vm.startQuiz(subject = null) },
             onOpenReward = { vm.openReward() },
             onOpenAbout = { vm.openAbout() },
@@ -920,7 +1002,8 @@ fun AppRoot(vm: LearningViewModel, pinStore: ParentPinStore) {
             total = s.total,
             correct = s.correct,
             earnedPoints = s.points,
-            onRetry = { vm.retryQuiz() },
+            ladder = s.ladder,
+            onRetry = { vm.startQuiz(subject = null) },
             onHome = { vm.goHome() }
         )
 
@@ -939,6 +1022,7 @@ fun AppRoot(vm: LearningViewModel, pinStore: ParentPinStore) {
             onOpenRewards = { vm.openRewardManage() },
             onOpenQuestions = { vm.openQuestionManage() },
             onOpenQuality = { vm.openQuestionQuality() },
+            onRediagnose = { vm.startDiagnostic() },
             onOpenBackup = { vm.openBackup() },
             onExportLog = { diagnosticsExportLauncher.launch(DiagnosticsExporter.fileName()) },
             onOpenVersions = { vm.openVersionHistory() },
@@ -960,6 +1044,8 @@ fun AppRoot(vm: LearningViewModel, pinStore: ParentPinStore) {
                 childName = profile?.name ?: "小朋友",
                 userId = activeId,
                 db = db,
+                stage = profile?.stage ?: Stage.PRIMARY_LOW,
+                ladder = ladder,
                 onBack = { vm.openParent() }
             )
         }
@@ -1116,6 +1202,8 @@ fun ParentDashboardComposable(
     childName: String,
     userId: Long,
     db: AppDatabase,
+    stage: String = Stage.PRIMARY_LOW,
+    ladder: GradeLadder.Status? = null,
     onBack: () -> Unit
 ) {
     var overall by remember(userId) { mutableStateOf(0.0) }
@@ -1151,6 +1239,8 @@ fun ParentDashboardComposable(
         dailyAccuracy = daily,
         weeklySummary = weekly,
         anchorStates = anchors,
+        stage = stage,
+        ladder = ladder,
         onBack = onBack
     )
 }

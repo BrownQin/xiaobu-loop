@@ -3,6 +3,7 @@ package com.learningloop.app.engine
 import com.learningloop.app.data.AnchorCatalog
 import com.learningloop.app.data.AnchorDef
 import com.learningloop.app.data.AppDatabase
+import com.learningloop.app.data.GradeLadder
 import com.learningloop.app.data.Stage
 import com.learningloop.app.data.entity.AnchorState
 import com.learningloop.app.data.entity.Question
@@ -55,24 +56,42 @@ object AnchorLoopEngine {
             .toSet()
 
         val anchors = AnchorCatalog.forStage(stage)
+
+        // 年级阶梯：一年级未达标只推一年级；达标后切到二年级，简单题靠 ZPD 与冷却自然跳过
+        val ladder = GradeLadder.of(states, stage)
+        val grade1Achieved = stage != Stage.KG &&
+            ladder.grades.firstOrNull { it.grade == 1 }?.achieved == true
+        val targetGrade = when {
+            stage == Stage.KG -> 0
+            grade1Achieved -> 2
+            else -> 1
+        }
+
         val topicHasSolid = anchors
             .filter { a -> AnchorCatalog.levels.all { l -> map[a.code to l]?.status == AnchorState.STATUS_SOLID } }
             .map { it.topic }
             .toSet()
 
         val scored = anchors
+            .filter { it.grade <= targetGrade }
             .filter { prereqReady(it, map) }
             .mapNotNull { anchor ->
                 val level = AnchorCatalog.levels.firstOrNull { lvl ->
                     map[anchor.code to lvl]?.status != AnchorState.STATUS_SOLID
                 } ?: return@mapNotNull null
                 val p = map[anchor.code to level]?.probability ?: anchor.bkt.init
-                Candidate(anchor, level, p, anchor.topic in topicHasSolid)
+                Candidate(anchor, level, p, anchor.topic in topicHasSolid, anchor.grade)
             }
+            .sortedWith(
+                compareBy(
+                    { if (it.grade == targetGrade) 0 else 1 },
+                    { it.topicSettled },
+                    { it.probability }
+                )
+            )
 
-        val chosen = scored.filter { it.probability in ZPD_LOW..ZPD_HIGH }
-            .minWithOrNull(compareBy({ it.topicSettled }, { it.probability }))
-            ?: scored.minWithOrNull(compareBy({ it.topicSettled }, { it.probability }))
+        val chosen = scored.filter { it.probability in ZPD_LOW..ZPD_HIGH }.firstOrNull()
+            ?: scored.firstOrNull()
             ?: return null
 
         val anchor = chosen.anchor
@@ -104,7 +123,8 @@ object AnchorLoopEngine {
         val anchor: AnchorDef,
         val level: String,
         val probability: Float,
-        val topicSettled: Boolean
+        val topicSettled: Boolean,
+        val grade: Int
     )
 
     /** 前置锚点达到 0.6 或已稳固才算可推进；前置未追踪时视为不阻塞 */

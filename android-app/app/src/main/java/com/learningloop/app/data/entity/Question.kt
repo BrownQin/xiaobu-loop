@@ -78,7 +78,14 @@ data class Question(
     val variantType: String = "",
 
     /** 学段：KG 幼儿园 / PRIMARY_LOW 小学低年级，组卷时只取当前孩子学段的题 */
-    val stage: String = Stage.PRIMARY_LOW
+    val stage: String = Stage.PRIMARY_LOW,
+
+    /**
+     * 自动质量结论：空串正常 / TOO_EASY / TOO_HARD / FAST_GUESS。
+     * 由作答证据定期刷新，TOO_HARD 与 FAST_GUESS 不进入组卷。
+     */
+    @ColumnInfo(name = "quality_state")
+    val qualityState: String = ""
 ) {
     companion object {
         // 题型常量

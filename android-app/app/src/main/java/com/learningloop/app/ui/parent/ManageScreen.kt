@@ -48,6 +48,7 @@ fun ManageScreen(
     onOpenRewards: () -> Unit = {},
     onOpenQuestions: () -> Unit = {},
     onOpenQuality: () -> Unit = {},
+    onRediagnose: () -> Unit = {},
     onOpenBackup: () -> Unit = {},
     onExportLog: () -> Unit = {},
     onOpenVersions: () -> Unit = {},
@@ -66,6 +67,7 @@ fun ManageScreen(
 
         ManageCard("查看") {
             ManageItem("📈", "学习报告", "锚点矩阵、薄弱点、趋势与建议", onOpenReport)
+            ManageItem("🗺", "重新测评", "12 道题重新定位当前年级水平", onRediagnose)
         }
 
         ManageCard("孩子与激励") {

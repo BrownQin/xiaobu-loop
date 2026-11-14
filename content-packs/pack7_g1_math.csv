@@ -1,0 +1,61 @@
+id,subject,knowledgePoint,difficulty,type,content,options,answer,explanation,tags,anchorCode,cognitiveLevel,variantType,enabled,stage
+,math,数学-一年级-20以内加减,1,choice,9 + 4 = ？,A.12|B.13|C.14,B,把 4 分成 1 和 3，9 + 1 = 10，10 + 3 = 13。,,g1-addsub-20,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-一年级-20以内加减,1,fill,8 + 5 = ____,,13,把 5 分成 2 和 3，8 + 2 = 10，10 + 3 = 13。,,g1-addsub-20,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-一年级-20以内加减,2,choice,15 - 7 = ？,A.7|B.8|C.9,B,想 7 + 8 = 15，所以 15 - 7 = 8。,,g1-addsub-20,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-一年级-20以内加减,2,fill,13 - 6 = ____,,7,想 6 + 7 = 13，所以 13 - 6 = 7。,,g1-addsub-20,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-一年级-20以内加减,2,choice,计算 6 + 7 时，可以先算 6 + 4 = 10，再算 10 + 3 = 13。这里把 7 分成了 4 和几？,A.2|B.3|C.5,B,7 分成 4 和 3，先凑成 10 再加剩下的 3。,,g1-addsub-20,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内加减,2,choice,计算 12 - 8 时，可以想 8 加几等于 12？,A.3|B.4|C.5,B,8 + 4 = 12，所以 12 - 8 = 4。,,g1-addsub-20,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内加减,3,fill,小明有 9 张卡片，又得到 6 张，现在一共有多少张？9 + 6 = ____,,15,求「一共」用加法，9 + 6 = 15。,,g1-addsub-20,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内加减,3,choice,树上有 14 只小鸟，飞走了 6 只，还剩几只？,A.7|B.8|C.9,B,求「还剩」用减法，14 - 6 = 8。,,g1-addsub-20,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内加减,2,fill,7 + 7 = ____,,14,两个 7 合起来是 14。,,g1-addsub-20,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-一年级-20以内加减,3,choice,下面哪道题的得数是 12？,A.8 + 5|B.9 + 3|C.7 + 6,B,9 + 3 = 12，其余两道分别是 13 和 13。,,g1-addsub-20,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-一年级-20以内应用题,2,word,小红有 8 朵花，小兰有 5 朵花，两人一共有多少朵花？,,13朵,求两人合起来是多少，用加法：8 + 5 = 13（朵）。,,g1-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内应用题,2,choice,盘子里有 13 个苹果，吃掉 5 个，还剩几个？,A.7|B.8|C.9,B,求剩下的用减法：13 - 5 = 8。,,g1-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内应用题,2,word,停车场有 15 辆车，开走了 9 辆，还剩多少辆？,,6辆,从总数里去掉开走的：15 - 9 = 6（辆）。,,g1-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内应用题,3,choice,小刚有 6 支铅笔，小强比他多 4 支，小强有几支铅笔？,A.2|B.9|C.10,C,「比他多 4 支」用加法：6 + 4 = 10。,,g1-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内应用题,3,choice,小丽有 12 张贴纸，比小美多 5 张，小美有几张贴纸？,A.7|B.8|C.17,A,小丽比小美多，小美就少：12 - 5 = 7。,,g1-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内应用题,2,word,篮子里有 9 个鸡蛋，又放进 8 个，现在一共有多少个鸡蛋？,,17个,「又放进」表示增加：9 + 8 = 17（个）。,,g1-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内应用题,3,choice,一年级有 14 人参加跳绳，其中 6 人是女生，男生有多少人？,A.6|B.7|C.8,C,总人数去掉女生就是男生：14 - 6 = 8。,,g1-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内应用题,2,word,车上原来有 11 人，到站下去了 4 人，车上还有多少人？,,7人,下去表示减少：11 - 4 = 7（人）。,,g1-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内应用题,3,choice,小华折了 7 只纸鹤，小明折了 9 只，小明比小华多折几只？,A.2|B.16|C.3,A,求相差多少用减法：9 - 7 = 2。,,g1-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-20以内应用题,3,word,图书角有故事书 8 本，科技书比故事书少 3 本，科技书有多少本？,,5本,「比故事书少 3 本」用减法：8 - 3 = 5（本）。,,g1-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-100以内数的认识,1,fill,从 1 数到 10，再数 1 个是 ____,,11,10 后面接着数 1 个就是 11。,,g1-num-100,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-100以内数的认识,1,choice,56 里面有几个十和几个一？,A.5个十和6个一|B.6个十和5个一|C.56个十,A,十位是 5 表示 5 个十，个位是 6 表示 6 个一。,,g1-num-100,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-100以内数的认识,1,fill,8 个十和 3 个一组成的数是 ____,,83,8 个十是 80，再加 3 个一是 83。,,g1-num-100,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-100以内数的认识,2,choice,比 59 大 1 的数是？,A.58|B.60|C.61,B,59 再添 1，个位满十向十位进一，得到 60。,,g1-num-100,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-100以内数的认识,2,choice,下面哪个数最接近 70？,A.65|B.72|C.78,B,72 和 70 相差 2，是三个数里最近的。,,g1-num-100,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-100以内数的认识,2,fill,一个两位数，十位是 4，个位是 0，这个数是 ____,,40,十位 4 表示 40，个位 0 表示没有一。,,g1-num-100,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-100以内数的认识,2,choice,84 和 48 相比，下面说法正确的是？,A.84大|B.48大|C.一样大,A,比较两位数先看十位，8 个十比 4 个十多。,,g1-num-100,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-100以内数的认识,2,fill,把 36、63、30 从小到大排列，中间一个数是 ____,,36,从小到大是 30、36、63，中间是 36。,,g1-num-100,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-100以内数的认识,2,choice,一箱牛奶有 24 盒，再放 6 盒是多少盒？,A.26|B.30|C.34,B,24 + 6 = 30，个位 4 + 6 满十进一。,,g1-num-100,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-100以内数的认识,3,choice,妈妈买了 3 盒鸡蛋，每盒 10 个，再买 5 个，一共多少个鸡蛋？,A.15|B.30|C.35,C,3 盒是 30 个，再加 5 个是 35 个。,,g1-num-100,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-图形分类,1,choice,下面哪种图形有 4 条边，4 个角都相等？,A.正方形|B.三角形|C.圆形,A,正方形四条边一样长，四个角都是直角。,,g1-shape-classify,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-一年级-图形分类,1,choice,三角形有几条边？,A.3|B.4|C.5,A,三角形由三条边围成。,,g1-shape-classify,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-一年级-图形分类,1,choice,下面哪个物品的形状像圆柱？,A.足球|B.易拉罐|C.魔方,B,易拉罐上下两个面是圆，侧面是曲面，像圆柱。,,g1-shape-classify,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-图形分类,2,choice,把图形按「有角」和「没有角」分类，圆形应该放在？,A.有角|B.没有角|C.都可以,B,圆形的边是弯曲的，没有角。,,g1-shape-classify,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-图形分类,2,choice,下面哪一组图形都是四边形？,A.正方形和长方形|B.三角形和圆形|C.圆形和正方形,A,正方形和长方形都有四条边。,,g1-shape-classify,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-一年级-图形分类,2,fill,用 4 根一样长的小棒可以围成一个 ____ 形。,,正方,四条边一样长的四边形是正方形。,,g1-shape-classify,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-图形分类,2,choice,一个长方形有几个直角？,A.2|B.3|C.4,C,长方形的四个角都是直角。,,g1-shape-classify,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-图形分类,3,choice,搭一个长方体，至少需要几个小正方体？,A.2|B.4|C.8,C,长方体至少有长、宽、高三个方向，2×2×2 = 8 个。,,g1-shape-classify,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-图形分类,2,choice,把一张正方形纸对折再对折，打开后最多能看到几个小正方形？,A.2|B.4|C.8,B,两次对折把正方形分成 4 个一样的小正方形。,,g1-shape-classify,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,math,数学-一年级-图形分类,3,fill,七巧板一共有 ____ 块。,,7,七巧板由 7 块图形拼成。,,g1-shape-classify,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识时间,1,choice,钟面上短针指向 3，长针指向 12，现在是几点？,A.3时|B.12时|C.6时,A,短针是时针指着 3，长针是分针指着 12，就是 3 时。,,g1-clock,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-一年级-认识时间,1,choice,钟面上一共有几个大格？,A.10|B.12|C.60,B,钟面一圈平均分成 12 个大格。,,g1-clock,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-一年级-认识时间,1,fill,分针指向 12，时针指向 7，是 ____ 时。,,7,分针指 12、时针指几就是几时。,,g1-clock,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识时间,2,choice,半时的时候，分针指向哪里？,A.3|B.6|C.12,B,分针走半圈指向 6，就是半时。,,g1-clock,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识时间,2,choice,时针在 9 和 10 之间，分针指向 6，是几时半？,A.9时半|B.10时半|C.6时半,A,时针过了 9 还没到 10，分针指 6，是 9 时半。,,g1-clock,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-一年级-认识时间,2,fill,1 时 = ____ 分。,,60,时针走 1 大格，分针正好走一圈 60 分。,,g1-clock,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识时间,2,choice,小明 8 时开始上课，上 1 小时后几点下课？,A.8时|B.9时|C.10时,B,8 时再过 1 小时是 9 时。,,g1-clock,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识时间,3,choice,妈妈 6 时半开始做饭，7 时做好，一共用了多长时间？,A.半小时|B.1小时|C.2小时,A,6 时半到 7 时，正好半小时。,,g1-clock,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识时间,3,choice,小华每天 9 时睡觉，早上 7 时起床，他睡了多长时间？,A.8小时|B.10小时|C.12小时,B,9 时到 12 时是 3 小时，再到 7 时是 7 小时，共 10 小时。,,g1-clock,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识时间,2,fill,一节课 40 分钟，课间休息 10 分钟，一共 ____ 分钟。,,50,40 + 10 = 50 分钟。,,g1-clock,APPLICATION,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识人民币,1,choice,1 元可以换几个 1 角？,A.5|B.10|C.100,B,1 元 = 10 角。,,g1-money,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识人民币,1,fill,1 元 = ____ 角。,,10,人民币单位换算：1 元等于 10 角。,,g1-money,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识人民币,1,choice,下面哪张人民币面值最大？,A.1元|B.5元|C.10元,C,10 元比 5 元、1 元都大。,,g1-money,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识人民币,2,choice,3 元 5 角 = 多少角？,A.8|B.35|C.53,B,3 元是 30 角，再加 5 角是 35 角。,,g1-money,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识人民币,2,choice,2 个 5 角是多少元？,A.1元|B.2元|C.5元,A,5 角 + 5 角 = 10 角 = 1 元。,,g1-money,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识人民币,2,fill,50 角 = ____ 元。,,5,10 角是 1 元，50 角就是 5 元。,,g1-money,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识人民币,2,choice,一支铅笔 2 元，付出 5 元，应找回多少钱？,A.2元|B.3元|C.7元,B,5 - 2 = 3，找回 3 元。,,g1-money,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识人民币,3,choice,一个本子 3 元 5 角，一块橡皮 1 元 5 角，一共多少钱？,A.4元|B.5元|C.6元,B,3 元 + 1 元 = 4 元，5 角 + 5 角 = 1 元，共 5 元。,,g1-money,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识人民币,3,word,小丽有 10 元，买了一个面包用了 6 元 5 角，还剩多少钱？,,3元5角,10 元 - 6 元 5 角 = 3 元 5 角。,,g1-money,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-一年级-认识人民币,3,choice,妈妈买了 2 瓶水，每瓶 2 元，一共花了多少钱？,A.2元|B.4元|C.6元,B,2 + 2 = 4，一共 4 元。,,g1-money,APPLICATION,CONTEXT,1,PRIMARY_LOW

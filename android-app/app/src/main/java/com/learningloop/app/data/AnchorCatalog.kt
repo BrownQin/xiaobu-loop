@@ -17,7 +17,9 @@ data class TopicDef(
     val stage: String,
     /** 领域：数与代数 / 图形与几何 / 语言与阅读 */
     val domain: String,
-    val order: Int
+    val order: Int,
+    /** 对应年级：幼儿园为 0，小学一年级为 1、二年级为 2（用于能力阶梯） */
+    val grade: Int = 0
 )
 
 /**
@@ -45,7 +47,10 @@ data class AnchorDef(
     val stageCode: String = Stage.PRIMARY_LOW,
     /** 是否为课标必修能力 */
     val required: Boolean = true
-)
+) {
+    /** 所属年级：由 AnchorCatalog 按主题默认值与锚点级覆盖计算，见 gradeOf */
+    val grade: Int get() = AnchorCatalog.gradeOf(code)
+}
 
 object AnchorCatalog {
 
@@ -65,17 +70,17 @@ object AnchorCatalog {
         TopicDef("kg-literacy", "识字启蒙", Stage.KG, "语言与阅读", 6),
         TopicDef("kg-language", "倾听与表达", Stage.KG, "语言与阅读", 7),
         TopicDef("kg-life", "生活中的数学", Stage.KG, "数与代数", 8),
-        // 小学二年级
-        TopicDef("g2-addsub", "100 以内加减", Stage.PRIMARY_LOW, "数与代数", 1),
-        TopicDef("g2-mul", "表内乘法", Stage.PRIMARY_LOW, "数与代数", 2),
-        TopicDef("g2-div", "表内除法", Stage.PRIMARY_LOW, "数与代数", 3),
-        TopicDef("g2-num", "万以内数的认识", Stage.PRIMARY_LOW, "数与代数", 4),
-        TopicDef("g2-measure", "量与计量", Stage.PRIMARY_LOW, "数与代数", 5),
-        TopicDef("g2-geometry", "图形与几何", Stage.PRIMARY_LOW, "图形与几何", 6),
-        TopicDef("g2-stat", "数据与规律", Stage.PRIMARY_LOW, "数与代数", 7),
-        TopicDef("g2-pinyin", "拼音与语音", Stage.PRIMARY_LOW, "语言与阅读", 8),
-        TopicDef("g2-literacy", "识字与写字", Stage.PRIMARY_LOW, "语言与阅读", 9),
-        TopicDef("g2-reading", "阅读与表达", Stage.PRIMARY_LOW, "语言与阅读", 10)
+        // 小学低年级（theme.grade：一年级 = 1，二年级 = 2）
+        TopicDef("g2-addsub", "100 以内加减", Stage.PRIMARY_LOW, "数与代数", 1, 1),
+        TopicDef("g2-mul", "表内乘法", Stage.PRIMARY_LOW, "数与代数", 2, 2),
+        TopicDef("g2-div", "表内除法", Stage.PRIMARY_LOW, "数与代数", 3, 2),
+        TopicDef("g2-num", "万以内数的认识", Stage.PRIMARY_LOW, "数与代数", 4, 2),
+        TopicDef("g2-measure", "量与计量", Stage.PRIMARY_LOW, "数与代数", 5, 1),
+        TopicDef("g2-geometry", "图形与几何", Stage.PRIMARY_LOW, "图形与几何", 6, 1),
+        TopicDef("g2-stat", "数据与规律", Stage.PRIMARY_LOW, "数与代数", 7, 1),
+        TopicDef("g2-pinyin", "拼音与语音", Stage.PRIMARY_LOW, "语言与阅读", 8, 1),
+        TopicDef("g2-literacy", "识字与写字", Stage.PRIMARY_LOW, "语言与阅读", 9, 1),
+        TopicDef("g2-reading", "阅读与表达", Stage.PRIMARY_LOW, "语言与阅读", 10, 2)
     )
 
     // ---------- BKT 默认参数（按锚点类型） ----------
@@ -260,30 +265,43 @@ object AnchorCatalog {
             bkt = recognize(), stageCode = Stage.KG
         ),
 
-        // ===== 小学二年级：100 以内加减 =====
+        // ===== 小学一年级：100 以内加减（20 以内起步） =====
+        AnchorDef(
+            code = "g1-addsub-20", subject = Question.SUBJECT_MATH, name = "20 以内进位加与退位减",
+            type = TYPE_REASONING, topic = "g2-addsub", stage = 1, prerequisites = emptyList(),
+            observable = "能算对 9 + 6、15 - 7 这类 20 以内进退位题，并说出「凑十」「想加算减」",
+            bkt = reasoning()
+        ),
         AnchorDef(
             code = "math-add-carry", subject = Question.SUBJECT_MATH, name = "100 以内进位加",
-            type = TYPE_REASONING, topic = "g2-addsub", stage = 1, prerequisites = emptyList(),
+            type = TYPE_REASONING, topic = "g2-addsub", stage = 2, prerequisites = listOf("g1-addsub-20"),
             observable = "能连续算对 3 道进位加，并说出「满十进一」",
             bkt = reasoning()
         ),
         AnchorDef(
             code = "math-sub-borrow", subject = Question.SUBJECT_MATH, name = "退位减法的算理",
-            type = TYPE_REASONING, topic = "g2-addsub", stage = 2,
+            type = TYPE_REASONING, topic = "g2-addsub", stage = 3,
             prerequisites = listOf("math-add-carry"),
             observable = "能解释「退一当十」并完成 3 道退位减",
             bkt = reasoning()
         ),
         AnchorDef(
+            code = "g1-addsub-word", subject = Question.SUBJECT_MATH, name = "20 以内加减应用题",
+            type = TYPE_MEANING, topic = "g2-addsub", stage = 4,
+            prerequisites = listOf("g1-addsub-20"),
+            observable = "能读懂「一共 / 还剩 / 多多少」，选对加减法并列式",
+            bkt = meaning()
+        ),
+        AnchorDef(
             code = "g2-addsub-mixed", subject = Question.SUBJECT_MATH, name = "连加连减与混合",
-            type = TYPE_REASONING, topic = "g2-addsub", stage = 3,
+            type = TYPE_REASONING, topic = "g2-addsub", stage = 5,
             prerequisites = listOf("math-sub-borrow"),
             observable = "能按从左到右的顺序计算 34 + 18 - 25，不跳步",
             bkt = reasoning()
         ),
         AnchorDef(
             code = "g2-addsub-word", subject = Question.SUBJECT_MATH, name = "加减法应用题",
-            type = TYPE_MEANING, topic = "g2-addsub", stage = 4,
+            type = TYPE_MEANING, topic = "g2-addsub", stage = 6,
             prerequisites = listOf("g2-addsub-mixed"),
             observable = "能根据「多多少 / 少多少」选择加法或减法并说明理由",
             bkt = meaning()
@@ -334,74 +352,100 @@ object AnchorCatalog {
             bkt = reasoning()
         ),
 
-        // ===== 小学二年级：万以内数的认识 =====
+        // ===== 小学：数的认识（一年级 100 以内 → 二年级万以内） =====
+        AnchorDef(
+            code = "g1-num-100", subject = Question.SUBJECT_MATH, name = "100 以内数的认识",
+            type = TYPE_RECOGNIZE, topic = "g2-num", stage = 1, prerequisites = emptyList(),
+            observable = "能数、读、写 100 以内的数，说出几个十和几个一，并比较大小",
+            bkt = recognize()
+        ),
         AnchorDef(
             code = "g2-num-readwrite", subject = Question.SUBJECT_MATH, name = "读写与组成",
-            type = TYPE_RECOGNIZE, topic = "g2-num", stage = 1, prerequisites = emptyList(),
+            type = TYPE_RECOGNIZE, topic = "g2-num", stage = 2, prerequisites = listOf("g1-num-100"),
             observable = "能正确读写 3050，并说出由 3 个千和 5 个十组成",
             bkt = recognize()
         ),
         AnchorDef(
             code = "g2-num-compare", subject = Question.SUBJECT_MATH, name = "比较与近似",
-            type = TYPE_REASONING, topic = "g2-num", stage = 2,
+            type = TYPE_REASONING, topic = "g2-num", stage = 3,
             prerequisites = listOf("g2-num-readwrite"),
             observable = "能比较 4980 与 5001 的大小，并说出近似到整百的数",
             bkt = reasoning()
         ),
         AnchorDef(
             code = "g2-num-placevalue", subject = Question.SUBJECT_MATH, name = "数位与计数单位",
-            type = TYPE_REASONING, topic = "g2-num", stage = 3,
+            type = TYPE_REASONING, topic = "g2-num", stage = 4,
             prerequisites = listOf("g2-num-readwrite"),
             observable = "能说出相邻两个数位之间的进率是 10",
             bkt = reasoning()
         ),
 
-        // ===== 小学二年级：量与计量 =====
+        // ===== 小学：量与计量（一年级时间/人民币 → 二年级单位换算） =====
+        AnchorDef(
+            code = "g1-clock", subject = Question.SUBJECT_MATH, name = "认识整时与半时",
+            type = TYPE_RECOGNIZE, topic = "g2-measure", stage = 1, prerequisites = emptyList(),
+            observable = "能读出钟面上的整时和半时，知道 1 时 = 60 分",
+            bkt = recognize()
+        ),
+        AnchorDef(
+            code = "g1-money", subject = Question.SUBJECT_MATH, name = "认识人民币",
+            type = TYPE_RECOGNIZE, topic = "g2-measure", stage = 2,
+            prerequisites = listOf("g1-num-100"),
+            observable = "能认出常见面值，知道 1 元 = 10 角，并完成简单找零",
+            bkt = recognize()
+        ),
         AnchorDef(
             code = "g2-length-unit", subject = Question.SUBJECT_MATH, name = "长度单位",
-            type = TYPE_RECOGNIZE, topic = "g2-measure", stage = 1, prerequisites = emptyList(),
+            type = TYPE_RECOGNIZE, topic = "g2-measure", stage = 3, prerequisites = emptyList(),
             observable = "能选对厘米或米，知道 1 米 = 100 厘米",
             bkt = recognize()
         ),
         AnchorDef(
-            code = "g2-mass-unit", subject = Question.SUBJECT_MATH, name = "克与千克",
-            type = TYPE_RECOGNIZE, topic = "g2-measure", stage = 2,
-            prerequisites = listOf("g2-length-unit"),
-            observable = "能判断一个苹果约 200 克，一袋米约 10 千克",
-            bkt = recognize()
-        ),
-        AnchorDef(
             code = "g2-time-clock", subject = Question.SUBJECT_MATH, name = "认识时间",
-            type = TYPE_REASONING, topic = "g2-measure", stage = 3,
-            prerequisites = listOf("g2-length-unit"),
+            type = TYPE_REASONING, topic = "g2-measure", stage = 4,
+            prerequisites = listOf("g1-clock"),
             observable = "能读出 8:45，并算出经过 20 分钟后的时间",
             bkt = reasoning()
         ),
         AnchorDef(
             code = "g2-money", subject = Question.SUBJECT_MATH, name = "元角分换算",
-            type = TYPE_REASONING, topic = "g2-measure", stage = 4,
-            prerequisites = listOf("g2-num-readwrite"),
+            type = TYPE_REASONING, topic = "g2-measure", stage = 5,
+            prerequisites = listOf("g1-money"),
             observable = "能换算 3 元 5 角 = 35 角，并完成简单找零",
             bkt = reasoning()
         ),
+        AnchorDef(
+            code = "g2-mass-unit", subject = Question.SUBJECT_MATH, name = "克与千克",
+            type = TYPE_RECOGNIZE, topic = "g2-measure", stage = 6,
+            prerequisites = listOf("g2-length-unit"),
+            observable = "能判断一个苹果约 200 克，一袋米约 10 千克",
+            bkt = recognize()
+        ),
 
-        // ===== 小学二年级：图形与几何 =====
+        // ===== 小学：图形与几何（一年级分类 → 二年级特征） =====
+        AnchorDef(
+            code = "g1-shape-classify", subject = Question.SUBJECT_MATH, name = "图形分类与拼组",
+            type = TYPE_RECOGNIZE, topic = "g2-geometry", stage = 1, prerequisites = emptyList(),
+            observable = "能按边和角给图形分类，并说出圆形、三角形、正方形、长方形的区别",
+            bkt = recognize()
+        ),
         AnchorDef(
             code = "g2-shape-recognize", subject = Question.SUBJECT_MATH, name = "认识图形",
-            type = TYPE_RECOGNIZE, topic = "g2-geometry", stage = 1, prerequisites = emptyList(),
+            type = TYPE_RECOGNIZE, topic = "g2-geometry", stage = 2,
+            prerequisites = listOf("g1-shape-classify"),
             observable = "能说出长方形、正方形、平行四边形的边角特征",
             bkt = recognize()
         ),
         AnchorDef(
             code = "g2-angle", subject = Question.SUBJECT_MATH, name = "角的初步认识",
-            type = TYPE_RECOGNIZE, topic = "g2-geometry", stage = 2,
+            type = TYPE_RECOGNIZE, topic = "g2-geometry", stage = 3,
             prerequisites = listOf("g2-shape-recognize"),
             observable = "能指出角的顶点和两条边，辨认直角、锐角、钝角",
             bkt = recognize()
         ),
         AnchorDef(
             code = "g2-symmetry-move", subject = Question.SUBJECT_MATH, name = "对称与平移旋转",
-            type = TYPE_REASONING, topic = "g2-geometry", stage = 3,
+            type = TYPE_REASONING, topic = "g2-geometry", stage = 4,
             prerequisites = listOf("g2-shape-recognize"),
             observable = "能判断图形是否轴对称，并说出平移后形状不变",
             bkt = reasoning()
@@ -530,6 +574,37 @@ object AnchorCatalog {
     )
 
     fun byCode(code: String): AnchorDef? = all.firstOrNull { it.code == code }
+
+    /**
+     * 锚点级年级覆盖：主题默认年级之外，少数锚点实际属于另一个年级。
+     * 例：万以内数的认识整体是二年级，但「100 以内数的认识」是一年级内容。
+     */
+    private val anchorGradeOverride: Map<String, Int> = mapOf(
+        "g1-num-100" to 1,
+        "g2-length-unit" to 2,
+        "g2-mass-unit" to 2,
+        "g2-angle" to 2,
+        "g2-symmetry-move" to 2,
+        "g2-data-collect" to 2,
+        "chinese-reading-main-idea" to 2,
+        "g2-reading-detail" to 2,
+        "g2-writing-sentence" to 2
+    )
+
+    /** 锚点所属年级：幼儿园 0，一年级 1，二年级 2 */
+    fun gradeOf(code: String): Int {
+        anchorGradeOverride[code]?.let { return it }
+        val anchor = byCode(code) ?: return 0
+        return topics.firstOrNull { it.code == anchor.topic }?.grade ?: 0
+    }
+
+    /** 某学段某年级的必修锚点 */
+    fun requiredAnchorsOfGrade(stage: String, grade: Int): List<AnchorDef> =
+        forStage(stage).filter { it.required && gradeOf(it.code) == grade }
+
+    /** 某学段的全部年级（升序） */
+    fun gradesOf(stage: String): List<Int> =
+        forStage(stage).map { gradeOf(it.code) }.distinct().sorted()
 
     fun topicOf(anchorCode: String): TopicDef? =
         byCode(anchorCode)?.let { a -> topics.firstOrNull { it.code == a.topic } }

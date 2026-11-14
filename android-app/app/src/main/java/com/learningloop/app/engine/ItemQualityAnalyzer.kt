@@ -9,15 +9,19 @@ import com.learningloop.app.data.entity.Question
  * 题目质量诊断：把作答证据反过来用于校准题库。
  *
  * 判据只依赖可观测的统计量，不做任何猜测：
- *  - 正确率 ≥ 95% 且样本 ≥ 3：太简单，升级层级或停用
- *  - 正确率 ≤ 25% 且样本 ≥ 3：太难，或题干/答案有误
- *  - 秒答占比过半：疑似背答案或选项可排除
+ *  - 正确率 ≥ 95% 且样本 ≥ 15：太简单，升级层级或停用
+ *  - 正确率 ≤ 15% 且样本 ≥ 15：太难，或题干 / 答案有误，组卷时排除
+ *  - 秒答占比 ≥ 60%：疑似背答案或选项可排除，组卷时排除
  *
  * 数据不足时不下结论，避免小样本误导家长。
  */
 object ItemQualityAnalyzer {
 
-    const val MIN_ATTEMPTS = 3
+    const val MIN_ATTEMPTS = 15
+
+    const val STATE_TOO_EASY = "TOO_EASY"
+    const val STATE_TOO_HARD = "TOO_HARD"
+    const val STATE_FAST_GUESS = "FAST_GUESS"
 
     enum class Issue { NONE, TOO_EASY, TOO_HARD, FAST_GUESS }
 
@@ -35,8 +39,8 @@ object ItemQualityAnalyzer {
         val issue: Issue = when {
             attempts < MIN_ATTEMPTS -> Issue.NONE
             accuracy >= 95 -> Issue.TOO_EASY
-            accuracy <= 25 -> Issue.TOO_HARD
-            fastGuesses * 2 >= attempts -> Issue.FAST_GUESS
+            accuracy <= 15 -> Issue.TOO_HARD
+            fastGuesses * 100 / attempts >= 60 -> Issue.FAST_GUESS
             else -> Issue.NONE
         }
 
@@ -86,4 +90,24 @@ object ItemQualityAnalyzer {
         "q=${agg.questionId} n=${agg.attempts} acc=${agg.correct}/${agg.attempts} " +
             "avg=${agg.avgDurationMs}ms fast=${agg.fastGuesses} " +
             "switches=${agg.optionSwitches} changes=${agg.answerChanges}"
+
+    /**
+     * 把质量结论写回题库：TOO_HARD / FAST_GUESS 会从组卷池中排除。
+     *
+     * 家长可关闭自动排除——关闭后只清空结论，不改题目启停；
+     * 样本不足的题保持原样，不因小样本误伤。
+     */
+    suspend fun refreshStates(
+        questionDao: QuestionDao,
+        recordDao: LearningRecordDao,
+        userId: Long,
+        autoExclude: Boolean
+    ) {
+        questionDao.clearQualityStates()
+        if (!autoExclude) return
+        val now = System.currentTimeMillis()
+        analyze(questionDao, recordDao, userId)
+            .filter { it.attempts >= MIN_ATTEMPTS && it.issue != Issue.NONE }
+            .forEach { questionDao.setQualityState(it.question.id, it.issue.name, now) }
+    }
 }

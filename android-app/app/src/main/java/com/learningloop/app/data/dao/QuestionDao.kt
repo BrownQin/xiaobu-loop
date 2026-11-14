@@ -52,12 +52,6 @@ interface QuestionDao {
     )
     suspend fun randomByKpStage(kp: String, stage: String, limit: Int): List<Question>
 
-    @Query("SELECT * FROM question WHERE subject = :subject AND knowledge_point IN (:knowledgePoints) AND enabled = 1")
-    suspend fun listBySubjectAndKnowledgePoints(
-        subject: String,
-        knowledgePoints: List<String>
-    ): List<Question>
-
     @Query("SELECT * FROM question WHERE knowledge_point = :kp AND difficulty BETWEEN :minDiff AND :maxDiff AND enabled = 1")
     suspend fun listByKnowledgePointAndDifficulty(
         kp: String,
@@ -85,6 +79,13 @@ interface QuestionDao {
     @Query("UPDATE question SET enabled = :enabled, updated_at = :now WHERE id = :id")
     suspend fun setEnabled(id: Long, enabled: Boolean, now: Long)
 
+    /** 写入自动质量结论（空串表示恢复正常） */
+    @Query("UPDATE question SET quality_state = :state, updated_at = :now WHERE id = :id")
+    suspend fun setQualityState(id: Long, state: String, now: Long)
+
+    @Query("UPDATE question SET quality_state = '' WHERE quality_state != ''")
+    suspend fun clearQualityStates()
+
     @Query("DELETE FROM question WHERE id = :id")
     suspend fun deleteById(id: Long)
 
@@ -94,22 +95,32 @@ interface QuestionDao {
     @Query("SELECT COUNT(*) FROM question WHERE enabled = 1")
     suspend fun countEnabled(): Int
 
-    /** 按锚点 + 认知层级取启用题目 */
-    @Query("SELECT * FROM question WHERE anchor_code = :code AND cognitive_level = :level AND enabled = 1")
+    /** 按锚点 + 认知层级取启用题目（自动排除质量异常的题） */
+    @Query(
+        "SELECT * FROM question WHERE anchor_code = :code AND cognitive_level = :level " +
+            "AND enabled = 1 AND quality_state NOT IN ('TOO_HARD','FAST_GUESS')"
+    )
     suspend fun listByAnchorLevel(code: String, level: String): List<Question>
 
     /** 按锚点 + 层级 + 学段取题：幼儿园与小学的锚点题互不串场 */
     @Query(
         "SELECT * FROM question WHERE anchor_code = :code AND cognitive_level = :level " +
-            "AND stage = :stage AND enabled = 1"
+            "AND stage = :stage AND enabled = 1 " +
+            "AND quality_state NOT IN ('TOO_HARD','FAST_GUESS')"
     )
     suspend fun listByAnchorLevelStage(code: String, level: String, stage: String): List<Question>
 
     /** 某锚点下全部已标注题目，用于无题时降级 */
-    @Query("SELECT * FROM question WHERE anchor_code = :code AND enabled = 1")
+    @Query(
+        "SELECT * FROM question WHERE anchor_code = :code AND enabled = 1 " +
+            "AND quality_state NOT IN ('TOO_HARD','FAST_GUESS')"
+    )
     suspend fun listByAnchor(code: String): List<Question>
 
-    @Query("SELECT * FROM question WHERE anchor_code = :code AND stage = :stage AND enabled = 1")
+    @Query(
+        "SELECT * FROM question WHERE anchor_code = :code AND stage = :stage AND enabled = 1 " +
+            "AND quality_state NOT IN ('TOO_HARD','FAST_GUESS')"
+    )
     suspend fun listByAnchorStage(code: String, stage: String): List<Question>
 
     /** 尚未标注锚点的内置题，用于老用户数据回填 */

@@ -27,6 +27,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.learningloop.app.data.GradeLadder
 import com.learningloop.app.ui.theme.LearningColors
 
 /**
@@ -42,6 +43,8 @@ fun QuizSummaryScreen(
     total: Int,
     correct: Int,
     earnedPoints: Long,
+    /** 摸底测评结束时展示年级阶梯结论；普通练习为 null */
+    ladder: GradeLadder.Status? = null,
     onRetry: () -> Unit = {},
     onHome: () -> Unit = {}
 ) {
@@ -119,6 +122,45 @@ fun QuizSummaryScreen(
             textAlign = TextAlign.Center,
             color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.75f)
         )
+
+        ladder?.let { status ->
+            Spacer(Modifier.height(18.dp))
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(18.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = LearningColors.CorrectGreen.copy(alpha = 0.12f)
+                )
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(
+                        "🗺 本次测评结论",
+                        fontSize = 13.sp,
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f)
+                    )
+                    Text(
+                        status.headline,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                    if (status.grades.isNotEmpty()) {
+                        Text(
+                            status.grades.joinToString(" · ") {
+                                "${it.label} ${it.solid}/${it.requiredTotal}"
+                            },
+                            fontSize = 12.sp,
+                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.65f)
+                        )
+                    }
+                    Spacer(Modifier.height(6.dp))
+                    Text(
+                        status.suggestion,
+                        fontSize = 13.sp,
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.8f)
+                    )
+                }
+            }
+        }
 
         Spacer(Modifier.height(28.dp))
 

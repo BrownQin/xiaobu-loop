@@ -58,11 +58,16 @@ fun ChildHomeScreen(
     wrongCount: Int = 2,
     stage: String = Stage.PRIMARY_LOW,
     todayPlan: LoopPlan? = null,
+    /** 年级阶梯结论，如「已达到一年级水平」 */
+    levelText: String? = null,
+    /** 还没做过题时，首页先引导一次 12 题摸底测评 */
+    showDiagnosticEntry: Boolean = false,
     children: List<ChildProfile> = emptyList(),
     activeId: Long = 0L,
     onSelectChild: (Long) -> Unit = {},
     onStartQuiz: (String?) -> Unit = {},
     onStartToday: () -> Unit = {},
+    onStartDiagnostic: () -> Unit = {},
     onOpenWrongBook: () -> Unit = {},
     onOpenReward: () -> Unit = {},
     onOpenAbout: () -> Unit = {},
@@ -115,7 +120,10 @@ fun ChildHomeScreen(
                         fontWeight = FontWeight.Bold
                     )
                     Text(
-                        text = "等级 $level · 今日也要加油哦",
+                        text = listOfNotNull(
+                            "等级 $level",
+                            levelText?.takeIf { it.isNotBlank() }
+                        ).joinToString(" · ") + " · 今日也要加油哦",
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
                     )
@@ -152,6 +160,32 @@ fun ChildHomeScreen(
                         )
                     }
                     Text("去兑换 →", fontSize = 13.sp, color = LearningColors.PrimaryLight)
+                }
+            }
+
+            // 新孩子先做一次 12 题摸底测评：不分年级题库，用测评找到起点
+            if (showDiagnosticEntry) {
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { onStartDiagnostic() },
+                    colors = CardDefaults.cardColors(
+                        containerColor = LearningColors.CorrectGreen.copy(alpha = 0.14f)
+                    ),
+                    shape = RoundedCornerShape(18.dp)
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(
+                            "🗺 先做一次小测评",
+                            fontSize = 17.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            "12 道题，大概 5 分钟。摸清你在哪个水平，之后只练刚好不会太难的内容。",
+                            fontSize = 12.sp,
+                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
+                        )
+                    }
                 }
             }
 

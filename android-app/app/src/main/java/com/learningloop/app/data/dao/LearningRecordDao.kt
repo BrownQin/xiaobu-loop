@@ -29,6 +29,10 @@ interface LearningRecordDao {
     @Query("SELECT * FROM learning_record")
     suspend fun dumpAll(): List<LearningRecord>
 
+    /** 当前孩子是否已经做过题：用于判断要不要先做摸底测评 */
+    @Query("SELECT COUNT(*) FROM learning_record WHERE user_id = :userId")
+    suspend fun countByUser(userId: Long): Int
+
     /** 最近 N 条该认知层级的耗时，用于计算个性化答题基线 */
     @Query(
         "SELECT duration_ms FROM learning_record WHERE user_id = :userId " +

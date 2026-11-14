@@ -62,7 +62,7 @@ class QuestionQualityRenderTest {
                     stage = Stage.KG
                 )
             )
-            repeat(3) {
+            repeat(15) {
                 database.learningRecordDao().insert(
                     LearningRecord(
                         userId = 1L,

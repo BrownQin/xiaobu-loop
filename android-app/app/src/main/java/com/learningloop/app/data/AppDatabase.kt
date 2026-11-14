@@ -34,6 +34,7 @@ import com.learningloop.app.data.entity.WrongAnswer
  *  - v5：question / child_profile 增加 stage（幼儿园 / 小学低年级，按孩子自动切题库）
  *  - v6：积分改为「颗星」小单位，历史积分清零，奖励定价按 1/100 折算
  *  - v7：learning_record 增加改答 / 切换选项次数（证据链）
+ *  - v8：question 增加 quality_state（自动质量结论，偏难 / 秒答题不进组卷）
  */
 @Database(
     entities = [
@@ -46,7 +47,7 @@ import com.learningloop.app.data.entity.WrongAnswer
         RewardItem::class,
         AnchorState::class
     ],
-    version = 7,
+    version = 8,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -163,6 +164,15 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        /** v7 → v8：题目自动质量结论，供组卷时排除偏难 / 秒答题 */
+        private val MIGRATION_7_8 = object : Migration(7, 8) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    "ALTER TABLE `question` ADD COLUMN `quality_state` TEXT NOT NULL DEFAULT ''"
+                )
+            }
+        }
+
         fun getInstance(context: Context): AppDatabase =
             INSTANCE ?: synchronized(this) {
                 INSTANCE ?: Room.databaseBuilder(
@@ -172,7 +182,7 @@ abstract class AppDatabase : RoomDatabase() {
                 )
                     .addMigrations(
                         MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4,
-                        MIGRATION_4_5, MIGRATION_5_6, MIGRATION_6_7
+                        MIGRATION_4_5, MIGRATION_5_6, MIGRATION_6_7, MIGRATION_7_8
                     )
                     .build()
                     .also { INSTANCE = it }

@@ -33,6 +33,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.learningloop.app.data.AnchorCatalog
+import com.learningloop.app.data.GradeLadder
+import com.learningloop.app.data.Stage
 import com.learningloop.app.data.entity.AnchorState
 import com.learningloop.app.data.entity.Question
 import com.learningloop.app.engine.GrowthCurveAnalyzer
@@ -62,6 +64,8 @@ fun ParentDashboardScreen(
     weeklySummary: List<WeeklySummary> = emptyList(),
     suggestion: String? = null,
     anchorStates: List<AnchorState> = emptyList(),
+    stage: String = Stage.PRIMARY_LOW,
+    ladder: GradeLadder.Status? = null,
     onBack: () -> Unit = {}
 ) {
     Column(
@@ -93,10 +97,44 @@ fun ParentDashboardScreen(
             }
         }
 
+        // 当前水平：不分年级题库，用阶梯说明孩子到哪一步了
+        ladder?.let { status ->
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(18.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = LearningColors.CorrectGreen.copy(alpha = 0.12f)
+                )
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(
+                        "当前水平",
+                        fontSize = 12.sp,
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.55f)
+                    )
+                    Text(status.headline, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                    status.grades.forEach { g ->
+                        Text(
+                            "${g.label}必修锚点：${g.solid}/${g.requiredTotal}" +
+                                if (g.achieved) " · 已达标" else " · 进行中",
+                            fontSize = 13.sp,
+                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
+                        )
+                    }
+                    Spacer(Modifier.height(6.dp))
+                    Text(
+                        status.suggestion,
+                        fontSize = 12.sp,
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.75f)
+                    )
+                }
+            }
+        }
+
         // 能力地图：主题概览 → 点开看锚点 × 三层
         if (anchorStates.isNotEmpty()) {
             SectionHeader("🧭 能力地图")
-            TopicMap(anchorStates)
+            TopicMap(anchorStates, stage)
         }
 
         // 薄弱点雷达（MVP 简化：Top 6 知识点掌握度条形列表）
@@ -164,7 +202,7 @@ private fun SectionHeader(text: String) {
  * 不暴露小数概率，只给「已稳固 / 攻坚中 / 未触发」三档。
  */
 @Composable
-private fun TopicMap(states: List<AnchorState>) {
+private fun TopicMap(states: List<AnchorState>, stage: String) {
     var expandedTopic by remember { mutableStateOf<String?>(null) }
     val byAnchor = states.groupBy { it.anchorCode }
 
@@ -202,7 +240,8 @@ private fun TopicMap(states: List<AnchorState>) {
                     Column(modifier = Modifier.weight(1f)) {
                         Text(topic.name, fontSize = 15.sp, fontWeight = FontWeight.Medium)
                         Text(
-                            "必修 $requiredSolid/${required.size} · 已稳固 $solid/${anchors.size} · ${topic.domain}",
+                            "必修 $requiredSolid/${required.size} · 已稳固 $solid/${anchors.size} · " +
+                                "${topic.domain} · ${gradeLabel(stage, topic.grade)}",
                             fontSize = 11.sp,
                             color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f)
                         )
@@ -296,6 +335,9 @@ private fun statusColor(status: String): Color = when (status) {
     AnchorState.STATUS_IN_PROGRESS -> LearningColors.AccentStar
     else -> Color(0xFFBDBDBD)
 }
+
+private fun gradeLabel(stage: String, grade: Int): String =
+    if (stage == Stage.KG) "幼儿园" else if (grade >= 2) "二年级" else "一年级"
 
 private fun gapHint(anchorName: String, level: String): String = when (level) {
     Question.LEVEL_MEMORY -> "$anchorName 的记忆层还没打通，先从认读和基础计算起步"

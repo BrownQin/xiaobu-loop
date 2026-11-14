@@ -13,6 +13,7 @@ def add(codes, subj, stage):
 add("kg-count-10 kg-num-compare kg-num-compose kg-classify-compare kg-add-10 kg-sub-10 kg-add-sub-10 kg-shape-space kg-position kg-pattern kg-size kg-mass kg-time-day kg-money-awareness".split(), "math", "KG")
 add("kg-pinyin-entry kg-pinyin-initial kg-pinyin-final kg-pinyin-tone kg-pinyin-blend kg-char-recognize kg-char-stroke kg-word-meaning kg-listen-express kg-speak-sentence kg-story-picture".split(), "chinese", "KG")
 add("math-add-carry math-sub-borrow g2-addsub-mixed g2-addsub-word math-mul-meaning math-mul-table g2-mul-word g2-div-meaning g2-div-table g2-div-remainder g2-num-readwrite g2-num-compare g2-num-placevalue g2-length-unit g2-mass-unit g2-time-clock g2-money g2-shape-recognize g2-angle g2-symmetry-move g2-data-collect g2-pattern".split(), "math", "PRIMARY_LOW")
+add("g1-addsub-20 g1-addsub-word g1-num-100 g1-shape-classify g1-clock g1-money".split(), "math", "PRIMARY_LOW")
 add("chinese-pinyin-polyphone g2-pinyin-similar g2-char-recognize g2-char-form g2-word-accumulate chinese-reading-main-idea g2-reading-detail g2-writing-sentence".split(), "chinese", "PRIMARY_LOW")
 
 LEVELS = {"MEMORY","UNDERSTANDING","APPLICATION"}
