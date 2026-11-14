@@ -53,6 +53,7 @@ import com.learningloop.app.data.ParentPinStore
 import com.learningloop.app.data.QualitySettings
 import com.learningloop.app.data.QuestionCsv
 import com.learningloop.app.data.Stage
+import com.learningloop.app.data.TelemetryStore
 import com.learningloop.app.data.entity.AnchorState
 import com.learningloop.app.data.entity.ChildProfile
 import com.learningloop.app.data.entity.LearningRecord
@@ -68,6 +69,7 @@ import com.learningloop.app.engine.ItemQualityAnalyzer
 import com.learningloop.app.engine.LoopPlan
 import com.learningloop.app.engine.PointIncentiveEngine
 import com.learningloop.app.engine.SignalAnalyzer
+import com.learningloop.app.engine.TelemetryReporter
 import com.learningloop.app.engine.Verdict
 import com.learningloop.app.engine.WrongQuestionLoop
 import com.learningloop.app.llm.LLMClient
@@ -84,6 +86,7 @@ import com.learningloop.app.ui.parent.AdjustPointsScreen
 import com.learningloop.app.ui.parent.ManageScreen
 import com.learningloop.app.ui.parent.ParentDashboardScreen
 import com.learningloop.app.ui.parent.ParentPinScreen
+import com.learningloop.app.ui.parent.PrivacyScreen
 import com.learningloop.app.ui.parent.QuestionManageScreen
 import com.learningloop.app.ui.parent.QuestionQualityScreen
 import com.learningloop.app.ui.parent.RewardManageScreen
@@ -176,6 +179,7 @@ sealed class Screen {
     data object VersionHistory : Screen()
     data object About : Screen()
     data object QuestionQuality : Screen()
+    data object Privacy : Screen()
 }
 
 // ==================== ViewModel ====================
@@ -242,6 +246,10 @@ class LearningViewModel : ViewModel() {
     private val _hasAnyRecord = MutableStateFlow(false)
     val hasAnyRecord: StateFlow<Boolean> = _hasAnyRecord.asStateFlow()
 
+    /** 匿名使用统计开关，家长可在管理页关闭 */
+    private val _telemetryEnabled = MutableStateFlow(true)
+    val telemetryEnabled: StateFlow<Boolean> = _telemetryEnabled.asStateFlow()
+
     private val _wrongCount = MutableStateFlow(0)
     val wrongCount: StateFlow<Int> = _wrongCount.asStateFlow()
 
@@ -258,6 +266,13 @@ class LearningViewModel : ViewModel() {
     private var parentVerified = false
     private var pendingParentScreen: Screen = Screen.ParentDashboard
 
+    /** 从隐私政策页返回时回到哪里（管理页或关于页） */
+    private var privacyReturn: Screen = Screen.Manage
+
+    /** 匿名统计上报器与启动事件去重标记 */
+    private var telemetry: TelemetryReporter? = null
+    private var telemetryStarted = false
+
     // ---------- 初始化 ----------
 
     fun init(db: AppDatabase, llm: LLMClient, store: ActiveChildStore, context: Context? = null) {
@@ -266,6 +281,7 @@ class LearningViewModel : ViewModel() {
         this.store = store
         this.appContext = context
         _activeId.value = store.activeChildId
+        _telemetryEnabled.value = context?.let { TelemetryStore.enabled(it) } ?: true
 
         viewModelScope.launch {
             db.questionDao().observeAll().collect { _allQuestions.value = it }
@@ -281,6 +297,7 @@ class LearningViewModel : ViewModel() {
                 syncProfile()
                 refreshWrongCount()
                 refreshAnchorData()
+                maybeStartTelemetry()
             }
         }
         viewModelScope.launch {
@@ -333,6 +350,34 @@ class LearningViewModel : ViewModel() {
                     d.questionDao(), d.learningRecordDao(), uid, autoExclude
                 )
             }
+        }
+    }
+
+    // ---------- 匿名统计 ----------
+
+    /** 首次拿到孩子档案后再记启动事件，保证学段字段准确 */
+    private fun maybeStartTelemetry() {
+        if (telemetryStarted) return
+        val ctx = appContext ?: return
+        val d = dbInstance ?: return
+        if (_children.value.isEmpty()) return
+        telemetryStarted = true
+        val reporter = telemetry ?: TelemetryReporter(d, ctx).also { telemetry = it }
+        viewModelScope.launch {
+            val stage = currentStage()
+            if (TelemetryStore.markActivatedOnce(ctx)) reporter.record("activate", stage)
+            if (TelemetryStore.markDayOpenOnce(ctx)) reporter.record("day_open", stage)
+            reporter.flush()
+        }
+    }
+
+    fun setTelemetryEnabled(enabled: Boolean) {
+        val ctx = appContext ?: return
+        TelemetryStore.setEnabled(ctx, enabled)
+        _telemetryEnabled.value = enabled
+        val d = dbInstance ?: return
+        if (!enabled) {
+            viewModelScope.launch { withContext(Dispatchers.IO) { d.telemetryEventDao().clear() } }
         }
     }
 
@@ -632,6 +677,11 @@ class LearningViewModel : ViewModel() {
                 ladder = if (wasDiagnostic) ladder else null
             )
             quizMode = QuizMode.NORMAL
+            telemetry?.let { reporter ->
+                val event = if (wasDiagnostic) "diagnostic_done" else "quiz_done"
+                reporter.record(event, stage)
+                reporter.flush()
+            }
         }
     }
 
@@ -764,6 +814,16 @@ class LearningViewModel : ViewModel() {
         _screen.value = Screen.About
     }
 
+    /** 隐私政策对所有人开放，不额外要求家长密码 */
+    fun openPrivacy(fromAbout: Boolean = false) {
+        privacyReturn = if (fromAbout) Screen.About else Screen.Manage
+        _screen.value = Screen.Privacy
+    }
+
+    fun closePrivacy() {
+        _screen.value = privacyReturn
+    }
+
     fun showMessage(message: String) {
         _uiMessage.value = message
     }
@@ -835,6 +895,7 @@ fun AppRoot(vm: LearningViewModel, pinStore: ParentPinStore) {
     val anchorStates by vm.anchorStates.collectAsState()
     val ladder by vm.ladder.collectAsState()
     val hasAnyRecord by vm.hasAnyRecord.collectAsState()
+    val telemetryEnabled by vm.telemetryEnabled.collectAsState()
 
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
@@ -931,6 +992,7 @@ fun AppRoot(vm: LearningViewModel, pinStore: ParentPinStore) {
             is Screen.QuestionManage, is Screen.Backup,
             is Screen.QuestionQuality, is Screen.VersionHistory -> vm.openParent()
             is Screen.About -> vm.goHome()
+            is Screen.Privacy -> vm.closePrivacy()
             is Screen.Summary -> vm.goHome()
             is Screen.ParentPinSet -> vm.openChildManage()
             else -> vm.goHome()
@@ -1027,6 +1089,9 @@ fun AppRoot(vm: LearningViewModel, pinStore: ParentPinStore) {
             onExportLog = { diagnosticsExportLauncher.launch(DiagnosticsExporter.fileName()) },
             onOpenVersions = { vm.openVersionHistory() },
             onOpenAbout = { vm.openAbout() },
+            telemetryEnabled = telemetryEnabled,
+            onToggleTelemetry = { vm.setTelemetryEnabled(it) },
+            onOpenPrivacy = { vm.openPrivacy(fromAbout = false) },
             onBack = { vm.goHome() }
         )
 
@@ -1065,7 +1130,12 @@ fun AppRoot(vm: LearningViewModel, pinStore: ParentPinStore) {
         }
 
         is Screen.About -> AboutScreen(
-            onBack = { vm.goHome() }
+            onBack = { vm.goHome() },
+            onOpenPrivacy = { vm.openPrivacy(fromAbout = true) }
+        )
+
+        is Screen.Privacy -> PrivacyScreen(
+            onBack = { vm.closePrivacy() }
         )
 
         is Screen.ChildProfileEdit -> ChildProfileEditScreen(

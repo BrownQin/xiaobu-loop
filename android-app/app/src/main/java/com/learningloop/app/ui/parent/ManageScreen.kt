@@ -18,6 +18,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -53,6 +54,9 @@ fun ManageScreen(
     onExportLog: () -> Unit = {},
     onOpenVersions: () -> Unit = {},
     onOpenAbout: () -> Unit = {},
+    telemetryEnabled: Boolean = true,
+    onToggleTelemetry: (Boolean) -> Unit = {},
+    onOpenPrivacy: () -> Unit = {},
     onBack: () -> Unit = {}
 ) {
     Column(
@@ -84,6 +88,14 @@ fun ManageScreen(
         }
 
         ManageCard("说明") {
+            ManageItem("🔒", "隐私政策", "采集什么、不采集什么、如何关闭", onOpenPrivacy)
+            ManageToggle(
+                emoji = "📶",
+                title = "匿名使用统计",
+                desc = "只报事件级数据，不含孩子与作答内容",
+                checked = telemetryEnabled,
+                onCheckedChange = onToggleTelemetry
+            )
             ManageItem("📋", "更新记录", "每个版本改了什么", onOpenVersions)
             ManageItem("ℹ️", "关于小步", "术语与设计原理", onOpenAbout)
         }
@@ -214,5 +226,33 @@ private fun ManageItem(emoji: String, title: String, desc: String, onClick: () -
             )
         }
         Text("›", fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.35f))
+    }
+}
+
+@Composable
+private fun ManageToggle(
+    emoji: String,
+    title: String,
+    desc: String,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Text(emoji, fontSize = 20.sp)
+        Column(modifier = Modifier.weight(1f)) {
+            Text(title, fontSize = 15.sp, fontWeight = FontWeight.Medium)
+            Text(
+                desc,
+                fontSize = 12.sp,
+                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.55f)
+            )
+        }
+        Switch(checked = checked, onCheckedChange = onCheckedChange)
     }
 }

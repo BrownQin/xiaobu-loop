@@ -15,6 +15,17 @@ object VersionHistory {
 
     val entries: List<VersionEntry> = listOf(
         VersionEntry(
+            version = "0.15.0",
+            date = "2026-11-14",
+            highlights = listOf(
+                "新增隐私政策：App 内可随时查看，说明采集什么、不采集什么",
+                "匿名使用统计：只上报事件级数据（启动、日打开、练习完成、测评完成）",
+                "统计不含孩子姓名、作答内容、题目内容与设备标识，默认开启可随手关闭",
+                "家长区新增「匿名使用统计」开关，关闭后清空待发送队列",
+                "统计端点由构建参数配置，未配置时 App 完全不发送数据"
+            )
+        ),
+        VersionEntry(
             version = "0.14.0",
             date = "2026-11-14",
             highlights = listOf(

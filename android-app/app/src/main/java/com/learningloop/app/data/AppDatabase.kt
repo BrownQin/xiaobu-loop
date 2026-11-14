@@ -13,6 +13,7 @@ import com.learningloop.app.data.dao.LearningRecordDao
 import com.learningloop.app.data.dao.PointLogDao
 import com.learningloop.app.data.dao.QuestionDao
 import com.learningloop.app.data.dao.RewardItemDao
+import com.learningloop.app.data.dao.TelemetryEventDao
 import com.learningloop.app.data.dao.WrongAnswerDao
 import com.learningloop.app.data.entity.AnchorState
 import com.learningloop.app.data.entity.ChildProfile
@@ -21,6 +22,7 @@ import com.learningloop.app.data.entity.LearningRecord
 import com.learningloop.app.data.entity.PointLog
 import com.learningloop.app.data.entity.Question
 import com.learningloop.app.data.entity.RewardItem
+import com.learningloop.app.data.entity.TelemetryEvent
 import com.learningloop.app.data.entity.WrongAnswer
 
 /**
@@ -35,6 +37,7 @@ import com.learningloop.app.data.entity.WrongAnswer
  *  - v6：积分改为「颗星」小单位，历史积分清零，奖励定价按 1/100 折算
  *  - v7：learning_record 增加改答 / 切换选项次数（证据链）
  *  - v8：question 增加 quality_state（自动质量结论，偏难 / 秒答题不进组卷）
+ *  - v9：新增 telemetry_event（匿名事件待发送队列，家长可关闭）
  */
 @Database(
     entities = [
@@ -45,9 +48,10 @@ import com.learningloop.app.data.entity.WrongAnswer
         PointLog::class,
         KnowledgeMastery::class,
         RewardItem::class,
-        AnchorState::class
+        AnchorState::class,
+        TelemetryEvent::class
     ],
-    version = 8,
+    version = 9,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -60,6 +64,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun knowledgeMasteryDao(): KnowledgeMasteryDao
     abstract fun rewardItemDao(): RewardItemDao
     abstract fun anchorStateDao(): AnchorStateDao
+    abstract fun telemetryEventDao(): TelemetryEventDao
 
     companion object {
         @Volatile private var INSTANCE: AppDatabase? = null
@@ -173,6 +178,27 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        /** v8 → v9：匿名事件待发送队列，只存事件级字段 */
+        private val MIGRATION_8_9 = object : Migration(8, 9) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    "CREATE TABLE IF NOT EXISTS `telemetry_event` (" +
+                        "`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                        "`event` TEXT NOT NULL, " +
+                        "`channel` TEXT NOT NULL, " +
+                        "`version` TEXT NOT NULL, " +
+                        "`stage` TEXT NOT NULL, " +
+                        "`created_at` INTEGER NOT NULL, " +
+                        "`sent_at` INTEGER NOT NULL, " +
+                        "`attempts` INTEGER NOT NULL)"
+                )
+                db.execSQL(
+                    "CREATE INDEX IF NOT EXISTS `idx_te_pending` " +
+                        "ON `telemetry_event` (`sent_at`, `attempts`)"
+                )
+            }
+        }
+
         fun getInstance(context: Context): AppDatabase =
             INSTANCE ?: synchronized(this) {
                 INSTANCE ?: Room.databaseBuilder(
@@ -182,7 +208,8 @@ abstract class AppDatabase : RoomDatabase() {
                 )
                     .addMigrations(
                         MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4,
-                        MIGRATION_4_5, MIGRATION_5_6, MIGRATION_6_7, MIGRATION_7_8
+                        MIGRATION_4_5, MIGRATION_5_6, MIGRATION_6_7, MIGRATION_7_8,
+                        MIGRATION_8_9
                     )
                     .build()
                     .also { INSTANCE = it }
