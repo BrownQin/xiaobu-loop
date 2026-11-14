@@ -1,0 +1,121 @@
+id,subject,knowledgePoint,difficulty,type,content,options,answer,explanation,tags,anchorCode,cognitiveLevel,variantType,enabled,stage
+,math,数学-10以内点数,1,choice,图上画了 6 个圆点，每个圆点表示 1 个气球，一共有几个气球？,A.5个|B.6个|C.7个,B,一个圆点数一下，数到 6 就是 6 个。,点数、数数,kg-count-10,MEMORY,DIAGRAM,1,KG
+,math,数学-10以内点数,1,choice,从 1 开始数：1、2、3、4、5、6、7，接着往下再数一个数是几？,A.6|B.8|C.9,B,数完 7 再数一个，就是 8。,点数、数数,kg-count-10,MEMORY,TEXT,1,KG
+,math,数学-10以内点数,2,choice,从 10 开始倒着数：10、9、8、7，接下来一个数是几？,A.6|B.5|C.9,A,倒着数，7 的前面是 6。,点数、数数,kg-count-10,MEMORY,TEXT,1,KG
+,math,数学-10以内点数,2,fill,有 5 个小朋友，每人发 1 块饼干，一共要准备几块饼干？,,5块,一人一块，5 个人就要 5 块。,点数、数数,kg-count-10,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-10以内点数,2,choice,小华把 8 颗扣子排成一排数，数出 8 颗。他把扣子挤在一起再数，会是几颗？,A.6颗|B.8颗|C.10颗,B,扣子没有多也没有少，还是 8 颗。,点数、数数,kg-count-10,UNDERSTANDING,TEXT,1,KG
+,math,数学-10以内点数,3,choice,小美从 1 数到 9，中间漏数了 5，她一共数出了几个数？,A.9个|B.8个|C.7个,B,漏掉一个，9 个数就只剩 8 个。,点数、数数,kg-count-10,UNDERSTANDING,TEXT,1,KG
+,math,数学-10以内点数,3,choice,妈妈让小宝拿 5 个鸡蛋，小宝只拿了 4 个，他还要再拿几个？,A.1个|B.2个|C.3个,A,5 个比 4 个多 1 个，还要拿 1 个。,点数、数数,kg-count-10,APPLICATION,CONTEXT,1,KG
+,math,数学-10以内点数,4,fill,盒子里有 8 块巧克力，小文一块一块数：1、2、3、4、5、6、7，他漏数了几块？,,1块,数到 7 就停了，8 块里漏了 1 块。,点数、数数,kg-count-10,APPLICATION,CONTEXT,1,KG
+,math,数学-10以内点数,4,fill,图中有 3 排小树，每排 3 棵，一共有几棵小树？,,9棵,一排 3 棵，3 排一共 9 棵。,点数、数数,kg-count-10,APPLICATION,DIAGRAM,1,KG
+,math,数学-10以内点数,3,choice,盘子里有 4 个橘子，又添上 1 个，算式 4+1 的得数是几？,A.4|B.5|C.6,B,4 再数一个就是 5。,点数、数数,kg-count-10,APPLICATION,EXPRESSION,1,KG
+,math,数学-比多少与大小,1,choice,数字 7 和 4 比，哪个数大？,A.7|B.4|C.一样大,A,7 比 4 多 3，7 更大。,比较、多少,kg-num-compare,MEMORY,TEXT,1,KG
+,math,数学-比多少与大小,1,choice,图上左边有 5 颗糖，右边有 3 颗糖，哪边多？,A.左边多|B.右边多|C.一样多,A,5 颗比 3 颗多。,比较、多少,kg-num-compare,MEMORY,DIAGRAM,1,KG
+,math,数学-比多少与大小,1,choice,数字 6 和 6 比，谁大？,A.前面的大|B.后面的大|C.一样大,C,两个都是 6，一样大。,比较、多少,kg-num-compare,MEMORY,TEXT,1,KG
+,math,数学-比多少与大小,2,choice,小明有 8 块积木，小红有 5 块积木，小明比小红多几块？,A.2块|B.3块|C.4块,B,8 比 5 多 3 块。,比较、多少,kg-num-compare,UNDERSTANDING,TEXT,1,KG
+,math,数学-比多少与大小,2,choice,图中第一排 6 个杯子，第二排 6 个杯垫，一个杯子对一个杯垫，谁多？,A.杯子多|B.杯垫多|C.一样多,C,一个一个对整齐，没有多也没有少。,比较、多少,kg-num-compare,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-比多少与大小,3,choice,小刚说：8 比 10 大。他说得对吗？,A.对|B.不对，8 比 10 小|C.两个数一样,B,10 在 8 的后面，10 更大。,比较、多少,kg-num-compare,UNDERSTANDING,TEXT,1,KG
+,math,数学-比多少与大小,3,choice,幼儿园有 9 个男孩和 7 个女孩，男孩比女孩多几个？,A.1个|B.2个|C.3个,B,9 比 7 多 2 个。,比较、多少,kg-num-compare,APPLICATION,CONTEXT,1,KG
+,math,数学-比多少与大小,3,choice,吃饭时摆了 6 把椅子，来了 8 个人，椅子够不够？,A.够，还多2把|B.不够，还差2把|C.正好够,B,8 个人比 6 把椅子多 2，还差 2 把。,比较、多少,kg-num-compare,APPLICATION,CONTEXT,1,KG
+,math,数学-比多少与大小,4,fill,图中小兔有 4 只，萝卜有 6 根，每只小兔吃 1 根，还剩几根萝卜？,,2根,4 只吃 4 根，6 根还剩下 2 根。,比较、多少,kg-num-compare,APPLICATION,DIAGRAM,1,KG
+,math,数学-比多少与大小,3,choice,要算 8 比 5 多几，用哪个算式？,A.8+5|B.8-5|C.5-8,B,比多比少，用大的数减小的数。,比较、多少,kg-num-compare,APPLICATION,EXPRESSION,1,KG
+,math,数学-数的分与合,1,fill,5 可以分成 2 和几？,,3,2 和 3 合起来是 5。,分与合、组成,kg-num-compose,MEMORY,TEXT,1,KG
+,math,数学-数的分与合,1,choice,3 和 4 合起来是几？,A.6|B.7|C.8,B,3 再添 4 就是 7。,分与合、组成,kg-num-compose,MEMORY,TEXT,1,KG
+,math,数学-数的分与合,1,choice,算式 6-2=4 里，6 可以分成哪两个数？,A.2和4|B.3和3|C.1和5,A,6 去掉 2 剩 4，6 分成 2 和 4。,分与合、组成,kg-num-compose,MEMORY,EXPRESSION,1,KG
+,math,数学-数的分与合,2,choice,8 分成 5 和几？,A.2|B.3|C.4,B,5 再添 3 就是 8。,分与合、组成,kg-num-compose,UNDERSTANDING,TEXT,1,KG
+,math,数学-数的分与合,2,choice,10 个苹果放进两个盘子，一个盘子放 6 个，另一个盘子放几个？,A.3个|B.4个|C.5个,B,6 和 4 合起来是 10。,分与合、组成,kg-num-compose,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-数的分与合,3,choice,图中 7 颗星星分成两堆，一堆 3 颗，另一堆几颗？,A.3颗|B.4颗|C.5颗,B,3 和 4 合起来是 7。,分与合、组成,kg-num-compose,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-数的分与合,3,fill,小红有 4 颗糖，小明有 4 颗糖，两个人一共有几颗糖？,,8颗,4 和 4 合起来是 8。,分与合、组成,kg-num-compose,APPLICATION,CONTEXT,1,KG
+,math,数学-数的分与合,3,choice,老师把 9 块橡皮分给两人，一人分 4 块，另一人分几块？,A.4块|B.5块|C.6块,B,9 分成 4 和 5。,分与合、组成,kg-num-compose,APPLICATION,CONTEXT,1,KG
+,math,数学-数的分与合,4,choice,一个数可以分成 3 和 6，这个数是几？,A.8|B.9|C.10,B,3 和 6 合起来是 9。,分与合、组成,kg-num-compose,APPLICATION,TEXT,1,KG
+,math,数学-数的分与合,3,choice,哪个算式表示 5 和 4 合起来？,A.5-4=1|B.5+4=9|C.9-5=4,B,合起来要用加法，5 加 4 得 9。,分与合、组成,kg-num-compose,APPLICATION,EXPRESSION,1,KG
+,math,数学-分类与排序,1,choice,图中有苹果、香蕉和皮球，哪个和其他两个不是一类？,A.苹果|B.香蕉|C.皮球,C,苹果和香蕉是水果，皮球是玩具。,分类、排序,kg-classify-compare,MEMORY,DIAGRAM,1,KG
+,math,数学-分类与排序,1,choice,下面哪个是交通工具？,A.小狗|B.公交车|C.苹果,B,公交车能载着人走路。,分类、排序,kg-classify-compare,MEMORY,TEXT,1,KG
+,math,数学-分类与排序,1,choice,图中有红圆、红方块、蓝圆和红三角，哪个颜色和大家不一样？,A.红圆|B.蓝圆|C.红三角,B,只有它是蓝色的。,分类、排序,kg-classify-compare,MEMORY,DIAGRAM,1,KG
+,math,数学-分类与排序,2,choice,把铅笔、橡皮、尺子放在一起，它们都属于什么？,A.玩具|B.文具|C.水果,B,写字画画用的东西都是文具。,分类、排序,kg-classify-compare,UNDERSTANDING,TEXT,1,KG
+,math,数学-分类与排序,2,choice,妈妈把袜子、帽子、手套放在一个柜子里，它们是按什么分在一起的？,A.都是穿的|B.都是吃的|C.都是圆的,A,它们都是穿在身上的东西。,分类、排序,kg-classify-compare,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-分类与排序,3,choice,红红把苹果和橘子放一起，把青菜和萝卜放一起，她一共分成了几类？,A.一类|B.两类|C.三类,B,水果一类，蔬菜一类。,分类、排序,kg-classify-compare,UNDERSTANDING,TEXT,1,KG
+,math,数学-分类与排序,3,choice,小朋友按从矮到高排队，小华最矮，小刚最高，小美在中间，谁排第一？,A.小华|B.小美|C.小刚,A,从矮到高排，最矮的小华站第一。,分类、排序,kg-classify-compare,APPLICATION,CONTEXT,1,KG
+,math,数学-分类与排序,3,fill,盘子里有 2 个苹果、3 根香蕉、4 颗葡萄，一共有几种水果？,,3种,按种类数，一共 3 种。,分类、排序,kg-classify-compare,APPLICATION,CONTEXT,1,KG
+,math,数学-分类与排序,4,choice,图中三根纸条，红纸条最长，黄纸条最短，蓝纸条在中间，哪根排第二？,A.红纸条|B.蓝纸条|C.黄纸条,B,从长到短排，中间的蓝纸条排第二。,分类、排序,kg-classify-compare,APPLICATION,DIAGRAM,1,KG
+,math,数学-分类与排序,4,choice,小花要把 4 只小鸭、2 只小鸡、3 条小鱼分成会游泳和不会游泳的两堆，怎么分？,A.小鸭和小鱼一堆，小鸡一堆|B.小鸭和小鸡一堆，小鱼一堆|C.三样都放一堆,A,小鸭和小鱼会游泳，小鸡不会。,分类、排序,kg-classify-compare,APPLICATION,TEXT,1,KG
+,math,数学-加法的意义,1,choice,盘子里有 2 个苹果，又放进 3 个，一共有几个？,A.4个|B.5个|C.6个,B,2 和 3 合起来是 5。,加法、合起来,kg-add-10,MEMORY,TEXT,1,KG
+,math,数学-加法的意义,1,fill,3+1=？,,4,3 再添上 1 就是 4。,加法、合起来,kg-add-10,MEMORY,EXPRESSION,1,KG
+,math,数学-加法的意义,1,choice,图中左边 4 朵红花，右边 2 朵黄花，花一共有几朵？,A.5朵|B.6朵|C.7朵,B,4 加 2 得 6。,加法、合起来,kg-add-10,MEMORY,DIAGRAM,1,KG
+,math,数学-加法的意义,2,choice,树上有 5 只小鸟，又飞来 4 只，现在树上有几只小鸟？,A.1只|B.8只|C.9只,C,5 和 4 合起来是 9。,加法、合起来,kg-add-10,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-加法的意义,2,choice,小明有 3 支铅笔，姐姐又给他 3 支，他一共有几支？,A.3支|B.6支|C.9支,B,3 加 3 得 6。,加法、合起来,kg-add-10,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-加法的意义,2,choice,哪个算式表示把 6 和 2 合起来？,A.6-2|B.6+2|C.2-6,B,合起来要用加法。,加法、合起来,kg-add-10,UNDERSTANDING,EXPRESSION,1,KG
+,math,数学-加法的意义,3,choice,公交车上原来有 6 个人，到站又上来 3 个人，现在车上有几个人？,A.3人|B.9人|C.10人,B,6 加 3 得 9。,加法、合起来,kg-add-10,APPLICATION,CONTEXT,1,KG
+,math,数学-加法的意义,4,fill,桌上有 4 个碗，妈妈又拿来 2 个碗和 1 双筷子，现在有几个碗？,,6个,筷子不是碗，只算 4 加 2 得 6。,加法、合起来,kg-add-10,APPLICATION,CONTEXT,1,KG
+,math,数学-加法的意义,3,choice,图中书架上层有 5 本书，下层有 4 本书，一共有几本书？,A.1本|B.9本|C.10本,B,5 加 4 得 9。,加法、合起来,kg-add-10,APPLICATION,DIAGRAM,1,KG
+,math,数学-加法的意义,4,choice,小华先折了 3 只纸鹤，又折了 4 只，最后再折 1 只，一共折了几只？,A.7只|B.8只|C.9只,B,3 加 4 得 7，再加 1 得 8。,加法、合起来,kg-add-10,APPLICATION,TEXT,1,KG
+,math,数学-减法的意义,1,choice,盘子里有 5 个橘子，吃掉 2 个，还剩几个？,A.2个|B.3个|C.4个,B,5 里去掉 2，还剩 3。,减法、剩下,kg-sub-10,MEMORY,TEXT,1,KG
+,math,数学-减法的意义,1,fill,7-3=？,,4,7 去掉 3 还剩 4。,减法、剩下,kg-sub-10,MEMORY,EXPRESSION,1,KG
+,math,数学-减法的意义,1,choice,图中有 6 只小兔，跑走 1 只，还剩几只？,A.5只|B.6只|C.7只,A,6 去掉 1 还剩 5。,减法、剩下,kg-sub-10,MEMORY,DIAGRAM,1,KG
+,math,数学-减法的意义,2,choice,树上有 8 个桃子，小猴摘走 3 个，树上还有几个？,A.4个|B.5个|C.6个,B,8 减 3 得 5。,减法、剩下,kg-sub-10,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-减法的意义,2,choice,盒子里有 9 块饼干，分给弟弟 4 块，还剩几块？,A.5块|B.6块|C.13块,A,9 减 4 得 5。,减法、剩下,kg-sub-10,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-减法的意义,3,choice,哪个算式表示从 8 里去掉 2？,A.8+2|B.8-2|C.2+8,B,去掉东西要用减法。,减法、剩下,kg-sub-10,UNDERSTANDING,EXPRESSION,1,KG
+,math,数学-减法的意义,3,choice,公交车上原来有 10 个人，到站下去 4 个人，车上还有几个人？,A.6人|B.7人|C.14人,A,10 减 4 得 6。,减法、剩下,kg-sub-10,APPLICATION,CONTEXT,1,KG
+,math,数学-减法的意义,4,fill,妈妈买了 7 个鸡蛋，早上用了 2 个，中午用了 1 个，还剩几个？,,4个,7 减 2 得 5，再减 1 得 4。,减法、剩下,kg-sub-10,APPLICATION,CONTEXT,1,KG
+,math,数学-减法的意义,3,choice,图中有 9 颗糖，圈走了 5 颗，剩下几颗？,A.4颗|B.5颗|C.6颗,A,9 减 5 得 4。,减法、剩下,kg-sub-10,APPLICATION,DIAGRAM,1,KG
+,math,数学-减法的意义,3,choice,小丽有 6 张彩纸，做手工全用完了，还剩几张？,A.0张|B.1张|C.6张,A,全部用完了，一张也不剩。,减法、剩下,kg-sub-10,APPLICATION,TEXT,1,KG
+,math,数学-10以内加减法,1,fill,2+5=？,,7,2 和 5 合起来是 7。,计算、口算,kg-add-sub-10,MEMORY,EXPRESSION,1,KG
+,math,数学-10以内加减法,1,fill,9-4=？,,5,9 去掉 4 还剩 5。,计算、口算,kg-add-sub-10,MEMORY,EXPRESSION,1,KG
+,math,数学-10以内加减法,1,choice,4 加 4 等于几？,A.6|B.7|C.8,C,4 和 4 合起来是 8。,计算、口算,kg-add-sub-10,MEMORY,TEXT,1,KG
+,math,数学-10以内加减法,2,choice,8-3 和 3+3 比，哪个得数大？,A.8-3|B.3+3|C.一样大,B,8 减 3 得 5，3 加 3 得 6。,计算、口算,kg-add-sub-10,UNDERSTANDING,EXPRESSION,1,KG
+,math,数学-10以内加减法,2,choice,小马虎算 6+1，得数是 5。他错在哪里？,A.该加却算成了减|B.数数漏了一个|C.他没有错,A,加 1 应该变大，得数应是 7。,计算、口算,kg-add-sub-10,UNDERSTANDING,TEXT,1,KG
+,math,数学-10以内加减法,3,choice,下面哪个算式的得数是 9？,A.10-2|B.5+4|C.8-1,B,5 加 4 得 9，另外两个得 8 和 7。,计算、口算,kg-add-sub-10,UNDERSTANDING,EXPRESSION,1,KG
+,math,数学-10以内加减法,3,fill,小红有 10 元，买本子用了 3 元，还剩下几元？,,7元,10 减 3 得 7。,计算、口算,kg-add-sub-10,APPLICATION,CONTEXT,1,KG
+,math,数学-10以内加减法,4,choice,篮子里有 6 个苹果，吃了一些后还剩 2 个，吃了几个？,A.3个|B.4个|C.8个,B,6 减 2 得 4，吃了 4 个。,计算、口算,kg-add-sub-10,APPLICATION,CONTEXT,1,KG
+,math,数学-10以内加减法,4,fill,小明先做了 3 道题，又做了 4 道题，一共做完了几道题？,,7道,3 加 4 得 7。,计算、口算,kg-add-sub-10,APPLICATION,TEXT,1,KG
+,math,数学-10以内加减法,4,choice,图中左边筐里有 6 个球，右边筐里有 3 个球，把右边的球全放进左边，左边有几个？,A.3个|B.9个|C.10个,B,6 加 3 得 9。,计算、口算,kg-add-sub-10,APPLICATION,DIAGRAM,1,KG
+,math,数学-认识图形,1,choice,皮球是什么形状的？,A.圆形|B.正方形|C.三角形,A,皮球圆圆的，能滚起来。,圆形、正方形、三角形,kg-shape-space,MEMORY,DIAGRAM,1,KG
+,math,数学-认识图形,1,choice,三角形有几个角？,A.2个|B.3个|C.4个,B,三角形有三个角三条边。,圆形、正方形、三角形,kg-shape-space,MEMORY,TEXT,1,KG
+,math,数学-认识图形,1,choice,正方形有几条边？,A.3条|B.4条|C.5条,B,正方形有四条一样长的边。,圆形、正方形、三角形,kg-shape-space,MEMORY,TEXT,1,KG
+,math,数学-认识图形,2,choice,图中有圆饼干、方手帕和三角尺，哪一个是正方形？,A.圆饼干|B.方手帕|C.三角尺,B,手帕的四条边一样长，是正方形。,圆形、正方形、三角形,kg-shape-space,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-认识图形,2,choice,车轮子做成圆形，为什么不做成正方形？,A.圆形会滚|B.圆形好看|C.正方形太重,A,圆形没有角，滚得动。,圆形、正方形、三角形,kg-shape-space,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-认识图形,3,choice,用 2 个一样大的三角形拼一拼，下面哪个图形拼不出来？,A.正方形|B.三角形|C.圆形,C,圆形没有角，三角形拼不出圆。,圆形、正方形、三角形,kg-shape-space,UNDERSTANDING,TEXT,1,KG
+,math,数学-认识图形,3,choice,教室里的钟面是什么形状的？,A.圆形|B.正方形|C.三角形,A,钟面圆圆的，是圆形。,圆形、正方形、三角形,kg-shape-space,APPLICATION,CONTEXT,1,KG
+,math,数学-认识图形,3,fill,图中有 3 个正方形和 2 个三角形，正方形比三角形多几个？,,1个,3 个比 2 个多 1 个。,圆形、正方形、三角形,kg-shape-space,APPLICATION,DIAGRAM,1,KG
+,math,数学-认识图形,4,choice,小红搭积木房子，屋顶是三角形，房身是正方形，一共用了几个图形？,A.1个|B.2个|C.3个,B,一个三角形和一个正方形，共 2 个。,圆形、正方形、三角形,kg-shape-space,APPLICATION,CONTEXT,1,KG
+,math,数学-认识图形,4,choice,下面哪种东西不是三角形的？,A.三明治|B.三角尺|C.硬币,C,硬币是圆形的。,圆形、正方形、三角形,kg-shape-space,APPLICATION,TEXT,1,KG
+,math,数学-方位与位置,1,choice,图中杯子放在桌子的上面，杯子在桌子的哪里？,A.上面|B.下面|C.旁边,A,杯子在桌面上面。,上下、前后、里外,kg-position,MEMORY,DIAGRAM,1,KG
+,math,数学-方位与位置,1,choice,小明的书包在椅子下面，书包在椅子的哪里？,A.上面|B.下面|C.前面,B,书包钻在椅子底下。,上下、前后、里外,kg-position,MEMORY,TEXT,1,KG
+,math,数学-方位与位置,1,choice,排队时小红站在小明的前面，小明在小红的哪里？,A.前面|B.后面|C.旁边,B,一个在前一个在后，正好反过来。,上下、前后、里外,kg-position,MEMORY,CONTEXT,1,KG
+,math,数学-方位与位置,2,choice,图中 3 本书叠在一起，红书在最上面，蓝书在最下面，黄书在哪里？,A.最上面|B.中间|C.最下面,B,黄书夹在红书和蓝书中间。,上下、前后、里外,kg-position,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-方位与位置,2,choice,老师把苹果放进盒子里，苹果在盒子的哪里？,A.里面|B.外面|C.上面,A,放进去就在盒子里面。,上下、前后、里外,kg-position,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-方位与位置,3,choice,小猫在桌子下面，小狗在桌子上面，谁在上面？,A.小猫|B.小狗|C.都在下面,B,小狗趴在桌面上。,上下、前后、里外,kg-position,UNDERSTANDING,TEXT,1,KG
+,math,数学-方位与位置,3,choice,小朋友手拉手，小刚的左边是小美，小美的右边是谁？,A.小刚|B.小丽|C.老师,A,两人挨着站，左右正好相反。,上下、前后、里外,kg-position,APPLICATION,CONTEXT,1,KG
+,math,数学-方位与位置,3,fill,图书角在教室的里面，操场在教室的外面，想跑步应该去哪里？,,操场,操场在外面，可以跑步。,上下、前后、里外,kg-position,APPLICATION,CONTEXT,1,KG
+,math,数学-方位与位置,4,choice,一栋楼有 3 层，小兰家住最上面一层，她家住第几层？,A.第一层|B.第二层|C.第三层,C,最上面一层就是第三层。,上下、前后、里外,kg-position,APPLICATION,DIAGRAM,1,KG
+,math,数学-方位与位置,4,choice,小朋友从前往后排队，小华是第 3 个，他前面有几个人？,A.2个|B.3个|C.4个,A,自己不算，前面还有 2 个人。,上下、前后、里外,kg-position,APPLICATION,TEXT,1,KG
+,math,数学-规律排序,1,choice,图中珠子按红、黄、红、黄排成一串，下一颗是什么颜色？,A.红色|B.黄色|C.蓝色,A,红黄一红一黄，接着排红色。,规律、ABAB,kg-pattern,MEMORY,DIAGRAM,1,KG
+,math,数学-规律排序,1,choice,图形按圆、方、圆、方排下去，接下来是哪个？,A.圆形|B.正方形|C.三角形,A,一圆一方轮着来，下一个是圆。,规律、ABAB,kg-pattern,MEMORY,TEXT,1,KG
+,math,数学-规律排序,1,choice,图中红旗、蓝旗、红旗、蓝旗插成一排，接下来插什么旗？,A.红旗|B.蓝旗|C.黄旗,A,一红一蓝轮着来，接着是红旗。,规律、ABAB,kg-pattern,MEMORY,DIAGRAM,1,KG
+,math,数学-规律排序,2,choice,积木排成大红、大红、小蓝、大红、大红、小蓝，接下来是什么？,A.大红|B.小蓝|C.都可以,A,两个大红配一个小蓝，一直这样重复。,规律、ABAB,kg-pattern,UNDERSTANDING,TEXT,1,KG
+,math,数学-规律排序,3,choice,按 1 个苹果、2 个梨的规律排，第 6 个是什么？,A.苹果|B.梨|C.都有可能,B,苹果梨梨苹果梨梨，第 6 个是梨。,规律、ABAB,kg-pattern,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-规律排序,3,choice,下面哪一组排得最有规律？,A.大大大小大|B.大小大小|C.大大小小,B,一大一小一直重复，很有规律。,规律、ABAB,kg-pattern,UNDERSTANDING,TEXT,1,KG
+,math,数学-规律排序,3,choice,小朋友按男、女、男、女的顺序排队，第 5 个是男孩还是女孩？,A.男孩|B.女孩|C.都可以,A,一男一女轮着来，单数位置是男孩。,规律、ABAB,kg-pattern,APPLICATION,CONTEXT,1,KG
+,math,数学-规律排序,4,fill,妈妈把碗和筷子摆成碗、筷、碗、筷，一共摆了 4 组，摆了几个碗？,,4个,每组一个碗，4 组就有 4 个碗。,规律、ABAB,kg-pattern,APPLICATION,CONTEXT,1,KG
+,math,数学-规律排序,4,choice,图中花盆按大、小、小、大、小、小排成一排，第 7 盆是什么？,A.大盆|B.小盆|C.看不出来,A,一大两小为一组，第 7 盆又是大盆。,规律、ABAB,kg-pattern,APPLICATION,DIAGRAM,1,KG
+,math,数学-规律排序,3,choice,拍手游戏：拍 2 下、停 1 下、拍 2 下、停 1 下，接下来该怎么做？,A.拍2下|B.停1下|C.拍1下,A,拍两下停一下，轮回来又是拍两下。,规律、ABAB,kg-pattern,APPLICATION,TEXT,1,KG
+,math,数学-比较大小长短,1,choice,图中有大皮球和小皮球，哪个大？,A.大皮球|B.小皮球|C.一样大,A,大皮球看上去更大。,大小、长短、高矮,kg-size,MEMORY,DIAGRAM,1,KG
+,math,数学-比较大小长短,1,choice,大象和小猫比，谁高？,A.大象|B.小猫|C.一样高,A,大象个头大，比小猫高得多。,大小、长短、高矮,kg-size,MEMORY,TEXT,1,KG
+,math,数学-比较大小长短,1,choice,图中红铅笔长、蓝铅笔短，哪支短？,A.红铅笔|B.蓝铅笔|C.一样长,B,蓝铅笔短一些。,大小、长短、高矮,kg-size,MEMORY,DIAGRAM,1,KG
+,math,数学-比较大小长短,2,choice,小树比小草高，小草比小树矮，谁最矮？,A.小树|B.小草|C.一样,B,小草贴在地上，比小树矮。,大小、长短、高矮,kg-size,UNDERSTANDING,TEXT,1,KG
+,math,数学-比较大小长短,2,choice,两根绳子一根长一根短，把长的那根剪掉一段，它会怎样？,A.变短了|B.变长了|C.不变,A,剪掉一段，剩下的就变短了。,大小、长短、高矮,kg-size,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-比较大小长短,3,choice,图中 3 根木棍，第一根最长，第三根最短，第二根比第一根怎样？,A.更长|B.短一些|C.一样长,B,第一根最长，第二根比它短一些。,大小、长短、高矮,kg-size,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-比较大小长短,3,choice,小明比小红高，小红比小刚高，三个人里谁最高？,A.小明|B.小红|C.小刚,A,一个比一个高，小明最高。,大小、长短、高矮,kg-size,APPLICATION,CONTEXT,1,KG
+,math,数学-比较大小长短,3,fill,爸爸的手比宝宝的手大，宝宝的手比爸爸的手怎样？,,小,比大反过来就是小。,大小、长短、高矮,kg-size,APPLICATION,CONTEXT,1,KG
+,math,数学-比较大小长短,4,choice,图中爸爸、妈妈、宝宝站在一起，爸爸最高，宝宝最矮，妈妈排第几高？,A.第一|B.第二|C.第三,B,爸爸第一高，妈妈在中间排第二。,大小、长短、高矮,kg-size,APPLICATION,DIAGRAM,1,KG
+,math,数学-比较大小长短,4,choice,三根一样长的彩带，分别卷成圈再展开，它们的长度还会一样吗？,A.一样长|B.变短了|C.变长了,A,只是卷起来，长度没有变。,大小、长短、高矮,kg-size,APPLICATION,TEXT,1,KG
+,math,数学-轻重与容量,1,choice,图中有西瓜和苹果，哪个重？,A.西瓜|B.苹果|C.一样重,A,西瓜又大又沉。,轻重、容量,kg-mass,MEMORY,DIAGRAM,1,KG
+,math,数学-轻重与容量,1,choice,羽毛和石头比，哪个轻？,A.羽毛|B.石头|C.一样轻,A,羽毛轻轻的，风一吹就飘。,轻重、容量,kg-mass,MEMORY,TEXT,1,KG
+,math,数学-轻重与容量,1,choice,两个一样大的杯子，一个装满水，一个只装一半，哪杯水多？,A.装满的|B.装一半的|C.一样多,A,装满的那杯水更多。,轻重、容量,kg-mass,MEMORY,CONTEXT,1,KG
+,math,数学-轻重与容量,3,choice,妈妈说：大的东西一定重。她说得对吗？,A.对|B.不对，大的不一定重|C.大的都很重,B,大棉花包很轻，小的铁块却很重。,轻重、容量,kg-mass,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-轻重与容量,2,choice,用天平称苹果和香蕉，苹果这边沉下去，谁重？,A.苹果|B.香蕉|C.一样重,A,沉下去的那边更重。,轻重、容量,kg-mass,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-轻重与容量,3,choice,图中两个一样大的杯子都装满了水，只是形状不同，哪杯水多？,A.左边的多|B.右边的多|C.一样多,C,杯子一样大又都装满，水一样多。,轻重、容量,kg-mass,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-轻重与容量,3,choice,一袋米和一袋棉花一样大，哪个更重？,A.米|B.棉花|C.一样重,A,米粒沉，棉花轻飘飘。,轻重、容量,kg-mass,APPLICATION,CONTEXT,1,KG
+,math,数学-轻重与容量,3,fill,小杯能装 2 勺水，大杯能装 3 个小杯的水，大杯能装几勺水？,,6勺,2 勺加 2 勺再加 2 勺，一共 6 勺。,轻重、容量,kg-mass,APPLICATION,CONTEXT,1,KG
+,math,数学-轻重与容量,3,choice,图中玩跷跷板，小猫这边高，小狗这边低，谁重？,A.小猫|B.小狗|C.一样重,B,低的那边重，小狗重。,轻重、容量,kg-mass,APPLICATION,DIAGRAM,1,KG
+,math,数学-轻重与容量,4,choice,两个一样大的瓶子都装满水，倒进粗细不同的两个杯子里，水一样多吗？,A.一样多|B.粗杯多|C.细杯多,A,水还是那些水，多少没有变。,轻重、容量,kg-mass,APPLICATION,TEXT,1,KG

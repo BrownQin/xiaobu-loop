@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">智能伴学</string>
+
+    <!-- 孩子端 -->
+    <string name="child_home_title">今天也要加油呀！</string>
+    <string name="child_home_task">今日任务</string>
+    <string name="child_home_points">我的积分</string>
+    <string name="child_home_start">开始学习</string>
+    <string name="child_home_wrong_book">错题本</string>
+    <string name="child_home_reward">奖励商城</string>
+
+    <!-- 做题 -->
+    <string name="quiz_title">答题中</string>
+    <string name="quiz_subject_chinese">语文</string>
+    <string name="quiz_subject_math">数学</string>
+    <string name="quiz_prev">上一题</string>
+    <string name="quiz_next">下一题</string>
+    <string name="quiz_submit">提交答案</string>
+    <string name="quiz_timer">剩余时间</string>
+    <string name="quiz_type_choice">选择题</string>
+    <string name="quiz_type_fill">填空题</string>
+    <string name="quiz_type_word">应用题</string>
+    <string name="quiz_voice_input">语音输入（敬请期待）</string>
+
+    <!-- 结果 -->
+    <string name="result_correct">太棒了！答对啦！🎉</string>
+    <string name="result_wrong">没关系，再想想~</string>
+    <string name="result_explanation">解析</string>
+    <string name="result_again">再做一次</string>
+    <string name="result_next">继续</string>
+
+    <!-- 奖励 -->
+    <string name="reward_title">奖励商城</string>
+    <string name="reward_points">积分</string>
+    <string name="reward_exchange">兑换</string>
+
+    <!-- 家长端 -->
+    <string name="parent_title">家长仪表盘</string>
+    <string name="parent_wrong_distribution">错题分布</string>
+    <string name="parent_weak_radar">薄弱点雷达图</string>
+    <string name="parent_growth_curve">成长曲线</string>
+    <string name="parent_suggestion">干预建议</string>
+    <string name="parent_edit_child">编辑孩子画像</string>
+
+    <!-- 通用 -->
+    <string name="subject_chinese">语文</string>
+    <string name="subject_math">数学</string>
+</resources>

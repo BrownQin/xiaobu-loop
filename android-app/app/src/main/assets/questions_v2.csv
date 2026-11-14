@@ -1,0 +1,525 @@
+id,subject,knowledgePoint,difficulty,type,content,options,answer,explanation,tags,anchorCode,cognitiveLevel,variantType,enabled,stage
+,math,数学-10以内点数,1,choice,图上画了 6 个圆点，每个圆点表示 1 个气球，一共有几个气球？,A.5个|B.6个|C.7个,B,一个圆点数一下，数到 6 就是 6 个。,点数、数数,kg-count-10,MEMORY,DIAGRAM,1,KG
+,math,数学-10以内点数,1,choice,从 1 开始数：1、2、3、4、5、6、7，接着往下再数一个数是几？,A.6|B.8|C.9,B,数完 7 再数一个，就是 8。,点数、数数,kg-count-10,MEMORY,TEXT,1,KG
+,math,数学-10以内点数,2,choice,从 10 开始倒着数：10、9、8、7，接下来一个数是几？,A.6|B.5|C.9,A,倒着数，7 的前面是 6。,点数、数数,kg-count-10,MEMORY,TEXT,1,KG
+,math,数学-10以内点数,2,fill,有 5 个小朋友，每人发 1 块饼干，一共要准备几块饼干？,,5块,一人一块，5 个人就要 5 块。,点数、数数,kg-count-10,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-10以内点数,2,choice,小华把 8 颗扣子排成一排数，数出 8 颗。他把扣子挤在一起再数，会是几颗？,A.6颗|B.8颗|C.10颗,B,扣子没有多也没有少，还是 8 颗。,点数、数数,kg-count-10,UNDERSTANDING,TEXT,1,KG
+,math,数学-10以内点数,3,choice,小美从 1 数到 9，中间漏数了 5，她一共数出了几个数？,A.9个|B.8个|C.7个,B,漏掉一个，9 个数就只剩 8 个。,点数、数数,kg-count-10,UNDERSTANDING,TEXT,1,KG
+,math,数学-10以内点数,3,choice,妈妈让小宝拿 5 个鸡蛋，小宝只拿了 4 个，他还要再拿几个？,A.1个|B.2个|C.3个,A,5 个比 4 个多 1 个，还要拿 1 个。,点数、数数,kg-count-10,APPLICATION,CONTEXT,1,KG
+,math,数学-10以内点数,4,fill,盒子里有 8 块巧克力，小文一块一块数：1、2、3、4、5、6、7，他漏数了几块？,,1块,数到 7 就停了，8 块里漏了 1 块。,点数、数数,kg-count-10,APPLICATION,CONTEXT,1,KG
+,math,数学-10以内点数,4,fill,图中有 3 排小树，每排 3 棵，一共有几棵小树？,,9棵,一排 3 棵，3 排一共 9 棵。,点数、数数,kg-count-10,APPLICATION,DIAGRAM,1,KG
+,math,数学-10以内点数,3,choice,盘子里有 4 个橘子，又添上 1 个，算式 4+1 的得数是几？,A.4|B.5|C.6,B,4 再数一个就是 5。,点数、数数,kg-count-10,APPLICATION,EXPRESSION,1,KG
+,math,数学-比多少与大小,1,choice,数字 7 和 4 比，哪个数大？,A.7|B.4|C.一样大,A,7 比 4 多 3，7 更大。,比较、多少,kg-num-compare,MEMORY,TEXT,1,KG
+,math,数学-比多少与大小,1,choice,图上左边有 5 颗糖，右边有 3 颗糖，哪边多？,A.左边多|B.右边多|C.一样多,A,5 颗比 3 颗多。,比较、多少,kg-num-compare,MEMORY,DIAGRAM,1,KG
+,math,数学-比多少与大小,1,choice,数字 6 和 6 比，谁大？,A.前面的大|B.后面的大|C.一样大,C,两个都是 6，一样大。,比较、多少,kg-num-compare,MEMORY,TEXT,1,KG
+,math,数学-比多少与大小,2,choice,小明有 8 块积木，小红有 5 块积木，小明比小红多几块？,A.2块|B.3块|C.4块,B,8 比 5 多 3 块。,比较、多少,kg-num-compare,UNDERSTANDING,TEXT,1,KG
+,math,数学-比多少与大小,2,choice,图中第一排 6 个杯子，第二排 6 个杯垫，一个杯子对一个杯垫，谁多？,A.杯子多|B.杯垫多|C.一样多,C,一个一个对整齐，没有多也没有少。,比较、多少,kg-num-compare,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-比多少与大小,3,choice,小刚说：8 比 10 大。他说得对吗？,A.对|B.不对，8 比 10 小|C.两个数一样,B,10 在 8 的后面，10 更大。,比较、多少,kg-num-compare,UNDERSTANDING,TEXT,1,KG
+,math,数学-比多少与大小,3,choice,幼儿园有 9 个男孩和 7 个女孩，男孩比女孩多几个？,A.1个|B.2个|C.3个,B,9 比 7 多 2 个。,比较、多少,kg-num-compare,APPLICATION,CONTEXT,1,KG
+,math,数学-比多少与大小,3,choice,吃饭时摆了 6 把椅子，来了 8 个人，椅子够不够？,A.够，还多2把|B.不够，还差2把|C.正好够,B,8 个人比 6 把椅子多 2，还差 2 把。,比较、多少,kg-num-compare,APPLICATION,CONTEXT,1,KG
+,math,数学-比多少与大小,4,fill,图中小兔有 4 只，萝卜有 6 根，每只小兔吃 1 根，还剩几根萝卜？,,2根,4 只吃 4 根，6 根还剩下 2 根。,比较、多少,kg-num-compare,APPLICATION,DIAGRAM,1,KG
+,math,数学-比多少与大小,3,choice,要算 8 比 5 多几，用哪个算式？,A.8+5|B.8-5|C.5-8,B,比多比少，用大的数减小的数。,比较、多少,kg-num-compare,APPLICATION,EXPRESSION,1,KG
+,math,数学-数的分与合,1,fill,5 可以分成 2 和几？,,3,2 和 3 合起来是 5。,分与合、组成,kg-num-compose,MEMORY,TEXT,1,KG
+,math,数学-数的分与合,1,choice,3 和 4 合起来是几？,A.6|B.7|C.8,B,3 再添 4 就是 7。,分与合、组成,kg-num-compose,MEMORY,TEXT,1,KG
+,math,数学-数的分与合,1,choice,算式 6-2=4 里，6 可以分成哪两个数？,A.2和4|B.3和3|C.1和5,A,6 去掉 2 剩 4，6 分成 2 和 4。,分与合、组成,kg-num-compose,MEMORY,EXPRESSION,1,KG
+,math,数学-数的分与合,2,choice,8 分成 5 和几？,A.2|B.3|C.4,B,5 再添 3 就是 8。,分与合、组成,kg-num-compose,UNDERSTANDING,TEXT,1,KG
+,math,数学-数的分与合,2,choice,10 个苹果放进两个盘子，一个盘子放 6 个，另一个盘子放几个？,A.3个|B.4个|C.5个,B,6 和 4 合起来是 10。,分与合、组成,kg-num-compose,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-数的分与合,3,choice,图中 7 颗星星分成两堆，一堆 3 颗，另一堆几颗？,A.3颗|B.4颗|C.5颗,B,3 和 4 合起来是 7。,分与合、组成,kg-num-compose,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-数的分与合,3,fill,小红有 4 颗糖，小明有 4 颗糖，两个人一共有几颗糖？,,8颗,4 和 4 合起来是 8。,分与合、组成,kg-num-compose,APPLICATION,CONTEXT,1,KG
+,math,数学-数的分与合,3,choice,老师把 9 块橡皮分给两人，一人分 4 块，另一人分几块？,A.4块|B.5块|C.6块,B,9 分成 4 和 5。,分与合、组成,kg-num-compose,APPLICATION,CONTEXT,1,KG
+,math,数学-数的分与合,4,choice,一个数可以分成 3 和 6，这个数是几？,A.8|B.9|C.10,B,3 和 6 合起来是 9。,分与合、组成,kg-num-compose,APPLICATION,TEXT,1,KG
+,math,数学-数的分与合,3,choice,哪个算式表示 5 和 4 合起来？,A.5-4=1|B.5+4=9|C.9-5=4,B,合起来要用加法，5 加 4 得 9。,分与合、组成,kg-num-compose,APPLICATION,EXPRESSION,1,KG
+,math,数学-分类与排序,1,choice,图中有苹果、香蕉和皮球，哪个和其他两个不是一类？,A.苹果|B.香蕉|C.皮球,C,苹果和香蕉是水果，皮球是玩具。,分类、排序,kg-classify-compare,MEMORY,DIAGRAM,1,KG
+,math,数学-分类与排序,1,choice,下面哪个是交通工具？,A.小狗|B.公交车|C.苹果,B,公交车能载着人走路。,分类、排序,kg-classify-compare,MEMORY,TEXT,1,KG
+,math,数学-分类与排序,1,choice,图中有红圆、红方块、蓝圆和红三角，哪个颜色和大家不一样？,A.红圆|B.蓝圆|C.红三角,B,只有它是蓝色的。,分类、排序,kg-classify-compare,MEMORY,DIAGRAM,1,KG
+,math,数学-分类与排序,2,choice,把铅笔、橡皮、尺子放在一起，它们都属于什么？,A.玩具|B.文具|C.水果,B,写字画画用的东西都是文具。,分类、排序,kg-classify-compare,UNDERSTANDING,TEXT,1,KG
+,math,数学-分类与排序,2,choice,妈妈把袜子、帽子、手套放在一个柜子里，它们是按什么分在一起的？,A.都是穿的|B.都是吃的|C.都是圆的,A,它们都是穿在身上的东西。,分类、排序,kg-classify-compare,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-分类与排序,3,choice,红红把苹果和橘子放一起，把青菜和萝卜放一起，她一共分成了几类？,A.一类|B.两类|C.三类,B,水果一类，蔬菜一类。,分类、排序,kg-classify-compare,UNDERSTANDING,TEXT,1,KG
+,math,数学-分类与排序,3,choice,小朋友按从矮到高排队，小华最矮，小刚最高，小美在中间，谁排第一？,A.小华|B.小美|C.小刚,A,从矮到高排，最矮的小华站第一。,分类、排序,kg-classify-compare,APPLICATION,CONTEXT,1,KG
+,math,数学-分类与排序,3,fill,盘子里有 2 个苹果、3 根香蕉、4 颗葡萄，一共有几种水果？,,3种,按种类数，一共 3 种。,分类、排序,kg-classify-compare,APPLICATION,CONTEXT,1,KG
+,math,数学-分类与排序,4,choice,图中三根纸条，红纸条最长，黄纸条最短，蓝纸条在中间，哪根排第二？,A.红纸条|B.蓝纸条|C.黄纸条,B,从长到短排，中间的蓝纸条排第二。,分类、排序,kg-classify-compare,APPLICATION,DIAGRAM,1,KG
+,math,数学-分类与排序,4,choice,小花要把 4 只小鸭、2 只小鸡、3 条小鱼分成会游泳和不会游泳的两堆，怎么分？,A.小鸭和小鱼一堆，小鸡一堆|B.小鸭和小鸡一堆，小鱼一堆|C.三样都放一堆,A,小鸭和小鱼会游泳，小鸡不会。,分类、排序,kg-classify-compare,APPLICATION,TEXT,1,KG
+,math,数学-加法的意义,1,choice,盘子里有 2 个苹果，又放进 3 个，一共有几个？,A.4个|B.5个|C.6个,B,2 和 3 合起来是 5。,加法、合起来,kg-add-10,MEMORY,TEXT,1,KG
+,math,数学-加法的意义,1,fill,3+1=？,,4,3 再添上 1 就是 4。,加法、合起来,kg-add-10,MEMORY,EXPRESSION,1,KG
+,math,数学-加法的意义,1,choice,图中左边 4 朵红花，右边 2 朵黄花，花一共有几朵？,A.5朵|B.6朵|C.7朵,B,4 加 2 得 6。,加法、合起来,kg-add-10,MEMORY,DIAGRAM,1,KG
+,math,数学-加法的意义,2,choice,树上有 5 只小鸟，又飞来 4 只，现在树上有几只小鸟？,A.1只|B.8只|C.9只,C,5 和 4 合起来是 9。,加法、合起来,kg-add-10,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-加法的意义,2,choice,小明有 3 支铅笔，姐姐又给他 3 支，他一共有几支？,A.3支|B.6支|C.9支,B,3 加 3 得 6。,加法、合起来,kg-add-10,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-加法的意义,2,choice,哪个算式表示把 6 和 2 合起来？,A.6-2|B.6+2|C.2-6,B,合起来要用加法。,加法、合起来,kg-add-10,UNDERSTANDING,EXPRESSION,1,KG
+,math,数学-加法的意义,3,choice,公交车上原来有 6 个人，到站又上来 3 个人，现在车上有几个人？,A.3人|B.9人|C.10人,B,6 加 3 得 9。,加法、合起来,kg-add-10,APPLICATION,CONTEXT,1,KG
+,math,数学-加法的意义,4,fill,桌上有 4 个碗，妈妈又拿来 2 个碗和 1 双筷子，现在有几个碗？,,6个,筷子不是碗，只算 4 加 2 得 6。,加法、合起来,kg-add-10,APPLICATION,CONTEXT,1,KG
+,math,数学-加法的意义,3,choice,图中书架上层有 5 本书，下层有 4 本书，一共有几本书？,A.1本|B.9本|C.10本,B,5 加 4 得 9。,加法、合起来,kg-add-10,APPLICATION,DIAGRAM,1,KG
+,math,数学-加法的意义,4,choice,小华先折了 3 只纸鹤，又折了 4 只，最后再折 1 只，一共折了几只？,A.7只|B.8只|C.9只,B,3 加 4 得 7，再加 1 得 8。,加法、合起来,kg-add-10,APPLICATION,TEXT,1,KG
+,math,数学-减法的意义,1,choice,盘子里有 5 个橘子，吃掉 2 个，还剩几个？,A.2个|B.3个|C.4个,B,5 里去掉 2，还剩 3。,减法、剩下,kg-sub-10,MEMORY,TEXT,1,KG
+,math,数学-减法的意义,1,fill,7-3=？,,4,7 去掉 3 还剩 4。,减法、剩下,kg-sub-10,MEMORY,EXPRESSION,1,KG
+,math,数学-减法的意义,1,choice,图中有 6 只小兔，跑走 1 只，还剩几只？,A.5只|B.6只|C.7只,A,6 去掉 1 还剩 5。,减法、剩下,kg-sub-10,MEMORY,DIAGRAM,1,KG
+,math,数学-减法的意义,2,choice,树上有 8 个桃子，小猴摘走 3 个，树上还有几个？,A.4个|B.5个|C.6个,B,8 减 3 得 5。,减法、剩下,kg-sub-10,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-减法的意义,2,choice,盒子里有 9 块饼干，分给弟弟 4 块，还剩几块？,A.5块|B.6块|C.13块,A,9 减 4 得 5。,减法、剩下,kg-sub-10,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-减法的意义,3,choice,哪个算式表示从 8 里去掉 2？,A.8+2|B.8-2|C.2+8,B,去掉东西要用减法。,减法、剩下,kg-sub-10,UNDERSTANDING,EXPRESSION,1,KG
+,math,数学-减法的意义,3,choice,公交车上原来有 10 个人，到站下去 4 个人，车上还有几个人？,A.6人|B.7人|C.14人,A,10 减 4 得 6。,减法、剩下,kg-sub-10,APPLICATION,CONTEXT,1,KG
+,math,数学-减法的意义,4,fill,妈妈买了 7 个鸡蛋，早上用了 2 个，中午用了 1 个，还剩几个？,,4个,7 减 2 得 5，再减 1 得 4。,减法、剩下,kg-sub-10,APPLICATION,CONTEXT,1,KG
+,math,数学-减法的意义,3,choice,图中有 9 颗糖，圈走了 5 颗，剩下几颗？,A.4颗|B.5颗|C.6颗,A,9 减 5 得 4。,减法、剩下,kg-sub-10,APPLICATION,DIAGRAM,1,KG
+,math,数学-减法的意义,3,choice,小丽有 6 张彩纸，做手工全用完了，还剩几张？,A.0张|B.1张|C.6张,A,全部用完了，一张也不剩。,减法、剩下,kg-sub-10,APPLICATION,TEXT,1,KG
+,math,数学-10以内加减法,1,fill,2+5=？,,7,2 和 5 合起来是 7。,计算、口算,kg-add-sub-10,MEMORY,EXPRESSION,1,KG
+,math,数学-10以内加减法,1,fill,9-4=？,,5,9 去掉 4 还剩 5。,计算、口算,kg-add-sub-10,MEMORY,EXPRESSION,1,KG
+,math,数学-10以内加减法,1,choice,4 加 4 等于几？,A.6|B.7|C.8,C,4 和 4 合起来是 8。,计算、口算,kg-add-sub-10,MEMORY,TEXT,1,KG
+,math,数学-10以内加减法,2,choice,8-3 和 3+3 比，哪个得数大？,A.8-3|B.3+3|C.一样大,B,8 减 3 得 5，3 加 3 得 6。,计算、口算,kg-add-sub-10,UNDERSTANDING,EXPRESSION,1,KG
+,math,数学-10以内加减法,2,choice,小马虎算 6+1，得数是 5。他错在哪里？,A.该加却算成了减|B.数数漏了一个|C.他没有错,A,加 1 应该变大，得数应是 7。,计算、口算,kg-add-sub-10,UNDERSTANDING,TEXT,1,KG
+,math,数学-10以内加减法,3,choice,下面哪个算式的得数是 9？,A.10-2|B.5+4|C.8-1,B,5 加 4 得 9，另外两个得 8 和 7。,计算、口算,kg-add-sub-10,UNDERSTANDING,EXPRESSION,1,KG
+,math,数学-10以内加减法,3,fill,小红有 10 元，买本子用了 3 元，还剩下几元？,,7元,10 减 3 得 7。,计算、口算,kg-add-sub-10,APPLICATION,CONTEXT,1,KG
+,math,数学-10以内加减法,4,choice,篮子里有 6 个苹果，吃了一些后还剩 2 个，吃了几个？,A.3个|B.4个|C.8个,B,6 减 2 得 4，吃了 4 个。,计算、口算,kg-add-sub-10,APPLICATION,CONTEXT,1,KG
+,math,数学-10以内加减法,4,fill,小明先做了 3 道题，又做了 4 道题，一共做完了几道题？,,7道,3 加 4 得 7。,计算、口算,kg-add-sub-10,APPLICATION,TEXT,1,KG
+,math,数学-10以内加减法,4,choice,图中左边筐里有 6 个球，右边筐里有 3 个球，把右边的球全放进左边，左边有几个？,A.3个|B.9个|C.10个,B,6 加 3 得 9。,计算、口算,kg-add-sub-10,APPLICATION,DIAGRAM,1,KG
+,math,数学-认识图形,1,choice,皮球是什么形状的？,A.圆形|B.正方形|C.三角形,A,皮球圆圆的，能滚起来。,圆形、正方形、三角形,kg-shape-space,MEMORY,DIAGRAM,1,KG
+,math,数学-认识图形,1,choice,三角形有几个角？,A.2个|B.3个|C.4个,B,三角形有三个角三条边。,圆形、正方形、三角形,kg-shape-space,MEMORY,TEXT,1,KG
+,math,数学-认识图形,1,choice,正方形有几条边？,A.3条|B.4条|C.5条,B,正方形有四条一样长的边。,圆形、正方形、三角形,kg-shape-space,MEMORY,TEXT,1,KG
+,math,数学-认识图形,2,choice,图中有圆饼干、方手帕和三角尺，哪一个是正方形？,A.圆饼干|B.方手帕|C.三角尺,B,手帕的四条边一样长，是正方形。,圆形、正方形、三角形,kg-shape-space,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-认识图形,2,choice,车轮子做成圆形，为什么不做成正方形？,A.圆形会滚|B.圆形好看|C.正方形太重,A,圆形没有角，滚得动。,圆形、正方形、三角形,kg-shape-space,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-认识图形,3,choice,用 2 个一样大的三角形拼一拼，下面哪个图形拼不出来？,A.正方形|B.三角形|C.圆形,C,圆形没有角，三角形拼不出圆。,圆形、正方形、三角形,kg-shape-space,UNDERSTANDING,TEXT,1,KG
+,math,数学-认识图形,3,choice,教室里的钟面是什么形状的？,A.圆形|B.正方形|C.三角形,A,钟面圆圆的，是圆形。,圆形、正方形、三角形,kg-shape-space,APPLICATION,CONTEXT,1,KG
+,math,数学-认识图形,3,fill,图中有 3 个正方形和 2 个三角形，正方形比三角形多几个？,,1个,3 个比 2 个多 1 个。,圆形、正方形、三角形,kg-shape-space,APPLICATION,DIAGRAM,1,KG
+,math,数学-认识图形,4,choice,小红搭积木房子，屋顶是三角形，房身是正方形，一共用了几个图形？,A.1个|B.2个|C.3个,B,一个三角形和一个正方形，共 2 个。,圆形、正方形、三角形,kg-shape-space,APPLICATION,CONTEXT,1,KG
+,math,数学-认识图形,4,choice,下面哪种东西不是三角形的？,A.三明治|B.三角尺|C.硬币,C,硬币是圆形的。,圆形、正方形、三角形,kg-shape-space,APPLICATION,TEXT,1,KG
+,math,数学-方位与位置,1,choice,图中杯子放在桌子的上面，杯子在桌子的哪里？,A.上面|B.下面|C.旁边,A,杯子在桌面上面。,上下、前后、里外,kg-position,MEMORY,DIAGRAM,1,KG
+,math,数学-方位与位置,1,choice,小明的书包在椅子下面，书包在椅子的哪里？,A.上面|B.下面|C.前面,B,书包钻在椅子底下。,上下、前后、里外,kg-position,MEMORY,TEXT,1,KG
+,math,数学-方位与位置,1,choice,排队时小红站在小明的前面，小明在小红的哪里？,A.前面|B.后面|C.旁边,B,一个在前一个在后，正好反过来。,上下、前后、里外,kg-position,MEMORY,CONTEXT,1,KG
+,math,数学-方位与位置,2,choice,图中 3 本书叠在一起，红书在最上面，蓝书在最下面，黄书在哪里？,A.最上面|B.中间|C.最下面,B,黄书夹在红书和蓝书中间。,上下、前后、里外,kg-position,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-方位与位置,2,choice,老师把苹果放进盒子里，苹果在盒子的哪里？,A.里面|B.外面|C.上面,A,放进去就在盒子里面。,上下、前后、里外,kg-position,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-方位与位置,3,choice,小猫在桌子下面，小狗在桌子上面，谁在上面？,A.小猫|B.小狗|C.都在下面,B,小狗趴在桌面上。,上下、前后、里外,kg-position,UNDERSTANDING,TEXT,1,KG
+,math,数学-方位与位置,3,choice,小朋友手拉手，小刚的左边是小美，小美的右边是谁？,A.小刚|B.小丽|C.老师,A,两人挨着站，左右正好相反。,上下、前后、里外,kg-position,APPLICATION,CONTEXT,1,KG
+,math,数学-方位与位置,3,fill,图书角在教室的里面，操场在教室的外面，想跑步应该去哪里？,,操场,操场在外面，可以跑步。,上下、前后、里外,kg-position,APPLICATION,CONTEXT,1,KG
+,math,数学-方位与位置,4,choice,一栋楼有 3 层，小兰家住最上面一层，她家住第几层？,A.第一层|B.第二层|C.第三层,C,最上面一层就是第三层。,上下、前后、里外,kg-position,APPLICATION,DIAGRAM,1,KG
+,math,数学-方位与位置,4,choice,小朋友从前往后排队，小华是第 3 个，他前面有几个人？,A.2个|B.3个|C.4个,A,自己不算，前面还有 2 个人。,上下、前后、里外,kg-position,APPLICATION,TEXT,1,KG
+,math,数学-规律排序,1,choice,图中珠子按红、黄、红、黄排成一串，下一颗是什么颜色？,A.红色|B.黄色|C.蓝色,A,红黄一红一黄，接着排红色。,规律、ABAB,kg-pattern,MEMORY,DIAGRAM,1,KG
+,math,数学-规律排序,1,choice,图形按圆、方、圆、方排下去，接下来是哪个？,A.圆形|B.正方形|C.三角形,A,一圆一方轮着来，下一个是圆。,规律、ABAB,kg-pattern,MEMORY,TEXT,1,KG
+,math,数学-规律排序,1,choice,图中红旗、蓝旗、红旗、蓝旗插成一排，接下来插什么旗？,A.红旗|B.蓝旗|C.黄旗,A,一红一蓝轮着来，接着是红旗。,规律、ABAB,kg-pattern,MEMORY,DIAGRAM,1,KG
+,math,数学-规律排序,2,choice,积木排成大红、大红、小蓝、大红、大红、小蓝，接下来是什么？,A.大红|B.小蓝|C.都可以,A,两个大红配一个小蓝，一直这样重复。,规律、ABAB,kg-pattern,UNDERSTANDING,TEXT,1,KG
+,math,数学-规律排序,3,choice,按 1 个苹果、2 个梨的规律排，第 6 个是什么？,A.苹果|B.梨|C.都有可能,B,苹果梨梨苹果梨梨，第 6 个是梨。,规律、ABAB,kg-pattern,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-规律排序,3,choice,下面哪一组排得最有规律？,A.大大大小大|B.大小大小|C.大大小小,B,一大一小一直重复，很有规律。,规律、ABAB,kg-pattern,UNDERSTANDING,TEXT,1,KG
+,math,数学-规律排序,3,choice,小朋友按男、女、男、女的顺序排队，第 5 个是男孩还是女孩？,A.男孩|B.女孩|C.都可以,A,一男一女轮着来，单数位置是男孩。,规律、ABAB,kg-pattern,APPLICATION,CONTEXT,1,KG
+,math,数学-规律排序,4,fill,妈妈把碗和筷子摆成碗、筷、碗、筷，一共摆了 4 组，摆了几个碗？,,4个,每组一个碗，4 组就有 4 个碗。,规律、ABAB,kg-pattern,APPLICATION,CONTEXT,1,KG
+,math,数学-规律排序,4,choice,图中花盆按大、小、小、大、小、小排成一排，第 7 盆是什么？,A.大盆|B.小盆|C.看不出来,A,一大两小为一组，第 7 盆又是大盆。,规律、ABAB,kg-pattern,APPLICATION,DIAGRAM,1,KG
+,math,数学-规律排序,3,choice,拍手游戏：拍 2 下、停 1 下、拍 2 下、停 1 下，接下来该怎么做？,A.拍2下|B.停1下|C.拍1下,A,拍两下停一下，轮回来又是拍两下。,规律、ABAB,kg-pattern,APPLICATION,TEXT,1,KG
+,math,数学-比较大小长短,1,choice,图中有大皮球和小皮球，哪个大？,A.大皮球|B.小皮球|C.一样大,A,大皮球看上去更大。,大小、长短、高矮,kg-size,MEMORY,DIAGRAM,1,KG
+,math,数学-比较大小长短,1,choice,大象和小猫比，谁高？,A.大象|B.小猫|C.一样高,A,大象个头大，比小猫高得多。,大小、长短、高矮,kg-size,MEMORY,TEXT,1,KG
+,math,数学-比较大小长短,1,choice,图中红铅笔长、蓝铅笔短，哪支短？,A.红铅笔|B.蓝铅笔|C.一样长,B,蓝铅笔短一些。,大小、长短、高矮,kg-size,MEMORY,DIAGRAM,1,KG
+,math,数学-比较大小长短,2,choice,小树比小草高，小草比小树矮，谁最矮？,A.小树|B.小草|C.一样,B,小草贴在地上，比小树矮。,大小、长短、高矮,kg-size,UNDERSTANDING,TEXT,1,KG
+,math,数学-比较大小长短,2,choice,两根绳子一根长一根短，把长的那根剪掉一段，它会怎样？,A.变短了|B.变长了|C.不变,A,剪掉一段，剩下的就变短了。,大小、长短、高矮,kg-size,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-比较大小长短,3,choice,图中 3 根木棍，第一根最长，第三根最短，第二根比第一根怎样？,A.更长|B.短一些|C.一样长,B,第一根最长，第二根比它短一些。,大小、长短、高矮,kg-size,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-比较大小长短,3,choice,小明比小红高，小红比小刚高，三个人里谁最高？,A.小明|B.小红|C.小刚,A,一个比一个高，小明最高。,大小、长短、高矮,kg-size,APPLICATION,CONTEXT,1,KG
+,math,数学-比较大小长短,3,fill,爸爸的手比宝宝的手大，宝宝的手比爸爸的手怎样？,,小,比大反过来就是小。,大小、长短、高矮,kg-size,APPLICATION,CONTEXT,1,KG
+,math,数学-比较大小长短,4,choice,图中爸爸、妈妈、宝宝站在一起，爸爸最高，宝宝最矮，妈妈排第几高？,A.第一|B.第二|C.第三,B,爸爸第一高，妈妈在中间排第二。,大小、长短、高矮,kg-size,APPLICATION,DIAGRAM,1,KG
+,math,数学-比较大小长短,4,choice,三根一样长的彩带，分别卷成圈再展开，它们的长度还会一样吗？,A.一样长|B.变短了|C.变长了,A,只是卷起来，长度没有变。,大小、长短、高矮,kg-size,APPLICATION,TEXT,1,KG
+,math,数学-轻重与容量,1,choice,图中有西瓜和苹果，哪个重？,A.西瓜|B.苹果|C.一样重,A,西瓜又大又沉。,轻重、容量,kg-mass,MEMORY,DIAGRAM,1,KG
+,math,数学-轻重与容量,1,choice,羽毛和石头比，哪个轻？,A.羽毛|B.石头|C.一样轻,A,羽毛轻轻的，风一吹就飘。,轻重、容量,kg-mass,MEMORY,TEXT,1,KG
+,math,数学-轻重与容量,1,choice,两个一样大的杯子，一个装满水，一个只装一半，哪杯水多？,A.装满的|B.装一半的|C.一样多,A,装满的那杯水更多。,轻重、容量,kg-mass,MEMORY,CONTEXT,1,KG
+,math,数学-轻重与容量,3,choice,妈妈说：大的东西一定重。她说得对吗？,A.对|B.不对，大的不一定重|C.大的都很重,B,大棉花包很轻，小的铁块却很重。,轻重、容量,kg-mass,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-轻重与容量,2,choice,用天平称苹果和香蕉，苹果这边沉下去，谁重？,A.苹果|B.香蕉|C.一样重,A,沉下去的那边更重。,轻重、容量,kg-mass,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-轻重与容量,3,choice,图中两个一样大的杯子都装满了水，只是形状不同，哪杯水多？,A.左边的多|B.右边的多|C.一样多,C,杯子一样大又都装满，水一样多。,轻重、容量,kg-mass,UNDERSTANDING,DIAGRAM,1,KG
+,math,数学-轻重与容量,3,choice,一袋米和一袋棉花一样大，哪个更重？,A.米|B.棉花|C.一样重,A,米粒沉，棉花轻飘飘。,轻重、容量,kg-mass,APPLICATION,CONTEXT,1,KG
+,math,数学-轻重与容量,3,fill,小杯能装 2 勺水，大杯能装 3 个小杯的水，大杯能装几勺水？,,6勺,2 勺加 2 勺再加 2 勺，一共 6 勺。,轻重、容量,kg-mass,APPLICATION,CONTEXT,1,KG
+,math,数学-轻重与容量,3,choice,图中玩跷跷板，小猫这边高，小狗这边低，谁重？,A.小猫|B.小狗|C.一样重,B,低的那边重，小狗重。,轻重、容量,kg-mass,APPLICATION,DIAGRAM,1,KG
+,math,数学-轻重与容量,4,choice,两个一样大的瓶子都装满水，倒进粗细不同的两个杯子里，水一样多吗？,A.一样多|B.粗杯多|C.细杯多,A,水还是那些水，多少没有变。,轻重、容量,kg-mass,APPLICATION,TEXT,1,KG
+,chinese,拼音-入门,1,choice,拼音字母 a 读什么音？,A.啊|B.哦|C.鹅,A,a 读“啊”，嘴巴张得大大的。,单韵母、认读,kg-pinyin-entry,MEMORY,TEXT,1,KG
+,chinese,拼音-入门,1,choice,下面哪个是单韵母？,A.o|B.b|C.sh,A,o 是单韵母，b 和 sh 都是声母。,单韵母、分类,kg-pinyin-entry,MEMORY,TEXT,1,KG
+,chinese,拼音-入门,2,choice,图上写着“妈妈”两个字，哪组拼音能拼出“妈妈”？,A.mā ma|B.bā ba|C.pá pa,A,“妈”的拼音是 mā，读第一声。,拼读、生活用词,kg-pinyin-entry,MEMORY,DIAGRAM,1,KG
+,chinese,拼音-入门,2,choice,学习拼音最主要的作用是什么？,A.帮助我们认字和读准字音|B.帮助我们算数学题|C.帮助我们画画,A,学会拼音就能自己认字、读准音。,拼音用处、理解,kg-pinyin-entry,UNDERSTANDING,TEXT,1,KG
+,chinese,拼音-入门,3,choice,小朋友不认识“苹果”的“苹”，他可以怎么做？,A.看旁边的拼音 píng 读出来|B.数一数有几个字|C.把字涂上颜色,A,拼音就写在字旁边，看着它能读出来。,拼音用处、生活情境,kg-pinyin-entry,UNDERSTANDING,CONTEXT,1,KG
+,chinese,拼音-入门,3,choice,书包上写着“bēi zi”，里面最可能装的是什么？,A.杯子|B.鞋子|C.帽子,A,bēi zi 是杯子，喝水用的。,拼读、生活情境,kg-pinyin-entry,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-入门,3,choice,图中有四个拼音宝宝：a、b、o、m。哪两个是韵母？,A.a 和 o|B.b 和 m|C.a 和 b,A,a 和 o 是韵母，b 和 m 是声母。,单韵母、分类,kg-pinyin-entry,APPLICATION,DIAGRAM,1,KG
+,chinese,拼音-入门,4,word,路牌上写着“公园”两个字，小朋友不认识。说说他可以怎样用拼音帮忙。,,可以看路牌上的拼音 gōng yuán 读出来。,看到拼音就能读出字音，认出路牌。,拼音用处、表达,kg-pinyin-entry,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-声母,1,choice,声母 b 是一个竖加一个半圆。下面哪个字母是这样写的？,A.b|B.d|C.p,A,b 的半圆在右边，竖在左边。,形近字母、认读,kg-pinyin-initial,MEMORY,DIAGRAM,1,KG
+,chinese,拼音-声母,2,choice,鼓声“咚咚”的“咚”，拼音 dōng 的声母是哪个字母？,A.d|B.b|C.q,A,dōng 开头的 d 就是声母。,声母、生活声音,kg-pinyin-initial,MEMORY,CONTEXT,1,KG
+,chinese,拼音-声母,2,choice,“牛奶”的“奶”拼音是 nǎi，它的声母是哪个？,A.n|B.l|C.m,A,nǎi 开头的 n 就是声母。,声母、n 和 l,kg-pinyin-initial,MEMORY,TEXT,1,KG
+,chinese,拼音-声母,2,choice,b 和 d 长得很像，怎样分清它们？,A.b 的半圆在右边，d 的半圆在左边|B.两个完全一样|C.b 有两竖,A,记住半圆的方向就不会认错了。,形近字母、辨析,kg-pinyin-initial,UNDERSTANDING,TEXT,1,KG
+,chinese,拼音-声母,3,choice,下面哪个词的两个字声母都是 d？,A.大豆|B.爸爸|C.皮球,A,大豆读 dà dòu，两个字都以 d 开头。,声母、组词,kg-pinyin-initial,UNDERSTANDING,CONTEXT,1,KG
+,chinese,拼音-声母,3,choice,“你、来、牛、老”四个字里，声母是 n 的有几个？,A.2 个|B.1 个|C.3 个,A,“你”和“牛”的声母是 n，另外两个是 l。,声母、n 和 l,kg-pinyin-initial,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-声母,4,fill,“老虎”的“老”拼音是 lǎo，它的声母是____。,,l,lǎo 开头的 l 就是声母。,声母、填空,kg-pinyin-initial,APPLICATION,TEXT,1,KG
+,chinese,拼音-声母,3,choice,图中有两扇门，左边写 n，右边写 l。“篮子”的“篮”lán 该进哪扇门？,A.写 l 的门|B.写 n 的门|C.两扇都可以,A,lán 的声母是 l，所以进写 l 的门。,声母、n 和 l,kg-pinyin-initial,APPLICATION,DIAGRAM,1,KG
+,chinese,拼音-韵母,1,choice,“白”的拼音是 bái，它的韵母是哪个？,A.ai|B.ei|C.ie,A,bái 后面的 ai 就是韵母。,韵母、ai,kg-pinyin-final,MEMORY,TEXT,1,KG
+,chinese,拼音-韵母,2,choice,“杯子”的“杯”读 bēi，它的韵母是哪个？,A.ei|B.ai|C.er,A,bēi 后面的 ei 就是韵母。,韵母、ei,kg-pinyin-final,MEMORY,TEXT,1,KG
+,chinese,拼音-韵母,2,choice,图上的小猫在“喵喵”叫，拼音 māo 的韵母是哪个？,A.ao|B.ou|C.an,A,māo 后面的 ao 就是韵母。,韵母、ao,kg-pinyin-final,MEMORY,DIAGRAM,1,KG
+,chinese,拼音-韵母,2,choice,ai 和 ei 读起来不一样，不同在哪里？,A.ai 开头嘴巴张得更大，ei 嘴巴扁一点|B.两个完全一样|C.只是声调不同,A,发 ai 时嘴巴先张大，再慢慢合上。,韵母、辨析,kg-pinyin-final,UNDERSTANDING,TEXT,1,KG
+,chinese,拼音-韵母,3,choice,“海”读 hǎi，“黑”读 hēi。哪个字读的时候嘴巴先张大？,A.海|B.黑|C.一样大,A,hǎi 里有 ai，嘴巴要先张大。,韵母、ai 和 ei,kg-pinyin-final,UNDERSTANDING,CONTEXT,1,KG
+,chinese,拼音-韵母,3,choice,小狗“汪汪”叫，拼音是 wāng wāng。它的韵母是 ang 还是 an？,A.ang|B.an|C.ai,A,wāng 后面的 ang 就是韵母。,韵母、后鼻音,kg-pinyin-final,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-韵母,4,fill,图上有头牛，拼音是 niú。请写出它的韵母____。,,iu,niú 后面的 iu 就是韵母。,韵母、书写,kg-pinyin-final,APPLICATION,DIAGRAM,1,KG
+,chinese,拼音-韵母,3,choice,下面哪个音节里藏着韵母 ou？,A.tóu|B.táo|C.tái,A,tóu 里藏着 ou。,韵母、ou,kg-pinyin-final,APPLICATION,TEXT,1,KG
+,chinese,拼音-声调,1,choice,“妈”读 mā，是第一声。第一声的声调符号是什么样子？,A.一横|B.往上升|C.一个小勾,A,第一声平平的，像一条横线。,声调、第一声,kg-pinyin-tone,MEMORY,TEXT,1,KG
+,chinese,拼音-声调,2,choice,“花”读 huā 是第一声，“画”读 huà 是第几声？,A.第四声|B.第一声|C.第二声,A,huà 上的 à 是第四声。,声调、第四声,kg-pinyin-tone,MEMORY,TEXT,1,KG
+,chinese,拼音-声调,2,choice,图上画着一匹马，“马”读 mǎ，声调符号像小船。它是第几声？,A.第三声|B.第一声|C.第四声,A,第三声先降后升，像一只小船。,声调、第三声,kg-pinyin-tone,MEMORY,DIAGRAM,1,KG
+,chinese,拼音-声调,2,choice,“妈”读 mā，“骂”读 mà。两个字读音哪里不一样？,A.声调不同，一个平稳一个往下落|B.声母不同|C.韵母不同,A,声母韵母都一样，只是声调不同。,声调、辨析,kg-pinyin-tone,UNDERSTANDING,TEXT,1,KG
+,chinese,拼音-声调,3,choice,老师说“把书放在桌子上”，“上”读 shàng。如果读成 shāng 会怎样？,A.听起来不像“上面”，意思就变了|B.完全一样|C.变成了“下面”,A,声调读错，词的意思就变了。,声调、生活情境,kg-pinyin-tone,UNDERSTANDING,CONTEXT,1,KG
+,chinese,拼音-声调,3,choice,小朋友喊“你好”，拼音是 nǐ hǎo。这里一共有几个第三声？,A.2 个|B.1 个|C.0 个,A,nǐ 和 hǎo 都是第三声。,声调、数一数,kg-pinyin-tone,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-声调,4,fill,“大”读 dà，它是第____声。,,四,dà 上的 à 是第四声。,声调、填空,kg-pinyin-tone,APPLICATION,TEXT,1,KG
+,chinese,拼音-声调,3,choice,图中有四个气球，分别标着 ā、á、ǎ、à。“雨”读 yǔ，它的 u 该找哪个气球？,A.ǎ|B.ā|C.à,A,yǔ 是第三声，所以找 ǎ。,声调、第三声,kg-pinyin-tone,APPLICATION,DIAGRAM,1,KG
+,chinese,拼音-拼读,1,choice,把 b 和 a 拼在一起，读什么？,A.bā|B.dā|C.pā,A,b 和 a 相拼就是 bā。,拼读、两拼,kg-pinyin-blend,MEMORY,TEXT,1,KG
+,chinese,拼音-拼读,2,choice,m 和 a 相拼，读 mā。这是哪个字的读音？,A.妈|B.马|C.骂,A,mā 是“妈”的读音。,拼读、组词,kg-pinyin-blend,MEMORY,TEXT,1,KG
+,chinese,拼音-拼读,2,choice,图上有一个大西瓜，“瓜”的拼音是 g-u-a，拼出来是？,A.guā|B.gā|C.huā,A,g、u、a 三个音快速连起来就是 guā。,拼读、三拼,kg-pinyin-blend,MEMORY,DIAGRAM,1,KG
+,chinese,拼音-拼读,2,choice,拼读“h-ǔ”时，为什么读成 hǔ 而不是 hú？,A.因为 ǔ 是第三声，拼出来还是第三声|B.因为 h 要读得重|C.因为 u 变成了别的音,A,声调跟着韵母走，ǔ 就是第三声。,拼读、声调,kg-pinyin-blend,UNDERSTANDING,TEXT,1,KG
+,chinese,拼音-拼读,3,choice,“p-í”拼成 pí。下面哪个词读 pí？,A.皮球|B.杯子|C.鼻子,A,pí 是“皮”，皮球的皮。,拼读、生活用词,kg-pinyin-blend,UNDERSTANDING,CONTEXT,1,KG
+,chinese,拼音-拼读,3,choice,小朋友想说“我要喝水”，其中“水”是 sh-u-ǐ。他拼成了 shuī，说出来的词对吗？,A.不对，应该是 shuǐ，第三声|B.对，完全一样|C.应该读 shuì,A,声调不能变，水读 shuǐ。,拼读、纠错,kg-pinyin-blend,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-拼读,4,fill,把 k 和 ā 拼成音节，写作____。,,kā,k 和 ā 相拼就是 kā。,拼读、书写,kg-pinyin-blend,APPLICATION,TEXT,1,KG
+,chinese,拼音-拼读,3,choice,图上有只兔子，“兔”是 t-ù。如果拼成 t-ū，会变成哪个音？,A.tū|B.tù|C.dù,A,t-ū 拼出来是 tū，声调变了。,拼读、声调,kg-pinyin-blend,APPLICATION,DIAGRAM,1,KG
+,chinese,语文-常见字认读,1,choice,“日”这个字指的是什么？,A.太阳|B.月亮|C.星星,A,“日”就是太阳的意思。,常见字、字义,kg-char-recognize,MEMORY,TEXT,1,KG
+,chinese,语文-常见字认读,2,choice,图上画着弯弯的月亮，下面哪个字是“月”？,A.月|B.日|C.目,A,“月”字的样子就像弯弯的月亮。,形近字、认读,kg-char-recognize,MEMORY,DIAGRAM,1,KG
+,chinese,语文-常见字认读,2,choice,“大”和“太”只差一点，哪个字是“太阳”的“太”？,A.太|B.大|C.犬,A,“太”比“大”多一点。,形近字、辨析,kg-char-recognize,MEMORY,TEXT,1,KG
+,chinese,语文-常见字认读,2,choice,“口”和“日”哪里不一样？,A.日比口多一横|B.口比日多一横|C.两个字完全一样,A,“日”是在“口”里加了一横。,形近字、比较,kg-char-recognize,UNDERSTANDING,TEXT,1,KG
+,chinese,语文-常见字认读,3,choice,“他、她、它”三个字，说“妹妹”应该用哪个？,A.她|B.他|C.它,A,说女的用“她”，妹妹是女孩。,常用字、选字,kg-char-recognize,UNDERSTANDING,CONTEXT,1,KG
+,chinese,语文-常见字认读,3,choice,门口的牌子上，上面一个“日”，下面一个“月”，合起来是哪个字？,A.明|B.朋|C.阳,A,日和月合在一起就是“明”。,合体字、生活情境,kg-char-recognize,APPLICATION,CONTEXT,1,KG
+,chinese,语文-常见字认读,3,choice,超市的牌子上写着“大米”，妈妈要买米，她该认哪个字？,A.米|B.木|C.来,A,“米”字上面有两点，像米粒。,形近字、生活情境,kg-char-recognize,APPLICATION,DIAGRAM,1,KG
+,chinese,语文-常见字认读,4,choice,商场门口有“入口”和“出口”两个牌子，要进去该看哪个？,A.入口|B.出口|C.两个都行,A,“入”是进去，“出”是出来。,常用字、生活情境,kg-char-recognize,APPLICATION,CONTEXT,1,KG
+,chinese,语文-基本笔画,1,choice,“十”字一共有几笔？,A.2 笔|B.1 笔|C.3 笔,A,“十”先写横，再写竖，共两笔。,笔画、数笔画,kg-char-stroke,MEMORY,TEXT,1,KG
+,chinese,语文-基本笔画,2,choice,“口”字的第一笔是什么？,A.竖|B.横|C.横折,A,写“口”先写左边的竖。,笔顺、第一笔,kg-char-stroke,MEMORY,TEXT,1,KG
+,chinese,语文-基本笔画,2,choice,图上写着一个“大”字，它一共有几笔？,A.3 笔|B.2 笔|C.4 笔,A,“大”是横、撇、捺，共三笔。,笔画、数笔画,kg-char-stroke,MEMORY,DIAGRAM,1,KG
+,chinese,语文-基本笔画,2,choice,“人”和“大”的笔画有什么不同？,A.大比人多一横|B.大比人多一撇|C.两个完全一样,A,“大”是在“人”上面加了一横。,笔画、比较,kg-char-stroke,UNDERSTANDING,TEXT,1,KG
+,chinese,语文-基本笔画,3,choice,写“木”字时，最后一笔是什么？,A.捺|B.横|C.竖,A,“木”的顺序是横、竖、撇、捺。,笔顺、最后一笔,kg-char-stroke,UNDERSTANDING,CONTEXT,1,KG
+,chinese,语文-基本笔画,3,choice,小朋友写“日”字，先写外面的框，再在里面写一横。这个字一共几笔？,A.4 笔|B.3 笔|C.5 笔,A,“日”是竖、横折、横、横，共四笔。,笔画、数笔画,kg-char-stroke,APPLICATION,CONTEXT,1,KG
+,chinese,语文-基本笔画,4,fill,“上”字一共有____笔。,,3,“上”是竖、横、横，共三笔。,笔画、填空,kg-char-stroke,APPLICATION,TEXT,1,KG
+,chinese,语文-基本笔画,3,choice,图上有三个字：一、二、三。笔画最多的是哪个？,A.三|B.一|C.二,A,“三”有三横，笔画最多。,笔画、比较,kg-char-stroke,APPLICATION,DIAGRAM,1,KG
+,chinese,语文-词语理解,1,choice,“苹果”是一种什么？,A.水果|B.蔬菜|C.动物,A,苹果是甜甜的水果。,词语、生活常识,kg-word-meaning,MEMORY,TEXT,1,KG
+,chinese,语文-词语理解,2,choice,“高兴”是什么意思？,A.心里很快乐|B.很困|C.很生气,A,高兴就是心里乐开了花。,词语、心情,kg-word-meaning,MEMORY,TEXT,1,KG
+,chinese,语文-词语理解,2,choice,图上小朋友满头大汗，还拿着扇子扇。这个感觉可以用哪个词？,A.热|B.冷|C.饿,A,流汗扇扇子说明天气很热。,词语、生活情境,kg-word-meaning,MEMORY,DIAGRAM,1,KG
+,chinese,语文-词语理解,2,choice,“冰凉”和“温暖”，哪个词是说冷？,A.冰凉|B.温暖|C.两个都说冷,A,冰凉就是又冰又冷。,词语、反义,kg-word-meaning,UNDERSTANDING,TEXT,1,KG
+,chinese,语文-词语理解,3,choice,妈妈说“饭菜很香”。这里的“香”是说？,A.味道好闻、好吃|B.颜色好看|C.声音好听,A,说饭菜香，是说味道好。,词语、多义词,kg-word-meaning,UNDERSTANDING,CONTEXT,1,KG
+,chinese,语文-词语理解,3,choice,下雨了，地面湿湿的。用哪个词说最合适？,A.潮湿|B.干燥|C.炎热,A,湿湿的就是潮湿。,词语、生活情境,kg-word-meaning,APPLICATION,CONTEXT,1,KG
+,chinese,语文-词语理解,4,choice,“小鸟在枝头唱歌”。“唱歌”在这里是说小鸟在做什么？,A.在叫|B.真的在唱一首歌|C.在跳舞,A,这是把鸟叫说成唱歌，听起来很美。,词语、拟人,kg-word-meaning,APPLICATION,TEXT,1,KG
+,chinese,语文-词语理解,3,choice,小朋友把玩具都收好了，房间很整齐。用哪个词夸他？,A.干净整齐|B.乱七八糟|C.又脏又乱,A,收好玩具，房间就干净整齐。,词语、生活情境,kg-word-meaning,APPLICATION,CONTEXT,1,KG
+,chinese,语文-倾听与表达,1,choice,别人和你说话时，你应该怎么做？,A.看着对方认真听|B.低头玩玩具|C.大声打断,A,认真听别人说话是有礼貌的表现。,倾听、习惯,kg-listen-express,MEMORY,TEXT,1,KG
+,chinese,语文-倾听与表达,2,choice,老师说要排队洗手。小朋友应该先做什么？,A.到洗手池排队|B.先去玩滑梯|C.坐在原地不动,A,听清老师的要求，先去排队。,倾听、规则,kg-listen-express,MEMORY,CONTEXT,1,KG
+,chinese,语文-倾听与表达,2,choice,图中有个小朋友在洗手，水开得很大。老师说“水开小一点”，他该怎么做？,A.把水关小一些|B.把水开得更大|C.不洗手了,A,听清老师的话，把水关小。,倾听、生活情境,kg-listen-express,MEMORY,DIAGRAM,1,KG
+,chinese,语文-倾听与表达,2,choice,听别人说话时，为什么要看着对方的眼睛？,A.表示在认真听，也更容易听清|B.只是因为好玩|C.因为怕被批评,A,看着对方，说明你在认真听。,倾听、礼貌,kg-listen-express,UNDERSTANDING,TEXT,1,KG
+,chinese,语文-倾听与表达,3,choice,小朋友没听清老师说的作业，他应该怎么办？,A.有礼貌地请老师再说一遍|B.回家随便写|C.不问别人自己猜,A,没听清就问，别自己乱猜。,倾听、解决问题,kg-listen-express,UNDERSTANDING,CONTEXT,1,KG
+,chinese,语文-倾听与表达,3,word,妈妈说了三件事：先洗手、再喝水、最后收书包。请说出妈妈说的第一件事。,,先洗手。,按听的顺序记，第一件事是先洗手。,倾听、记忆顺序,kg-listen-express,APPLICATION,CONTEXT,1,KG
+,chinese,语文-倾听与表达,3,choice,下面哪句话说得最有礼貌？,A.请你把书递给我，好吗|B.把书给我|C.快把书拿来,A,加上“请”和“好吗”就有礼貌。,表达、礼貌用语,kg-listen-express,APPLICATION,TEXT,1,KG
+,chinese,语文-倾听与表达,4,word,小朋友想借同伴的彩笔，请说一句完整又有礼貌的话。,,我可以借你的彩笔用一下吗？谢谢！,先说“请”再说谢谢，别人更愿意借。,表达、礼貌用语,kg-listen-express,APPLICATION,CONTEXT,1,KG
+,chinese,语文-说完整句,1,choice,下面哪一句是完整的话？,A.小猫在睡觉|B.睡觉小猫在|C.在睡觉小猫,A,说清楚“谁在做什么”才是完整的话。,完整句、判断,kg-speak-sentence,MEMORY,TEXT,1,KG
+,chinese,语文-说完整句,2,choice,用“我、苹果、吃”三个词，能排成哪句通顺的话？,A.我吃苹果|B.苹果吃我|C.吃我苹果,A,按“谁做什么”排，就是我吃苹果。,组句、词序,kg-speak-sentence,MEMORY,TEXT,1,KG
+,chinese,语文-说完整句,2,choice,图上有个小朋友在跑步。用“谁在做什么”说一句，哪句最合适？,A.小明在跑步|B.跑步在小明|C.小明跑步在,A,先说谁，再说他在做什么。,完整句、看图说话,kg-speak-sentence,MEMORY,DIAGRAM,1,KG
+,chinese,语文-说完整句,2,choice,“花开了”和“花开了吗”两句哪里不一样？,A.后一句是在问问题|B.前一句更长|C.意思完全一样,A,句末加上“吗”就是在提问。,句子、语气,kg-speak-sentence,UNDERSTANDING,TEXT,1,KG
+,chinese,语文-说完整句,3,choice,小朋友只说“吃饭”两个字，怎样说才更完整？,A.我在家里吃饭|B.吃饭|C.饭,A,加上“谁”和“在哪里”就完整了。,完整句、扩句,kg-speak-sentence,UNDERSTANDING,CONTEXT,1,KG
+,chinese,语文-说完整句,3,word,图中有个小朋友在公园里放风筝。请说出“谁在哪里做什么”。,,小朋友在公园里放风筝。,说清谁、在哪里、做什么，句子就完整。,完整句、看图说话,kg-speak-sentence,APPLICATION,DIAGRAM,1,KG
+,chinese,语文-说完整句,4,choice,想请别人帮忙，下面哪句说得最清楚又礼貌？,A.请你帮我拿一下桌上的杯子，好吗|B.杯子|C.帮我,A,说清楚要拿什么，还加上“请”。,表达、礼貌用语,kg-speak-sentence,APPLICATION,CONTEXT,1,KG
+,chinese,语文-说完整句,3,fill,把句子补充完整：小鸟在树上____。,,唱歌,补充“在哪里做什么”，句子就完整了。,完整句、补充句子,kg-speak-sentence,APPLICATION,TEXT,1,KG
+,chinese,语文-看图讲述,1,choice,图中有个小朋友在洗手。他在做什么？,A.洗手|B.洗脸|C.洗脚,A,他手上有泡泡，是在洗手。,看图、说图意,kg-story-picture,MEMORY,DIAGRAM,1,KG
+,chinese,语文-看图讲述,2,choice,图中有三只小鸭子跟着鸭妈妈过马路。图里有几只小鸭子？,A.3 只|B.2 只|C.4 只,A,数一数，跟着妈妈的是三只小鸭。,看图、数数,kg-story-picture,MEMORY,DIAGRAM,1,KG
+,chinese,语文-看图讲述,2,choice,图中下着雨，小朋友撑着一把红伞。天气怎么样？,A.下雨|B.下雪|C.晴天,A,有雨点和伞，就是下雨天。,看图、天气,kg-story-picture,MEMORY,DIAGRAM,1,KG
+,chinese,语文-看图讲述,2,choice,图中小朋友先穿袜子，再穿鞋子。他先做的是哪件事？,A.穿袜子|B.穿鞋子|C.两件一起做,A,先穿袜子，再穿鞋子。,看图、先后顺序,kg-story-picture,UNDERSTANDING,DIAGRAM,1,KG
+,chinese,语文-看图讲述,3,choice,图中妈妈在厨房做饭，小朋友在摆碗筷。他们分别在做什么？,A.妈妈做饭，小朋友摆碗筷|B.两个人都在做饭|C.两个人都在看电视,A,看清每个人在做的事再回答。,看图、说图意,kg-story-picture,UNDERSTANDING,DIAGRAM,1,KG
+,chinese,语文-看图讲述,3,word,小朋友在小区里把地上的纸捡起来放进垃圾桶。请说一句夸他的话。,,你真爱干净，会把垃圾送回家。,说出他做得好的地方，就是夸他。,生活情境、评价表达,kg-story-picture,APPLICATION,CONTEXT,1,KG
+,chinese,语文-看图讲述,3,word,早上太阳升起来了，小朋友背上书包准备出门。请用一句话说说时间和事情。,,早上，小朋友背着书包去上学。,先说时间，再说他去做什么。,生活情境、讲述,kg-story-picture,APPLICATION,CONTEXT,1,KG
+,chinese,语文-看图讲述,4,word,图中有两只小蚂蚁一起搬一粒米。请讲讲它们在做什么，结果会怎样。,,两只小蚂蚁一起搬米，合作就能把米搬回洞里。,一起用力，小蚂蚁也能搬动大米粒。,看图、推理讲述,kg-story-picture,APPLICATION,DIAGRAM,1,KG
+,math,数学-认识时间,1,choice,太阳升起来，天亮了，这是一天中的什么时候？,A.早上|B.晚上|C.半夜,A,太阳升起、天亮就是早上。,时间、早上,kg-time-day,MEMORY,TEXT,1,KG
+,math,数学-认识时间,2,choice,小朋友上床睡觉，一般是哪个时候？,A.晚上|B.中午|C.早上,A,天黑以后，晚上才睡觉。,时间、晚上,kg-time-day,MEMORY,TEXT,1,KG
+,math,数学-认识时间,2,choice,图上的钟，短针指着 7，长针指着 12。这是几点？,A.7 点|B.12 点|C.5 点,A,长针指 12，短针指几就是几点。,认识钟面、整点,kg-time-day,MEMORY,DIAGRAM,1,KG
+,math,数学-认识时间,2,choice,先吃早饭，再去上学，最后睡觉。哪件事最早发生？,A.吃早饭|B.上学|C.睡觉,A,一天里先吃早饭，再上学。,时间、先后顺序,kg-time-day,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-认识时间,3,choice,中午太阳在头顶，我们一般在这个时候做什么？,A.吃午饭、午休|B.吃早饭|C.起床,A,中午是吃午饭和休息的时间。,时间、中午,kg-time-day,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-认识时间,3,choice,小明 8 点上学，1 个小时后开始做课间操。课间操是几点？,A.9 点|B.8 点|C.10 点,A,8 点再过 1 个小时就是 9 点。,时间、过一小时,kg-time-day,APPLICATION,CONTEXT,1,KG
+,math,数学-认识时间,4,fill,妈妈 6 点下班，路上走了 1 个小时，她____点到家。,,7,6 点再过 1 个小时就是 7 点。,时间、过一小时,kg-time-day,APPLICATION,EXPRESSION,1,KG
+,math,数学-认识时间,3,choice,图中有太阳和月亮。白天过去以后，接着来的是什么？,A.黑夜|B.早上|C.中午,A,白天过完就是黑夜。,时间、白天和黑夜,kg-time-day,APPLICATION,DIAGRAM,1,KG
+,math,数学-认识人民币,1,choice,我们国家用的钱叫什么？,A.人民币|B.美元|C.欧元,A,我们国家用的钱是人民币。,认识人民币、常识,kg-money-awareness,MEMORY,TEXT,1,KG
+,math,数学-认识人民币,2,choice,图上有一张纸币，上面写着 1 元。这张钱是多少？,A.1 元|B.10 元|C.1 角,A,纸币上写着 1 元，就是一元钱。,认识人民币、面值,kg-money-awareness,MEMORY,DIAGRAM,1,KG
+,math,数学-认识人民币,2,choice,1 元等于多少角？,A.10 角|B.100 角|C.1 角,A,一元等于十角。,人民币、换算,kg-money-awareness,MEMORY,TEXT,1,KG
+,math,数学-认识人民币,2,choice,5 角和 1 元，哪个钱更多？,A.1 元|B.5 角|C.一样多,A,1 元等于 10 角，比 5 角多。,人民币、比较,kg-money-awareness,UNDERSTANDING,TEXT,1,KG
+,math,数学-认识人民币,3,choice,一瓶水 2 元，一包饼干 3 元。哪个更贵？,A.饼干|B.水|C.一样贵,A,3 元比 2 元多，饼干更贵。,人民币、比较,kg-money-awareness,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-认识人民币,3,choice,小朋友有 5 元，买 3 元的本子，还剩几元？,A.2 元|B.3 元|C.8 元,A,5 元去掉 3 元，还剩 2 元。,人民币、简单计算,kg-money-awareness,APPLICATION,CONTEXT,1,KG
+,math,数学-认识人民币,4,choice,一支笔 4 元，一块橡皮 1 元。买这两样一共要几元？,A.5 元|B.4 元|C.3 元,A,4 元加 1 元是 5 元。,人民币、简单计算,kg-money-awareness,APPLICATION,EXPRESSION,1,KG
+,math,数学-认识人民币,3,choice,妈妈给 10 元买 6 元的画册，找回的钱够买 1 元一支的铅笔吗？,A.够，找回 4 元|B.不够|C.刚好 0 元,A,10 元减 6 元找回 4 元，买 1 元的笔够用。,人民币、生活应用,kg-money-awareness,APPLICATION,CONTEXT,1,KG
+,math,数学-进位加法,1,fill,38＋27＝____,,65,个位8＋7＝15写5进1，十位3＋2＋1＝6。,进位加法、口算,math-add-carry,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-进位加法,1,fill,口算：46＋9＝____,,55,6＋9＝15写5进1，十位4＋1＝5。,进位加法、口算,math-add-carry,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-进位加法,2,choice,小明先摆4捆5根小棒，又摆上2捆8根小棒。现在一共有多少根小棒？,A.63|B.73|C.77,B,45＋28＝73，个位5＋8满十要向十位进1。,进位加法、小棒、图景,math-add-carry,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-进位加法,2,choice,计算56＋38时，个位6＋8＝14，接下来应该怎样写？,A.个位写4，向十位进1|B.个位写1，向十位进4|C.个位写14，不用进位,A,个位相加满十，写4并向十位进1。,进位加法、算理,math-add-carry,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-进位加法,3,choice,小马虎算35＋47，得数是72。他错在哪里？,A.个位5＋7算错了|B.个位满十后，十位忘记加上进位的1|C.十位3＋4算成了9,B,十位应是3＋4＋1＝8，正确得数是82。,进位加法、易错、纠错,math-add-carry,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-进位加法,3,choice,下面哪道算式的得数比80大？,A.38＋39|B.47＋32|C.56＋25,C,38＋39＝77，47＋32＝79，56＋25＝81。,进位加法、估算、比较,math-add-carry,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-进位加法,3,word,图书角有故事书28本，科技书比故事书多17本。科技书有多少本？,,28＋17＝45（本）,求比28多17的数，用加法算。,进位加法、应用题、比多,math-add-carry,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-进位加法,3,word,公共汽车上原来有37人，到站又上来26人。现在车上有多少人？,,37＋26＝63（人）,原来的人数加上来的人数，就是现在的人数。,进位加法、应用题、坐车,math-add-carry,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-进位加法,3,word,小华第一次拍球45下，第二次比第一次多拍38下。第二次拍了多少下？,,45＋38＝83（下）,比45多38，就用45加38。,进位加法、应用题、拍球,math-add-carry,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-进位加法,4,word,学校图书室原来有48本书，又买回36本。现在图书室有多少本书？,,48＋36＝84（本）,原有的本数加买回的本数，得84本。,进位加法、应用题、图书,math-add-carry,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-退位减法,1,fill,52－8＝____,,44,个位2减8不够，借1当10，12－8＝4，十位剩4。,退位减法、口算,math-sub-borrow,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-退位减法,1,fill,口算：73－6＝____,,67,13－6＝7，十位7借走1后是6。,退位减法、口算,math-sub-borrow,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-退位减法,2,choice,用小棒算43－7：先把1捆拆成10根，和3根合起来是13根。13根拿走7根，还剩几根？,A.5|B.6|C.7,B,13－7＝6，所以43－7＝36。,退位减法、小棒、算理,math-sub-borrow,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-退位减法,2,choice,计算60－24，个位0减4不够减，应该怎么办？,A.向十位借1，个位当成10再减|B.个位直接写0|C.把24倒过来减,A,个位不够减时，向十位借1当10。,退位减法、算理、整十数,math-sub-borrow,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-退位减法,3,choice,计算81－36时，十位上的数要减去多少？,A.3|B.4|C.8,B,十位8被借走1变成7，7－3＝4。,退位减法、算理、十位,math-sub-borrow,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-退位减法,3,choice,小马虎算45－8，得数是47。他错在哪里？,A.个位5－8算成了2|B.个位不够减时，十位忘记减去借走的1|C.个位忘记写0,B,十位4要变成3，正确得数是37。,退位减法、易错、纠错,math-sub-borrow,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-退位减法,3,word,停车场原来有62辆车，开走了25辆。停车场还剩多少辆车？,,62－25＝37（辆）,从原有的车里减去开走的车。,退位减法、应用题、停车场,math-sub-borrow,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-退位减法,3,word,图书角有90本书，借出38本。还剩多少本书？,,90－38＝52（本）,用总本数减去借出的本数。,退位减法、应用题、借书,math-sub-borrow,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-退位减法,4,word,妈妈带了100元，买书包用去56元。还剩多少元？,,100－56＝44（元）,100减56，个位和十位都要退位。,退位减法、应用题、买东西,math-sub-borrow,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-退位减法,4,word,跳绳比赛，小云跳了81下，小丽比小云少跳26下。小丽跳了多少下？,,81－26＝55（下）,比81少26，就用81减26。,退位减法、应用题、跳绳,math-sub-borrow,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-连加连减,2,fill,24＋36＋18＝____,,78,先算24＋36＝60，再算60＋18＝78。,连加、口算,g2-addsub-mixed,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-连加连减,2,fill,90－25－35＝____,,30,先算90－25＝65，再算65－35＝30。,连减、口算,g2-addsub-mixed,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-连加连减,2,fill,先算42＋18＝60，再算60－27，结果是____。,,33,60－27＝33，同级运算从左往右算。,混合运算、按步计算,g2-addsub-mixed,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-连加连减,3,choice,计算80－26＋14，应该先算哪一步？,A.先算26＋14|B.先算80－26|C.先算80＋14,B,只有加减法时，要从左往右依次计算。,混合运算、运算顺序,g2-addsub-mixed,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-连加连减,3,choice,下面哪道算式的结果和其他两道不同？,A.50－20－8|B.50－（20＋8）|C.50－20＋8,C,前两道都得22，第三道得38。,混合运算、比较、运算顺序,g2-addsub-mixed,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-连加连减,3,choice,小明算60－15＋25时，先算成60－40＝20。他错在哪里？,A.应该先算60－15|B.应该先算15＋25|C.减法不能连着算,A,先算60－15＝45，再加25得70。,混合运算、易错、纠错,g2-addsub-mixed,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-连加连减,3,word,公共汽车上有48人，到第一站下去12人，到第二站又上来9人。现在车上有多少人？,,48－12＋9＝45（人）,先减去下去的，再加上上来的。,混合运算、应用题、坐车,g2-addsub-mixed,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-连加连减,3,word,小华有70元，买书用了28元，妈妈又给他15元。现在他有多少元？,,70－28＋15＝57（元）,先减去花掉的，再加上妈妈给的。,混合运算、应用题、零花钱,g2-addsub-mixed,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-连加连减,4,word,仓库有85箱饮料，上午运走26箱，下午运走34箱。还剩多少箱？,,85－26－34＝25（箱）,两次运走的都要减去。,混合运算、应用题、仓库,g2-addsub-mixed,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-连加连减,4,word,小丁跳绳，第一次跳36下，第二次跳29下，第三次跳25下。三次一共跳了多少下？,,36＋29＋25＝90（下）,把三次跳的下数相加。,连加、应用题、跳绳,g2-addsub-mixed,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-加减法应用题,1,word,教室里有24张桌子，搬走9张。还剩多少张？,,24－9＝15（张）,从24张里去掉9张。,应用题、减法、教室,g2-addsub-word,MEMORY,CONTEXT,1,PRIMARY_LOW
+,math,数学-加减法应用题,2,word,图中左边有35张贴纸，右边有18张贴纸。合起来一共有多少张？,,35＋18＝53（张）,把两边的张数合起来。,应用题、加法、贴纸,g2-addsub-word,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-加减法应用题,2,word,篮子里有56个橘子，吃掉27个。还剩多少个？,,56－27＝29（个）,总数减去吃掉的个数。,应用题、减法、橘子,g2-addsub-word,MEMORY,CONTEXT,1,PRIMARY_LOW
+,math,数学-加减法应用题,2,choice,一盒彩笔18元，一盒蜡笔比彩笔便宜5元。求蜡笔的价钱，用哪种方法算？,A.用加法|B.用减法|C.加法和减法都可以,B,便宜就是少，要用18减5。,应用题、比少、审题,g2-addsub-word,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-加减法应用题,3,choice,树上原来有30只鸟，飞走一些后还剩12只。求飞走了多少只，算式是哪个？,A.30＋12|B.30－12|C.12－30,B,总数减去剩下的，就是飞走的只数。,应用题、逆向思考、鸟,g2-addsub-word,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-加减法应用题,3,choice,下面哪个问题不能用45－18来解决？,A.有45个苹果，吃了18个，还剩几个|B.一班45人，二班18人，两班一共几人|C.有45元，花掉18元，还剩几元,B,求两班一共多少人要用加法。,应用题、选择算法、比较,g2-addsub-word,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-加减法应用题,3,word,学校买来48根跳绳，分给二年级25根。还剩多少根？,,48－25＝23（根）,从买来的跳绳里减去分掉的。,应用题、减法、跳绳,g2-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-加减法应用题,3,word,小芳折了36颗星星，小丽比小芳多折9颗。小丽折了多少颗？,,36＋9＝45（颗）,比36多9，就用36加9。,应用题、比多、折纸,g2-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-加减法应用题,4,word,果园里有苹果树57棵，梨树比苹果树少19棵。两种树一共有多少棵？,,57－19＝38（棵），57＋38＝95（棵）,先求梨树38棵，再求一共95棵。,应用题、两步、果园,g2-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-加减法应用题,4,word,小明看一本80页的故事书，第一天看26页，第二天看31页。还剩多少页没看？,,80－26－31＝23（页）,用总页数减去两天看的页数。,应用题、连减、看书,g2-addsub-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-乘法的意义,1,choice,图中有4盘桃子，每盘3个。求一共有多少个，用哪个算式？,A.4＋3|B.4×3|C.4－3,B,4个3相加，可以写成4×3。,乘法意义、图景、几个几,math-mul-meaning,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-乘法的意义,2,fill,5＋5＋5＋5表示____个5相加。,,4,数一数，一共有4个5。,乘法意义、几个几,math-mul-meaning,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-乘法的意义,2,fill,6＋6＋6＝18，写成乘法算式是____。,,3×6,3个6相加，可以写成3×6。,乘法意义、改写算式,math-mul-meaning,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-乘法的意义,2,choice,下面哪个算式表示「4个3相加」？,A.4＋3|B.4×3|C.3＋3＋3,B,4个3相加写成乘法就是4×3。,乘法意义、几个几、辨析,math-mul-meaning,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-乘法的意义,3,choice,「3个4」和「4个3」的结果相同吗？,A.相同，都得12|B.不同，得数差1|C.不能比较,A,3×4和4×3都得12。,乘法意义、比较、交换,math-mul-meaning,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-乘法的意义,3,choice,小明说「5＋5＋5可以写成5×3」。他的想法对吗？,A.对，3个5相加就是5×3|B.错，应该写成5＋3|C.错，应该写成3×3,A,3个5相加，写成乘法是5×3。,乘法意义、判断、说理,math-mul-meaning,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-乘法的意义,3,word,操场上每排种6棵树，一共种了4排。一共种了多少棵？,,6×4＝24（棵）,4个6相加，用乘法算得快。,乘法意义、应用题、种树,math-mul-meaning,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-乘法的意义,3,word,一盒糖有8颗，妈妈买了5盒。一共有多少颗糖？,,8×5＝40（颗）,5个8相加，用8乘5。,乘法意义、应用题、糖果,math-mul-meaning,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-乘法的意义,4,word,一张桌子坐4人，7张这样的桌子能坐多少人？,,4×7＝28（人）,7个4相加，用4乘7。,乘法意义、应用题、坐桌子,math-mul-meaning,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-乘法的意义,4,word,小华每天读5页书，一周7天一共读多少页？,,5×7＝35（页）,7个5相加，用5乘7。,乘法意义、应用题、读书,math-mul-meaning,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-表内乘法,1,fill,六七____。,,四十二,口诀是六七四十二。,表内乘法、口诀,math-mul-table,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-表内乘法,1,fill,7×8＝____,,56,想口诀七八五十六。,表内乘法、口算,math-mul-table,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-表内乘法,2,choice,9×9用哪句口诀来算？,A.九九八十一|B.八九七十二|C.七九六十三,A,9乘9要用九九八十一。,表内乘法、口诀、九的乘法,math-mul-table,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-表内乘法,2,choice,根据口诀「七八五十六」，下面哪个算式是对的？,A.7×8＝56|B.7＋8＝56|C.56－8＝7,A,七八五十六，就是7乘8得56。,表内乘法、口诀、对应算式,math-mul-table,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-表内乘法,3,fill,口诀「六七四十二」可以写出两道乘法算式：6×7和____。,,7×6,两个乘数交换位置，得数不变。,表内乘法、口诀、交换,math-mul-table,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-表内乘法,3,choice,下面哪道算式不能用口诀「六八四十八」来算？,A.6×8|B.8×6|C.6＋8,C,这句口诀算的是乘法，不算加法。,表内乘法、口诀、辨析,math-mul-table,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-表内乘法,3,word,一盒铅笔有6支，7盒一共有多少支？,,6×7＝42（支）,想口诀六七四十二。,表内乘法、应用题、铅笔,math-mul-table,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-表内乘法,3,word,每个小朋友分8颗糖，分给9个小朋友要多少颗？,,8×9＝72（颗）,想口诀八九七十二。,表内乘法、应用题、分糖,math-mul-table,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-表内乘法,4,word,一辆小汽车坐5人，8辆这样的小汽车能坐多少人？,,5×8＝40（人）,想口诀五八四十。,表内乘法、应用题、坐车,math-mul-table,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-表内乘法,4,word,墙上每行贴9张画，贴了6行。一共贴了多少张？,,9×6＝54（张）,想口诀六九五十四。,表内乘法、应用题、贴画,math-mul-table,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-乘法应用题,1,word,每个鱼缸养3条金鱼，5个鱼缸一共养多少条？,,3×5＝15（条）,5个3相加，用3乘5。,乘法应用题、鱼缸,g2-mul-word,MEMORY,CONTEXT,1,PRIMARY_LOW
+,math,数学-乘法应用题,2,word,一张电影票8元，买4张要多少元？,,8×4＝32（元）,4个8相加就是32元。,乘法应用题、买票,g2-mul-word,MEMORY,CONTEXT,1,PRIMARY_LOW
+,math,数学-乘法应用题,2,choice,图中有5串葡萄，每串6颗。求一共有多少颗，算式是哪个？,A.5＋6|B.5×6|C.6－5,B,5个6相加，用5乘6。,乘法应用题、图景、葡萄,g2-mul-word,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-乘法应用题,2,choice,小明说「每盒有5个，3盒就是5＋3＝8个」。他错在哪里？,A.应该用5×3＝15|B.应该用5－3＝2|C.他没有错,A,3盒就是3个5相加，要用乘法。,乘法应用题、纠错、几个几,g2-mul-word,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-乘法应用题,3,choice,「每盘放4个苹果，放满6盘」和「每盘放6个苹果，放满4盘」，两题的结果相同吗？,A.相同，都是24个|B.不同，相差10个|C.无法判断,A,4×6和6×4都得24。,乘法应用题、比较、交换,g2-mul-word,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-乘法应用题,3,choice,求「5个8是多少」，下面哪种想法是对的？,A.用5＋8来算|B.用5×8来算|C.用8－5来算,B,5个8相加，用5乘8最简便。,乘法应用题、几个几、选择算法,g2-mul-word,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-乘法应用题,3,word,操场上每队站9人，一共站了4队。一共有多少人？,,9×4＝36（人）,4个9相加，用9乘4。,乘法应用题、排队,g2-mul-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-乘法应用题,3,word,妈妈买回6袋牛奶，每袋5元。一共花了多少元？,,5×6＝30（元）,6个5相加，用5乘6。,乘法应用题、买东西,g2-mul-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-乘法应用题,4,word,教室里每行摆8张椅子，摆了5行，另外还多出3张。一共有多少张椅子？,,8×5＝40（张），40＋3＝43（张）,先算5行共40张，再加上多的3张。,乘法应用题、两步、椅子,g2-mul-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-乘法应用题,4,word,一箱矿泉水有9瓶，买来4箱。分给同学30瓶后，还剩多少瓶？,,9×4＝36（瓶），36－30＝6（瓶）,先算一共36瓶，再减去分掉的。,乘法应用题、两步、矿泉水,g2-mul-word,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-除法的意义,1,choice,图中有12个苹果，平均放进3个盘子。求每盘放几个，用哪个算式？,A.12＋3|B.12÷3|C.12×3,B,平均分要用除法。,除法意义、平均分、图景,g2-div-meaning,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-除法的意义,2,fill,把18平均分成6份，每份是____。,,3,18÷6＝3。,除法意义、平均分,g2-div-meaning,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-除法的意义,2,fill,24÷4表示把24平均分成____份。,,4,除号后面的4就是分的份数。,除法意义、算式含义,g2-div-meaning,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-除法的意义,2,choice,把20个桃子平均分给5只小猴，求每只分几个，就是求什么？,A.把20平均分成5份，每份几个|B.20比5多几|C.20个5是多少,A,平均分给5只，就是把20平均分成5份。,除法意义、平均分、说理,g2-div-meaning,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-除法的意义,3,choice,下面哪种分法是平均分？,A.12个苹果放3盘，每盘4个|B.12个苹果放3盘，分别放2个、4个、6个|C.12个苹果全放1盘,A,每份同样多，才是平均分。,除法意义、平均分、判断,g2-div-meaning,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-除法的意义,3,choice,「15÷3＝5」可以表示下面哪句话？,A.15里面有3个5|B.15里面有5个3|C.3个15是多少,B,15每3个一份，正好分成5份。,除法意义、包含除、辨析,g2-div-meaning,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-除法的意义,3,word,有24块饼干，平均分给4个小朋友。每人分几块？,,24÷4＝6（块）,把24平均分成4份，每份6块。,除法意义、应用题、分饼干,g2-div-meaning,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-除法的意义,3,word,有20朵花，每5朵扎成一束。可以扎几束？,,20÷5＝4（束）,看20里面有几个5。,除法意义、应用题、扎花,g2-div-meaning,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-除法的意义,4,word,老师把36本本子平均奖给6个小组。每个小组得几本？,,36÷6＝6（本）,36平均分成6份，每份6本。,除法意义、应用题、发本子,g2-div-meaning,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-除法的意义,4,word,小猴摘了27个玉米，每天吃3个。这些玉米能吃几天？,,27÷3＝9（天）,看27里面有几个3。,除法意义、应用题、玉米,g2-div-meaning,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-表内除法,1,fill,想口诀「二四得八」，8÷2＝____。,,4,二四得八，所以商是4。,表内除法、口诀求商,g2-div-table,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-表内除法,1,fill,42÷6＝____。,,7,想口诀六七四十二，商是7。,表内除法、口诀求商,g2-div-table,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-表内除法,2,choice,算36÷4时，要想哪句口诀？,A.四九三十六|B.四六二十四|C.六六三十六,A,4乘9得36，所以36÷4＝9。,表内除法、想口诀,g2-div-table,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-表内除法,3,fill,根据口诀「七八五十六」，56÷7＝____，56÷8＝____。,,8；7,这句口诀能算出两道除法。,表内除法、一诀两除,g2-div-table,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-表内除法,3,choice,下面哪道除法可以用口诀「六八四十八」来算？,A.48÷6|B.48÷8|C.48÷6和48÷8都可以,C,一句口诀能写出两道除法算式。,表内除法、口诀、辨析,g2-div-table,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-表内除法,3,choice,在56÷□＝8中，□里填几？应该怎样想？,A.填7，想七八五十六|B.填8，想八八六十四|C.填6，想六八四十八,A,56除以7得8，用口诀七八五十六。,表内除法、未知除数、想口诀,g2-div-table,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-表内除法,3,word,把45颗糖平均分给5个小朋友。每人分几颗？,,45÷5＝9（颗）,想口诀五九四十五。,表内除法、应用题、分糖,g2-div-table,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-表内除法,3,word,56条鱼，每个鱼缸放8条。需要几个鱼缸？,,56÷8＝7（个）,想口诀七八五十六。,表内除法、应用题、金鱼,g2-div-table,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-表内除法,4,word,有54名同学，每9人站一队。可以站成几队？,,54÷9＝6（队）,想口诀六九五十四。,表内除法、应用题、排队,g2-div-table,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-表内除法,4,word,一根绳子长72厘米，平均剪成8段。每段长几厘米？,,72÷8＝9（厘米）,想口诀八九七十二。,表内除法、应用题、剪绳,g2-div-table,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-有余数的除法,2,fill,17÷5＝____……____。,,3……2,17里面最多有3个5，还剩2。,有余数除法、口算,g2-div-remainder,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-有余数的除法,2,fill,在23÷4＝5……3中，余数是____。,,3,3就是分完后剩下的数。,有余数除法、认识各部分,g2-div-remainder,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-有余数的除法,2,choice,一个数除以6，余数可能是下面哪个数？,A.6|B.5|C.7,B,余数必须比除数6小。,有余数除法、余数与除数,g2-div-remainder,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-有余数的除法,3,choice,下面哪道算式算错了？,A.20÷3＝6……2|B.20÷3＝5……5|C.20÷6＝3……2,B,余数5比除数3大，说明还能再分。,有余数除法、纠错、余数比除数小,g2-div-remainder,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-有余数的除法,3,choice,□÷5＝4……△，△最大是几？,A.4|B.5|C.6,A,余数要比5小，最大是4。,有余数除法、最大余数,g2-div-remainder,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-有余数的除法,3,choice,判断：一个除法算式的余数是7，除数是6。这个算式一定算错了。这句话对吗？,A.对，余数7比除数6大|B.错，余数可以比除数大|C.不一定，要看被除数,A,余数必须比除数小，所以一定算错。,有余数除法、判断、余数比除数小,g2-div-remainder,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-有余数的除法,3,word,有17个苹果，每盘放4个。能放满几盘？还剩几个？,,17÷4＝4（盘）……1（个）,放满4盘，还剩1个。,有余数除法、应用题、分苹果,g2-div-remainder,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-有余数的除法,4,word,23名同学去划船，每条船最多坐5人。至少要租几条船？,,23÷5＝4（条）……3（人），4＋1＝5（条）,剩下的3人也要租一条船。,有余数除法、进一法、划船,g2-div-remainder,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-有余数的除法,4,word,用50元买笔记本，每本8元。最多能买几本？还剩几元？,,50÷8＝6（本）……2（元）,最多买6本，还剩2元。,有余数除法、应用题、买文具,g2-div-remainder,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-有余数的除法,4,word,一根绳子长25米，每4米剪一段。最多能剪几段？还剩几米？,,25÷4＝6（段）……1（米）,最多剪6段，还剩1米。,有余数除法、应用题、剪绳,g2-div-remainder,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-万以内数的认识,1,fill,由4个千、6个百和8个一组成的数写作什么？,,4608,4个千是4000，6个百是600，再加8就是4608。,数的组成、写数,g2-num-readwrite,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-万以内数的认识,1,choice,图中3捆小棒每捆表示一千，旁边还有5根单独的小棒，这个数是多少？,A.3500|B.3005|C.3050,B,3捆是3000，5根是5，合起来是3005。,看图写数、数的组成,g2-num-readwrite,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-万以内数的认识,2,fill,2809读作什么？,,二千八百零九,千位2读二千，百位8读八百，十位0读零，个位9读九。,读数、中间有零,g2-num-readwrite,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-万以内数的认识,2,choice,下面哪个数读作五千零六？,A.5600|B.5006|C.5060,B,5006中间两个0只读一个零，末尾的0不读。,读数、易错,g2-num-readwrite,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-万以内数的认识,2,choice,3600里面有多少个百？,A.3个|B.36个|C.360个,B,3600是36个百，千位上3表示30个百。,计数单位、数的组成,g2-num-readwrite,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-万以内数的认识,3,fill,一个数千位上是7，十位上是4，其余各位都是0，这个数写作什么？,,7040,千位写7，百位写0，十位写4，个位写0。,写数、数位,g2-num-readwrite,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-万以内数的认识,3,choice,学校图书室有二千零五十本书，这个数写作什么？,A.250|B.2050|C.2005,B,二千是2000，零五十是50，合起来是2050。,写数、生活情境,g2-num-readwrite,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-万以内数的认识,3,word,小明家的门牌号是四千零六，这个数写作什么？它比4000多多少？,,4006，比4000多6,四千零六写作4006，4006减4000等于6。,写数、数的组成,g2-num-readwrite,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-万以内数的认识,4,fill,用3、0、5、8四张数字卡片摆一个最大的四位数，这个数写作什么？,,8530,把最大的数字放在最高位，从大到小排就是8530。,组数、比较大小,g2-num-readwrite,APPLICATION,TEXT,1,PRIMARY_LOW
+,math,数学-万以内数的认识,4,fill,一个四位数千位是6，个位是9，百位和十位都是0，这个数读作什么？,,六千零九,中间两个0只读一个零，末尾的9读九。,读数、中间有零,g2-num-readwrite,APPLICATION,TEXT,1,PRIMARY_LOW
+,math,数学-数的大小比较,1,choice,下面三个数中最大的一个是哪一个？,A.998|B.1000|C.989,B,四位数比三位数大，1000是四位数。,比较大小、位数,g2-num-compare,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-数的大小比较,1,fill,在括号里填上大于号或小于号：458（ ）485。,,＜,百位相同比十位，5比8小，所以458小于485。,比较大小、符号,g2-num-compare,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-数的大小比较,2,choice,2998最接近的整千数是多少？,A.2000|B.3000|C.4000,B,2998只比3000少2，所以最接近3000。,近似数、整千,g2-num-compare,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-数的大小比较,2,choice,比较687和768的大小，下面说法正确的是哪一个？,A.687大|B.768大|C.一样大,B,百位上7比6大，所以768大。,比较大小、说理,g2-num-compare,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-数的大小比较,2,choice,图中左边一堆598块积木，右边一堆601块，哪一堆多？,A.左边多|B.右边多|C.一样多,B,601比598大3，右边多。,比较大小、看图,g2-num-compare,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数的大小比较,3,fill,3986大约是几千？,,4000,3986接近4000，只差14。,近似数、整千,g2-num-compare,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-数的大小比较,3,choice,小明有985元，小红有1020元，谁的钱多？,A.小明多|B.小红多|C.一样多,B,1020是四位数，985是三位数，小红多。,比较大小、生活情境,g2-num-compare,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-数的大小比较,3,word,一年级有486人，二年级有512人，哪个年级人数多？多多少人？,,二年级多，多26人,512减486等于26，所以二年级多26人。,比较大小、减法,g2-num-compare,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-数的大小比较,4,fill,一台冰箱售价3998元，大约是几千元？,,4000元,3998接近整千数4000。,近似数、整千,g2-num-compare,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-数的大小比较,4,word,用5、0、8三张数字卡片摆出最大的三位数和最小的三位数，数字不重复，它们相差多少？,,最大850，最小508，相差342,组成850和508，850减508等于342。,组数、比较大小,g2-num-compare,APPLICATION,TEXT,1,PRIMARY_LOW
+,math,数学-数位与计数单位,1,choice,10个一是多少？,A.1个十|B.1个百|C.1个千,A,10个一就是1个十，相邻单位进率是10。,计数单位、进率,g2-num-placevalue,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-数位与计数单位,1,fill,计数器百位上拨3颗珠子，十位上拨2颗，个位上拨6颗，表示的数是多少？,,326,百位3是300，十位2是20，个位6是6。,看计数器、数的组成,g2-num-placevalue,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数位与计数单位,2,fill,一个四位数从右边起第三位是什么位？,,百位,从右边起依次是个位、十位、百位、千位。,数位顺序、记忆,g2-num-placevalue,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-数位与计数单位,2,choice,3256中数字5在什么位上？,A.个位|B.十位|C.百位,B,5在从右边起第二位，是十位。,数位、认数,g2-num-placevalue,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-数位与计数单位,2,choice,600里面有几个百？,A.6个十|B.6个百|C.6个千,B,600的百位上是6，表示6个百。,计数单位、说理,g2-num-placevalue,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-数位与计数单位,3,fill,830里面一共有多少个十？,,83个,830是83个十，百位上8表示80个十。,计数单位、进率,g2-num-placevalue,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-数位与计数单位,3,choice,一盒铅笔有10支，10盒一共多少支？,A.10支|B.100支|C.1000支,B,10个十是100，相邻单位进率是10。,计数单位、生活情境,g2-num-placevalue,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-数位与计数单位,3,word,工地运来8车砖，每车1000块，一共运来多少块？,,8000块,8个千是8000，所以一共8000块。,计数单位、生活情境,g2-num-placevalue,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-数位与计数单位,4,fill,一个数由4个千和7个十组成，这个数写作什么？它的十位上是几？,,4070，十位上是7,千位写4，百位写0，十位写7，个位写0。,数的组成、数位,g2-num-placevalue,APPLICATION,TEXT,1,PRIMARY_LOW
+,math,数学-数位与计数单位,4,fill,10个一百是多少？30个一百又是多少？,,1000和3000,10个一百是1000，30个一百是3000。,计数单位、进率,g2-num-placevalue,APPLICATION,EXPRESSION,1,PRIMARY_LOW
+,math,数学-长度单位,1,choice,1米等于多少厘米？,A.10厘米|B.100厘米|C.1000厘米,B,1米等于100厘米，要记牢。,单位换算、记忆,g2-length-unit,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-长度单位,1,fill,3米等于多少厘米？,,300厘米,1米是100厘米，3米就是300厘米。,单位换算、米与厘米,g2-length-unit,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-长度单位,2,choice,量一支铅笔的长用哪个单位比较合适？,A.厘米|B.米|C.千米,A,铅笔很短，用厘米量正合适。,单位选择、生活经验,g2-length-unit,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-长度单位,2,choice,下面哪个长度大约是1米？,A.小朋友两臂展开的长度|B.一根粉笔的长度|C.一层楼的高度,A,两臂展开大约1米，粉笔和楼房都不对。,估测、长度表象,g2-length-unit,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-长度单位,2,choice,200厘米和2米比较，结果怎样？,A.200厘米长|B.2米长|C.一样长,C,2米等于200厘米，两个长度一样长。,单位换算、比较,g2-length-unit,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-长度单位,3,fill,图中铅笔一端对着0刻度，另一端对着8厘米，这支铅笔长多少厘米？,,8厘米,从0刻度量到8厘米，长度就是8厘米。,看图测量、厘米,g2-length-unit,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-长度单位,3,word,一根跳绳长2米，剪去50厘米，还剩多少厘米？,,150厘米,2米是200厘米，减去50厘米剩150厘米。,单位换算、减法,g2-length-unit,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-长度单位,3,word,小明身高125厘米，小红比他高10厘米，小红身高多少厘米？,,135厘米,125加10等于135，所以是135厘米。,长度加法、生活情境,g2-length-unit,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-长度单位,4,choice,教室的长大约是8什么？,A.厘米|B.米|C.千米,B,教室比较长，8米才合适。,估测、单位选择,g2-length-unit,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-长度单位,4,word,一条彩带长3米，做花用去80厘米，还剩多少厘米？,,220厘米,3米是300厘米，300减80等于220厘米。,单位换算、两步思考,g2-length-unit,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-质量单位,1,choice,1千克等于多少克？,A.10克|B.100克|C.1000克,C,1千克等于1000克，要记住。,单位换算、记忆,g2-mass-unit,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-质量单位,1,fill,天平左边放2千克的砝码，右边要放多少克砝码才能平衡？,,2000克,2千克就是2000克，两边一样重才平衡。,单位换算、天平,g2-mass-unit,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-质量单位,2,choice,一个鸡蛋大约重多少？,A.5克|B.50克|C.500克,B,一个鸡蛋大约50克，500克太重了。,估测、质量表象,g2-mass-unit,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-质量单位,2,choice,称一袋大米的质量用哪个单位比较合适？,A.克|B.千克|C.厘米,B,一袋大米比较重，用千克合适。,单位选择、生活经验,g2-mass-unit,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-质量单位,2,choice,3000克和3千克比较，结果怎样？,A.3000克重|B.3千克重|C.一样重,C,3千克就是3000克，两边一样重。,单位换算、比较,g2-mass-unit,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-质量单位,3,fill,1千克500克合多少克？,,1500克,1千克是1000克，再加500克是1500克。,单位换算、千克与克,g2-mass-unit,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-质量单位,3,word,一袋苹果重2千克，吃掉500克，还剩多少克？,,1500克,2千克是2000克，2000减500等于1500克。,单位换算、减法,g2-mass-unit,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-质量单位,3,word,妈妈买了1千克香蕉和3千克苹果，一共重多少千克？,,4千克,1加3等于4，一共重4千克。,质量加法、生活情境,g2-mass-unit,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-质量单位,4,word,一箱牛奶重4千克，搬走2箱，一共搬走多少克？,,8000克,2箱是8千克，8千克等于8000克。,单位换算、两步思考,g2-mass-unit,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-质量单位,4,choice,一袋盐重500克，两袋盐一共重多少？,A.500克|B.1千克|C.10千克,B,两袋是1000克，1000克就是1千克。,单位换算、生活情境,g2-mass-unit,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-认识时间,1,choice,钟面时针在3和4之间，分针指向12，是几时？,A.3时|B.4时|C.12时,A,分针指12是整时，时针过3就是3时。,认钟面、整时,g2-time-clock,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-认识时间,1,fill,钟面时针在8和9之间，分针指向9，是几时几分？,,8时45分,分针指9是45分，时针过8，所以是8时45分。,认钟面、几时几分,g2-time-clock,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-认识时间,2,fill,钟面分针指向6，时针在7和8之间，是几时几分？,,7时30分,分针指6是30分，时针过7，是7时30分。,认钟面、半时,g2-time-clock,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-认识时间,2,choice,分针走一小格是多少分钟？,A.1分|B.5分|C.10分,A,分针走一小格是1分，走一大格是5分。,认识分、记忆,g2-time-clock,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-认识时间,2,choice,钟面时针指向10，分针指向12，这个时间是几时？,A.10时|B.12时|C.10时12分,A,分针指12是整时，看时针指10就是10时。,认钟面、整时,g2-time-clock,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-认识时间,3,fill,从8时30分到8时45分，经过了多长时间？,,15分,分针从6走到9，走了3大格，是15分。,经过时间、计算,g2-time-clock,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-认识时间,3,word,小明7时40分从家出发，走了20分钟到学校，几时几分到校？,,8时到校,40分加20分是60分，正好1小时，所以是8时。,经过时间、生活情境,g2-time-clock,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-认识时间,3,word,一节课40分钟，8时20分上课，几时几分下课？,,9时下课,20分加40分是60分，正好1小时，所以是9时。,经过时间、生活情境,g2-time-clock,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-认识时间,4,word,小红9时开始看书，看了45分钟，她几时几分结束？,,9时45分,9时再过45分就是9时45分。,经过时间、计算,g2-time-clock,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-认识时间,4,choice,钟面时针快到5，分针指向11，是几时几分？,A.5时55分|B.4时55分|C.4时11分,B,分针指11是55分，时针还没到5，是4时55分。,认钟面、易错,g2-time-clock,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,math,数学-元角分,1,choice,1元等于多少角？,A.10角|B.100角|C.1角,A,1元等于10角，元和角进率是10。,元角换算、记忆,g2-money,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-元角分,1,fill,3元等于多少角？,,30角,1元是10角，3元就是30角。,元角换算、元换角,g2-money,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-元角分,2,fill,50角等于多少元？,,5元,10角是1元，50角就是5元。,元角换算、角换元,g2-money,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-元角分,2,choice,1元5角等于多少角？,A.15角|B.105角|C.150角,A,1元是10角，再加5角就是15角。,元角换算、说理,g2-money,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-元角分,2,choice,图中有1张1元和3枚1角硬币，一共多少钱？,A.1元3角|B.13元|C.4角,A,1元加3角就是1元3角。,看图数钱、元角,g2-money,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-元角分,3,fill,8角加2角是多少角？合多少元？,,10角，合1元,8角加2角是10角，10角就是1元。,元角换算、满十进一,g2-money,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-元角分,3,word,买一支铅笔要8角，付了1元，应找回多少钱？,,2角,1元是10角，10角减8角等于2角。,找零、元角换算,g2-money,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-元角分,3,word,一包薯片5元，一瓶饮料3元5角，买这两样一共要多少钱？,,8元5角,5元加3元是8元，再加5角是8元5角。,购物付款、元角,g2-money,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-元角分,4,word,妈妈给小明20元买文具，买笔记本用了12元5角，还剩多少钱？,,7元5角,20元减12元是8元，再减5角是7元5角。,找零、退位思考,g2-money,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-元角分,4,word,一个面包3元5角，用10元买两个，应找回多少钱？,,3元,两个面包7元，10元减7元等于3元。,购物找零、两步思考,g2-money,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-认识图形,1,choice,一个四边形，四条边一样长，四个角都是直角。它是什么图形？,A.长方形|B.正方形|C.平行四边形,B,四边一样长、四角都是直角的是正方形。,正方形、图形辨认,g2-shape-recognize,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-认识图形,1,fill,长方形有（ ）条边，还有（ ）个直角。,,4条边和4个直角,长方形有四条边，四个角都是直角。,长方形、图形特征,g2-shape-recognize,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-认识图形,2,fill,一个四边形，两组对边分别平行，四个角都不是直角。它叫什么图形？,,平行四边形,两组对边分别平行、角不是直角的是平行四边形。,平行四边形、图形辨认,g2-shape-recognize,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-认识图形,2,choice,下面三句话中，正确的一句是哪一句？,A.正方形的四条边都相等|B.长方形的四条边都相等|C.平行四边形的四个角都是直角,A,长方形只有对边相等，平行四边形的角不一定是直角。,图形特征、判断,g2-shape-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-认识图形,3,choice,小步说正方形是特殊的长方形。下面哪种解释最合适？,A.正方形的四条边相等，四个角也是直角|B.正方形看起来比长方形大|C.正方形没有直角,A,正方形有长方形的全部特点，四条边还都相等。,正方形、长方形、说理,g2-shape-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-认识图形,3,choice,一个长方形，长不变，把宽增加到和长一样长。它会变成什么图形？,A.正方形|B.平行四边形|C.三角形,A,宽和长一样时四边相等，四个角是直角，就是正方形。,图形变化、推理,g2-shape-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-认识图形,3,word,教室里的一块黑板面是长方形，长4米，宽1米。沿着黑板面的四条边走一圈，一共走多少米？,,10米,4加1等于5，5乘2等于10米。,长方形、周长、生活,g2-shape-recognize,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-认识图形,3,choice,妈妈买回一块手帕，它的四条边一样长，四个角都是直角。这块手帕是什么形状？,A.正方形|B.长方形|C.平行四边形,A,四条边一样长、四角是直角，是正方形。,正方形、生活,g2-shape-recognize,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-认识图形,4,fill,用4根一样长的小棒首尾相接摆一个图形，要求四个角都是直角。摆出的是什么图形？,,正方形,四根一样长的小棒摆成直角，就是正方形。,正方形、操作,g2-shape-recognize,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-认识图形,4,fill,一个长方形的长是6厘米，宽是4厘米。把它剪成两个完全一样的正方形，每个正方形的边长是多少厘米？,,4厘米,宽是4厘米，剪出的正方形边长就是4厘米。,长方形、正方形、切分,g2-shape-recognize,APPLICATION,EXPRESSION,1,PRIMARY_LOW
+,math,数学-角的初步认识,1,fill,一个角有（ ）个顶点，有（ ）条边。,,1个顶点和2条边,角由一个顶点和两条边组成。,角、顶点、边,g2-angle,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-角的初步认识,1,choice,一个角张开的大小和三角尺上的直角完全一样。它是什么角？,A.锐角|B.直角|C.钝角,B,和三角尺的直角完全一样，就是直角。,直角、辨认,g2-angle,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-角的初步认识,2,choice,一个角比直角小，两条边张开得比较窄。它是什么角？,A.锐角|B.直角|C.钝角,A,比直角小的角叫锐角。,锐角、辨认,g2-angle,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-角的初步认识,2,choice,下面说法正确的是哪一句？,A.角的两条边画得越长，角就越大|B.角的大小要看两条边张开的大小|C.角的大小和边张开的多少没有关系,B,角的大小只看两边张开多少，和边画多长无关。,角的大小、易错,g2-angle,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-角的初步认识,3,choice,把直角的两条边都画长一倍，这个角变成什么角？,A.锐角|B.直角|C.钝角,B,边画长了，张开的程度没变，还是直角。,直角、角的大小,g2-angle,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-角的初步认识,3,choice,小步用三角尺量一个角，发现这个角比直角大。下面判断正确的是哪一句？,A.这个角是钝角|B.这个角是锐角|C.这个角一定是直角,A,比直角大的角是钝角。,钝角、判断,g2-angle,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-角的初步认识,3,word,一块红领巾上有3个角，其中1个是钝角，其余都是锐角。这块红领巾上有几个锐角？,,2个,3个角去掉1个钝角，还剩2个锐角。,锐角、生活,g2-angle,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-角的初步认识,3,choice,钟面上3点整的时候，时针和分针正好组成一个角。这个角是什么角？,A.锐角|B.直角|C.钝角,B,3点整时两针正好成直角。,直角、钟面,g2-angle,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-角的初步认识,4,fill,一张长方形纸有4个直角。剪去其中一个角，剩下的图形最多有几个角？,,5个角,剪去一个角会多出一个角，4减1加2等于5。,直角、剪角,g2-angle,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,math,数学-角的初步认识,4,word,爸爸要把两根木条钉成直角，手边只有一把三角尺。他该怎样检查这个角是不是直角？,,把三角尺的直角顶点对准两根木条的连接处，看两条边是否和三角尺的两条直角边重合。,用三角尺的直角去比，两条边都重合了才是直角。,直角、操作,g2-angle,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,1,choice,下面哪个汉字沿中间竖着对折后，两边能完全重合？,A.中|B.上|C.子,A,中左右两边一样，对折能重合。,对称、汉字,g2-symmetry-move,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,2,choice,一只蝴蝶左右两边的花纹完全一样，沿着身体中间对折能重合。这只蝴蝶是什么图形？,A.对称图形|B.平移图形|C.旋转图形,A,对折后两边完全重合，就是对称图形。,对称、蝴蝶,g2-symmetry-move,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-对称与运动,2,choice,推拉窗沿着直线慢慢移动，窗子的方向一直没有改变。这种运动叫什么？,A.平移|B.旋转|C.对称,A,沿直线移动、方向不变，叫平移。,平移、生活,g2-symmetry-move,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,2,choice,风扇的叶片绕着中心转动，电梯门直着开关。下面说法正确的是哪一句？,A.风扇叶片是旋转，电梯门是平移|B.两个都是平移|C.两个都是旋转,A,绕中心转动是旋转，直着移动是平移。,平移、旋转、比较,g2-symmetry-move,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,3,choice,数字8沿着中间的竖线对折，左右两边能完全重合。下面说法正确的是哪一句？,A.8是对称的|B.8只能平移|C.8不能对折,A,8左右两边一样，对折能重合，是对称的。,对称、数字,g2-symmetry-move,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,3,choice,字母A沿着中间竖线对折能重合。把字母A向右平移一格后，它还是对称图形吗？,A.还是对称图形|B.不再是对称图形|C.变成了旋转图形,A,平移只改变位置，不改变样子，照样对称。,对称、平移、推理,g2-symmetry-move,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-对称与运动,3,choice,小明把一张正方形纸对折一次，剪出一棵小树，打开后得到两棵一样的小树。这利用了纸的什么特点？,A.对称|B.平移|C.旋转,A,对折后剪开，两边一样，用的是对称。,对称、剪纸,g2-symmetry-move,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,3,word,妈妈拖地时，拖把沿着地面来回直着擦。拖把做的是平移还是旋转？,,平移,拖把沿直线来回移动，方向不变，是平移。,平移、生活,g2-symmetry-move,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,4,fill,一个图形绕着一个固定的点转了半圈，形状和大小都没有改变。这种运动叫什么？,,旋转,绕一个点转动、形状大小不变，叫旋转。,旋转、图形运动,g2-symmetry-move,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,math,数学-对称与运动,4,word,电梯从1楼升到5楼，电梯里的箱子跟着一起上升。箱子做的是什么运动？请说明理由。,,箱子做平移运动，因为它沿着直线上升，方向没有改变。,沿直线上升、方向不变，是平移。,平移、说理,g2-symmetry-move,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-数据整理,1,fill,用画正字的方法记录数据，一个正字是5笔，表示（ ）个。,,5个,一个正字五笔，就表示5个。,正字、数据整理,g2-data-collect,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数据整理,1,choice,画正字记录：苹果 正正、香蕉 正、梨 正正正。哪种水果最多？,A.苹果|B.香蕉|C.梨,C,梨有3个正字也就是15个，最多。,正字、最多,g2-data-collect,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数据整理,2,choice,画正字记录：红花 正、黄花 正正、蓝花 正正正。黄花有多少朵？,A.5朵|B.10朵|C.15朵,B,黄花有2个正字，2个5是10朵。,正字、数数,g2-data-collect,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数据整理,2,choice,画正字记录：男生 正正、女生 正正正。下面说法正确的是哪一句？,A.女生比男生多5人|B.男生比女生多5人|C.男生和女生一样多,A,女生15人，男生10人，女生多5人。,正字、比较,g2-data-collect,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数据整理,3,choice,记录数据时，用画正字的方法有什么好处？,A.一个正字正好5笔，可以五个五个地数|B.正字的写法最好看|C.一个正字只有4笔,A,五笔一组，五个五个地数，又快又清楚。,正字、说理,g2-data-collect,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-数据整理,3,choice,画正字记录：跳绳 正正、踢球 正、跑步 正正。参加人数最少的是哪一项？,A.跳绳|B.踢球|C.跑步,B,踢球只有5人，是三项中最少的。,最少、数据整理,g2-data-collect,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数据整理,3,word,画正字记录：苹果 正正、香蕉 正、梨 正正正。三种水果一共有多少个？,,30个,10加5加15等于30个。,正字、求和,g2-data-collect,APPLICATION,EXPRESSION,1,PRIMARY_LOW
+,math,数学-数据整理,3,word,班级投票选班长，小红得 正正、小刚得 正、小丽得 正正正。小丽比小红多几票？,,5票,小丽15票，小红10票，多5票。,正字、比较,g2-data-collect,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-数据整理,4,word,小组记录一周的阅读本数：周一 正、周二 正正、周三 正正正、周四 正。这一周一共读了多少本？,,35本,5加10加15加5等于35本。,正字、连加,g2-data-collect,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-数据整理,4,fill,画正字记录：红球 正正、黄球 正正正、蓝球 正。蓝球再添几个就和红球一样多？,,5个,红球10个，蓝球5个，还差5个。,正字、相差,g2-data-collect,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,math,数学-规律探索,1,fill,按规律填数：2、4、6、8、（ ）。,,10,每次加2，8后面是10。,数列、等差,g2-pattern,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-规律探索,2,fill,按规律填数：1、2、4、8、（ ）。,,16,每个数是前一个的2倍，8的2倍是16。,数列、2倍,g2-pattern,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-规律探索,2,choice,按规律排列：红、黄、红、黄、红、（ ）。下一个是什么颜色？,A.红色|B.黄色|C.蓝色,B,红黄两个一组重复，红后面是黄。,周期、规律,g2-pattern,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-规律探索,2,choice,数列3、6、9、12、15是按什么规律排列的？,A.每次加3|B.每次加2|C.每次乘2,A,后一个数都比前一个多3。,等差、说理,g2-pattern,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-规律探索,3,choice,数列1、3、9、27是按什么规律排列的？,A.每次加2|B.每次乘3|C.每次加6,B,后一个数都是前一个数的3倍。,倍数、规律,g2-pattern,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-规律探索,3,choice,图形按三角形、圆形、圆形、三角形、圆形、圆形的顺序一直排下去。第7个是什么图形？,A.三角形|B.圆形|C.不能确定,A,三个一组重复，第7个是下一组的第一个，是三角形。,周期、推理,g2-pattern,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-规律探索,3,word,小明每天存钱，第一天存2元，第二天存4元，第三天存6元。照这样存下去，第五天存多少元？,,10元,每天多存2元，第五天是2乘5等于10元。,等差、生活,g2-pattern,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-规律探索,3,fill,一串彩灯按红、红、黄、蓝的顺序重复挂着。从左往右数，第11盏灯是什么颜色？,,黄色,四盏一组，第11盏是第三组的第三盏，是黄色。,周期、彩灯,g2-pattern,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-规律探索,4,word,一棵小树第一天长高2厘米，以后每天都比前一天多长1厘米。这棵小树第三天长高多少厘米？,,4厘米,第二天长3厘米，第三天长4厘米。,等差、推理,g2-pattern,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-规律探索,4,word,数列1、2、3、5、8、13接着往下排，下一个数是多少？请说出你的想法。,,21，因为每个数等于前面两个数相加。,前两个数相加得下一个数，8加13等于21。,规律、说理,g2-pattern,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,1,choice,“长大”的“长”应该读什么？,A.zhǎng|B.cháng|C.zhàng,A,“长”在这里表示生长，读 zhǎng。,多音字、语境,chinese-pinyin-polyphone,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,1,choice,“行走”的“行”应该读什么？,A.xíng|B.háng|C.hàng,A,走路、行走的“行”读 xíng。,多音字、语境,chinese-pinyin-polyphone,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,2,choice,图上写着“快乐”两个字，这里的“乐”读什么？,A.lè|B.yuè|C.yào,A,快乐表示高兴，读 lè。,多音字、看图,chinese-pinyin-polyphone,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-多音字,2,choice,“音乐”的“乐”和“快乐”的“乐”，读音一样吗？,A.不一样，音乐读 yuè，快乐读 lè|B.一样，都读 lè|C.一样，都读 yuè,A,同一个字在不同词语里读音可能不同。,多音字、比较,chinese-pinyin-polyphone,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,2,choice,妈妈去“银行”取钱，这里的“行”读什么？,A.háng|B.xíng|C.héng,A,银行、行业里的“行”读 háng。,多音字、生活情境,chinese-pinyin-polyphone,UNDERSTANDING,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,3,choice,“得到”的“得”和“跑得快”的“得”，读音一样吗？,A.不一样，得到读 dé，跑得快读 de|B.一样，都读 dé|C.一样，都读 děi,A,前一个“得”是得到，后一个读得轻。,多音字、比较,chinese-pinyin-polyphone,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,3,choice,小明说“我长高了”，这里的“长”读 zhǎng。哪句话里的“长”也读 zhǎng？,A.柳条很长|B.小树长大了|C.长江很长,B,小树长大和长高一样，都表示生长。,多音字、辨读,chinese-pinyin-polyphone,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,3,choice,“他只想要一支铅笔”里的“只”读 zhǐ。哪句里的“只”也读 zhǐ？,A.一只小鸟|B.只有三个人|C.两只手,B,“只有”的“只”读 zhǐ，“一只”的“只”读 zhī。,多音字、辨读,chinese-pinyin-polyphone,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,4,choice,“他笑着走进来”里的“着”读 zhe。哪句里的“着”读法相同？,A.着火了吗|B.她唱着歌|C.铅笔找不着了,B,唱着歌的“着”也读轻声 zhe。,多音字、辨读,chinese-pinyin-polyphone,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,3,fill,“头发”的“发”读 fà，“发现”的“发”读 fā。请写出“出发”的“发”的读音____。,,fā,出发的“发”和发现一样，读 fā。,多音字、填写,chinese-pinyin-polyphone,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,1,choice,“明天____见”应该填哪个字？,A.再|B.在|C.才,A,“再见”的“再”表示又一次见面。,同音字、再和在,g2-pinyin-similar,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,1,choice,“我____教室里读书”应该填哪个字？,A.在|B.再|C.才,A,“在”表示地点，人就在教室里。,同音字、再和在,g2-pinyin-similar,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,2,choice,图上小朋友正趴在书桌前写作业。句子“小明____作业”该填哪个字？,A.做|B.作|C.坐,A,写作业、做事情用提手旁的“做”。,同音字、做和作,g2-pinyin-similar,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-音近字,2,choice,“开心____笑”应该填哪个字？,A.地|B.的|C.得,A,后面是动作“笑”，前面用“地”。,的、地、得、填写,g2-pinyin-similar,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,2,choice,“再”和“在”的意思不同。下面哪句话说得对？,A.“再”表示又一次，“在”表示地点或正在|B.两个都表示地点|C.两个都表示又一次,A,分清意思，用字才不会出错。,同音字、比较,g2-pinyin-similar,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,3,choice,老师站在教室门口，请同学们走进来。哪句话用字正确？,A.请进教室上课|B.我家离学校很进|C.他冲近了教室,A,走进来用“进”，距离短用“近”。,同音字、进和近,g2-pinyin-similar,UNDERSTANDING,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,3,choice,下面哪句话没有错别字？,A.我们坐在教室里认真地读书|B.我们座在教室里认真地读书|C.我们坐在教室里认真的读书,A,坐下的“坐”和“认真”后的“地”都对。,同音字、错别字,g2-pinyin-similar,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,3,choice,妈妈在厨房忙碌，我想去帮忙。哪句话用字正确？,A.我帮妈妈做家务|B.我帮妈妈作家务|C.我帮妈妈坐家务,A,做事情用“做”，写文章才用“作”。,同音字、做和作,g2-pinyin-similar,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,3,fill,“弟弟高兴____跳起来”中，横线上应填“地”还是“得”？,,地,后面是动作“跳”，前面用“地”。,的、地、得、填写,g2-pinyin-similar,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,4,fill,老师讲完了，请你把这句话____说一遍。横线上填哪个字表示“又一次”？,,再,“再说一遍”就是又说一次。,同音字、填写,g2-pinyin-similar,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,1,choice,“晴”可以组成下面哪个词？,A.晴天|B.眼睛|C.清水,A,晴天的“晴”是日字旁，和太阳有关。,组词、日字旁,g2-char-recognize,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,2,choice,“篮”字的偏旁是竹字头，说明它和什么有关？,A.竹子|B.水|C.火,A,竹字头的字大多和竹子、竹器有关。,偏旁、识字,g2-char-recognize,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,2,choice,“蜻蜓”的“蜻”是什么偏旁？,A.虫字旁|B.米字旁|C.三点水,A,虫字旁的字大多和小昆虫有关。,偏旁、昆虫,g2-char-recognize,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,2,choice,“清”“晴”“情”都有“青”，哪个字和水有关？,A.清|B.晴|C.情,A,三点水的“清”和水有关。,形声字、偏旁,g2-char-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,3,choice,“蜜蜂”的“蜂”和“山峰”的“峰”，哪个和昆虫有关？,A.蜂|B.峰|C.两个都有关,A,虫字旁的“蜂”才是昆虫。,形声字、辨义,g2-char-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,3,choice,“挑”和“跳”都有“兆”，怎样分清它们？,A.提手旁和手的动作有关，足字旁和脚有关|B.两个字意思完全一样|C.两个字都和水有关,A,看偏旁想意思，就不会用错。,形近字、偏旁,g2-char-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,3,choice,春天来了，我想摘一朵花。下面哪个词中的“采”用对了？,A.采花|B.采作业|C.采电视,A,采花、采茶都用“采”。,组词、词语搭配,g2-char-recognize,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,4,choice,图上公园里有一个圆圆的花坛。句子“公园里有一个____形花坛”该填哪个字？,A.圆|B.园|C.员,A,圆形的“圆”表示形状。,同音字、形状,g2-char-recognize,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-识字组词,3,fill,用“球”组一个词，填进句子：“弟弟在操场上拍____。”,,皮球,拍皮球是一个完整的词语搭配。,组词、搭配,g2-char-recognize,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,4,word,请用“亮”组两个词，再选一个词说一句完整的话。,,明亮、月亮；例：教室里的灯很明亮。,组词要说得出意思，句子要完整。,组词、表达,g2-char-recognize,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,1,choice,“自____的事情自己做”中，横线上应填哪个字？,A.己|B.已|C.巳,A,“自己”的“己”不出头。,形近字、易错,g2-char-form,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,1,choice,“____经”表示事情已经过去，横线上该填哪个字？,A.已|B.己|C.巳,A,“已经”的“已”上面露一点头。,形近字、易错,g2-char-form,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,2,choice,“____光”是太阳照下来的光，横线上该填哪个字？,A.日|B.目|C.曰,A,日字旁瘦瘦的，里面只有一横。,形近字、日字旁,g2-char-form,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,2,choice,图上写着“未”和“末”两个字，哪个字上面一横更长？,A.末|B.未|C.一样长,A,“末”表示末端，上面一横写得长。,形近字、看图,g2-char-form,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-形近字,3,choice,“土”和“士”怎样区分？,A.“士”上面一横长，“土”下面一横长|B.两个字完全一样|C.“土”上面一横长,A,士兵的“士”上横长，泥土的“土”下横长。,形近字、比较,g2-char-form,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,3,choice,“天”和“夫”只差一点点，哪句话说得对？,A.“夫”的撇从上面穿出来，“天”不出头|B.两个字一模一样|C.“天”比“夫”多一横,A,大夫的“夫”撇要出头。,形近字、比较,g2-char-form,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,3,choice,老师请我们说说自己的事。哪句话用字正确？,A.自己的事情自己做|B.自已的事情自已做|C.自已的事情自己做,A,自己的“己”不出头，别写成“已”。,形近字、错别字,g2-char-form,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,3,choice,一个星期上五天学，最后两天休息。“周____”该填哪个字？,A.末|B.未|C.木,A,周末是一个星期的最后。,形近字、生活情境,g2-char-form,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,3,fill,“____兵”是保卫国家的士兵，横线上应填“士”还是“土”？,,士,士兵的“士”上面一横长。,形近字、填写,g2-char-form,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,4,word,请用“己”和“已”各说一句话，让别人听出两个字的不同。,,例：自己的书包自己收；我已经八岁了。,“己”是自己，“已”是已经。,形近字、表达,g2-char-form,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,1,choice,“明亮的____”后面填什么最合适？,A.眼睛|B.石头|C.泥土,A,眼睛亮亮的，可以说明亮的眼睛。,词语搭配、形容词,g2-word-accumulate,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,2,choice,“轻轻地____”后面填什么最合适？,A.走|B.打雷|C.敲鼓,A,走路可以很轻，打雷敲鼓声音很大。,词语搭配、副词,g2-word-accumulate,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,1,choice,“弯弯的____”后面填什么最合适？,A.月亮|B.太阳|C.桌子,A,月亮弯弯的，像一只小船。,词语搭配、形容词,g2-word-accumulate,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,2,choice,“茂密的树林”里的“茂密”是什么意思？,A.树很多，叶子很密|B.树很矮|C.树林很亮,A,茂密就是又多又密。,词语理解、积累,g2-word-accumulate,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,3,choice,下面哪组词语搭配不合适？,A.甜甜的笑容|B.高高的米饭|C.静静地听,B,米饭不能说高高的，可以说满满的。,词语搭配、判断,g2-word-accumulate,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,2,choice,“哗哗”和“沙沙”都是声音，哪个更像小雨落在树叶上的声音？,A.沙沙|B.哗哗|C.咚咚,A,小雨轻轻落下，声音细细的。,象声词、积累,g2-word-accumulate,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,3,choice,妈妈在厨房炒菜，香味飘到了客厅。这时用哪个词最合适？,A.香喷喷|B.亮晶晶|C.绿油油,A,炒菜的香味用香喷喷。,词语搭配、生活情境,g2-word-accumulate,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,3,choice,图中小朋友在图书馆看书，谁也不说话。哪句话最合适？,A.图书馆里静悄悄的|B.图书馆里闹哄哄的|C.图书馆里冷冰冰的,A,大家安静看书，用静悄悄。,词语搭配、看图,g2-word-accumulate,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-词语搭配,3,fill,请填一个表示水很清的词：“____的河水从桥下流过。”,,清清,清清表示水干净、看得见底。,词语搭配、描写,g2-word-accumulate,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,4,word,请用“蓝蓝的”和“雪白的”各说一个短语，再连成一句完整的话。,,例：蓝蓝的天空；雪白的云朵；蓝蓝的天空飘着雪白的云朵。,先想事物，再把两个短语连成句子。,词语搭配、表达,g2-word-accumulate,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「早晨，奶奶在院子里给花浇水。她一边浇一边说：“你们喝饱了水，就会开出更美的花。”小孙女也提来小水壶，学着奶奶的样子帮忙。太阳升起来了，院子里飘着淡淡的花香。」这段话主要写了什么？,A.奶奶和小孙女一起给花浇水|B.奶奶去市场买菜|C.小孙女在写作业,A,短文写的是祖孙俩一起浇花这件事。,短文、主旨,chinese-reading-main-idea,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「下课了，小明发现同桌的铅笔断了。他悄悄把自己的铅笔递过去。同桌接过铅笔，笑着说了声谢谢。上课铃响了，两个人坐得端端正正，一起认真听讲。老师看见了，也笑着点点头。」这段话主要写了小明做的哪件事？,A.把铅笔借给同桌|B.帮老师收作业|C.自己去买铅笔,A,主要事件是把铅笔借给同桌。,短文、概括,chinese-reading-main-idea,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「夏天的午后，天空忽然阴了下来。小雨点从云里跳下来，落在屋顶上，滴答滴答。它又落进小河里，和小鱼做游戏。太阳出来了，小雨点慢慢飞上天空，又变成了白云。」这段话主要写了什么？,A.小雨点从云里落下，又回到天空|B.小雨点在屋顶上睡觉|C.小雨点和小鸟一起飞,A,短文顺着小雨点的变化来写。,短文、主旨,chinese-reading-main-idea,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「妈妈每天下班回家，先给爷爷倒一杯热水，再陪他说说话。小丽看见了，也学着给妈妈捶背。妈妈摸摸她的头说：“你真是个懂事的好孩子。”一家人围坐在桌边，屋子里暖融融的。」这段话主要想告诉我们什么？,A.小丽学会了关心家人|B.妈妈不爱说话|C.爷爷喜欢喝热水,A,小丽学着妈妈的样子关心家人。,短文、主旨,chinese-reading-main-idea,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「夏天的午后，一只小蚂蚁在路边找食物。它找到一粒米，自己搬不动。它跑回家叫来伙伴，大家一起用力，把米搬回了洞里。蚂蚁妈妈笑着说：“人多力量大。”」这段话想告诉我们什么？,A.大家团结起来力量大|B.蚂蚁最喜欢吃米|C.一个人做事更快,A,蚂蚁妈妈的话点明了道理。,短文、道理,chinese-reading-main-idea,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「春天到了，小草从土里钻出来。公园里的花开了，红的、黄的、白的，引来许多蜜蜂。小朋友脱下厚棉衣，在草地上放风筝。柳条在风里轻轻摆动，燕子也从南方飞回来了。」这段话主要写了什么？,A.春天来了，公园里充满生机|B.冬天很冷，大家不出门|C.小朋友在家里写作业,A,花草、蜜蜂和放风筝都写出春天的生机。,短文、主旨,chinese-reading-main-idea,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「放学路上，小华看见一位老奶奶提着两袋菜，走得很慢。路边的树叶被风吹得沙沙作响。他跑过去说：“奶奶，我帮您提一袋吧。”老奶奶笑着说：“谢谢你，好孩子。”」读了这段话，我们应该向小华学习什么？,A.主动帮助有困难的人|B.放学要快点跑回家|C.提东西要用两只手,A,小华主动帮老人提东西。,短文、道理,chinese-reading-main-idea,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「放学的时候，操场上的同学已经不多了。小林在操场捡到一个铅笔盒，里面有五支铅笔和一块橡皮。他没有拿回家，而是交给了老师。第二天，同学找回了铅笔盒，对小林说了声谢谢。」小林这样做，最值得我们学习的是什么？,A.捡到东西要交给老师、还给失主|B.铅笔盒里的东西很多|C.操场上的东西不能乱捡,A,捡到东西要想办法还给失主。,短文、道理,chinese-reading-main-idea,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,4,choice,「星期天，爸爸带小东去种树。小东挖坑、扶树苗、浇水，累得满头大汗。爸爸说：“小树长大要很多年，我们要好好照顾它。”小东点点头，给小树挂上了自己的名字牌。」这段话主要告诉我们什么？,A.种树要出力，也要用心照顾|B.种树只要浇一次水就行|C.星期天不用写作业,A,爸爸的话说明种树要长期照顾。,短文、主旨,chinese-reading-main-idea,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,4,choice,「下雪了，屋顶和树上都白了。小朋友们戴上手套，跑到院子里堆雪人。他们用胡萝卜做鼻子，用纽扣做眼睛。雪人笑眯眯地站在雪地里，好像在说：“谢谢你们！”」给这段话选一个最合适的题目。,A.快乐的雪天|B.春天的花园|C.夏天的池塘,A,短文写的是下雪天堆雪人的快乐。,短文、拟题,chinese-reading-main-idea,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-短文阅读,1,choice,「早上七点，妈妈叫小文起床。小文穿好衣服，刷了牙，洗了脸，坐到桌前吃了一个鸡蛋、喝了一杯牛奶。七点半，他背上书包高高兴兴地去上学。妈妈站在门口，笑着向他挥手。」小文几点去上学？,A.七点|B.七点半|C.八点,B,短文中说七点半背上书包去上学。,提取信息、时间,g2-reading-detail,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「放学后，爷爷来接小雨。路上，小雨看见一只小猫蹲在树下，就停下脚步。爷爷说：“小猫可能饿了。”小雨把书包里的饼干掰了一半，放在小猫面前。小猫低下头，一口一口地吃起来。」谁把饼干给了小猫？,A.小雨|B.爷爷|C.老师,A,是短文中的小雨掰了饼干。,提取信息、人物,g2-reading-detail,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「星期天上午，阳光照在阳台上，暖洋洋的。妈妈在阳台上晾衣服。小红搬来小凳子，站在旁边帮妈妈递衣架。妈妈晾完衣服，摸摸小红的头，两个人一起把凳子搬回屋里。」图上小红帮妈妈做了什么？,A.递衣架|B.擦桌子|C.扫地,A,短文写的是小红递衣架。,提取信息、看图,g2-reading-detail,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「体育课上，老师让大家跳绳。小刚跳了几下就被绳子绊住了脚。他捡起绳子，看了看别人怎么跳，又试了一次，这次一口气跳了二十下。同学们在旁边大声数着数。」小刚后来为什么能跳二十下？,A.他看别人怎么跳，又认真练习|B.他换了一根新绳子|C.老师帮他跳完了,A,小刚看别人跳，又试了一次。,提取信息、原因,g2-reading-detail,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「奶奶把一盆花放在窗台上，天天给它浇水。过了几天，花盆里长出了绿绿的小芽。奶奶说：“别急，它还要晒晒太阳。”于是，小芽被搬到了阳光最好的地方。奶奶每天都来看它好几遍。」奶奶为什么把小芽搬到阳光最好的地方？,A.小芽需要晒太阳才能长大|B.窗台上太挤了|C.小芽怕水,A,奶奶说小芽还要晒晒太阳。,提取信息、原因,g2-reading-detail,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「图书角是大家最喜欢去的地方。图书角里，一本故事书被撕破了一页。小林拿来胶带，小心地把那一页粘好。旁边的同学问：“是你撕的吗？”小林摇摇头说：“不是，不过它现在能看了。”」小林为什么把书粘好？,A.他不想让同学们看不成书|B.书是他撕坏的|C.他想把书带回家,A,小林想让大家还能看这本书。,提取信息、原因,g2-reading-detail,UNDERSTANDING,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「星期六下午，社区组织打扫卫生。王阿姨带着明明来到小花园，明明负责捡纸屑，王阿姨负责擦长椅。大家干得满头大汗，谁也不喊累。一个小时后，小花园变得干干净净。」星期六下午，明明在哪里做了什么？,A.在小花园里捡纸屑|B.在家里写作业|C.在教室擦黑板,A,时间、地点和事情都在短文中。,提取信息、要素,g2-reading-detail,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,4,choice,「周五放学时，老师提醒大家：下周一要带一张全家福，还要准备一分钟的自我介绍。小美回家后，把这两件事写在便签上，贴在书桌前，还让妈妈提醒自己。」小美用什么办法记住老师说的两件事？,A.写在便签上贴在书桌前|B.请同桌帮她记|C.第二天再问老师,A,小美把两件事写在便签上。,提取信息、方法,g2-reading-detail,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「菜市场里，一位老爷爷提着篮子买菜。他先买了三根黄瓜，又买了两斤西红柿，最后在门口买了一把青菜，篮子装得满满的。他提着满满的篮子，慢慢走回家。」老爷爷最后买的是什么？,A.一把青菜|B.三根黄瓜|C.两斤西红柿,A,短文写最后买了一把青菜。,提取信息、顺序,g2-reading-detail,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-短文阅读,4,word,「操场上彩旗飘飘，十分热闹。运动会上，二年级三班的接力赛跑到最后一棒。小雨接过接力棒，咬着牙往前冲，终于第一个冲过终点。同学们围上来，又跳又笑。」请用一句话说清楚：什么时候、谁、做了什么、结果怎样。,,运动会接力赛上，小雨接过最后一棒往前冲，第一个冲过终点。,说清楚时间、人物、事情和结果。,提取信息、表达,g2-reading-detail,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,1,choice,“妈妈一边做饭，一边____。”横线上填什么最合适？,A.听广播|B.睡着|C.飞起来,A,做饭和听广播可以同时做。,造句、一边一边,g2-writing-sentence,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,2,choice,“下课了，同学们有的跳绳，有的____。”横线上填什么最合适？,A.踢毽子|B.上课铃|C.教室,A,踢毽子和跳绳都是课间活动。,造句、有的有的,g2-writing-sentence,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,2,choice,图中有三个小朋友，一个在读书，一个在画画，还有一个在唱歌。请补全句子：同学们有的读书，有的画画，还有的____。,A.唱歌|B.跑步|C.写字,A,图上第三个小朋友在唱歌。,看图写话、有的有的,g2-writing-sentence,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-写话,2,choice,“一边……一边……”表示什么？,A.两个动作同时做|B.先做一件事再做另一件|C.只做一件事,A,两件事一起做才用“一边……一边……”。,句式理解、一边一边,g2-writing-sentence,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,3,choice,下面哪句话用“一边……一边……”写得不合适？,A.小明一边跑步，一边睡觉|B.妈妈一边做饭，一边听音乐|C.我一边走路，一边唱歌,A,跑步和睡觉不能同时做。,句式判断、一边一边,g2-writing-sentence,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,2,choice,“有的……有的……”通常用来写什么？,A.不同的人在做不同的事|B.一个人做很多件事|C.一件事的原因,A,用“有的……有的……”把大家做的事分开说。,句式理解、有的有的,g2-writing-sentence,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,3,word,教室里，同学们正在打扫卫生。请用“有的……有的……”写一句话。,,同学们有的擦桌子，有的扫地，还有的擦窗户。,先写大家在做的事，再用“有的……有的……”分开说。,造句、生活情境,g2-writing-sentence,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-写话,3,word,图中一只小鸟站在枝头唱歌。请用“一边……一边……”写一句话。,,小鸟一边拍着翅膀，一边唱歌。,两个动作要能同时发生。,看图写话、一边一边,g2-writing-sentence,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-写话,3,fill,下课了，操场上真热闹：有的跑步，有的____，有的跳绳。请填一个课间活动。,,踢球,踢球和跑步、跳绳一样，都是课间活动。,造句、词语填空,g2-writing-sentence,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-写话,4,word,图中小朋友在公园里放风筝，天上有白云。请写两句话，用上“一边……一边……”和“有的……有的……”。,,例：星期天，小朋友们在公园里放风筝。他们有的拉线，有的举风筝，一边跑一边笑。,先看清图，再把两个句式都用上。,看图写话、句式运用,g2-writing-sentence,APPLICATION,DIAGRAM,1,PRIMARY_LOW

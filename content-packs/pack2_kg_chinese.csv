@@ -1,0 +1,105 @@
+id,subject,knowledgePoint,difficulty,type,content,options,answer,explanation,tags,anchorCode,cognitiveLevel,variantType,enabled,stage
+,chinese,拼音-入门,1,choice,拼音字母 a 读什么音？,A.啊|B.哦|C.鹅,A,a 读“啊”，嘴巴张得大大的。,单韵母、认读,kg-pinyin-entry,MEMORY,TEXT,1,KG
+,chinese,拼音-入门,1,choice,下面哪个是单韵母？,A.o|B.b|C.sh,A,o 是单韵母，b 和 sh 都是声母。,单韵母、分类,kg-pinyin-entry,MEMORY,TEXT,1,KG
+,chinese,拼音-入门,2,choice,图上写着“妈妈”两个字，哪组拼音能拼出“妈妈”？,A.mā ma|B.bā ba|C.pá pa,A,“妈”的拼音是 mā，读第一声。,拼读、生活用词,kg-pinyin-entry,MEMORY,DIAGRAM,1,KG
+,chinese,拼音-入门,2,choice,学习拼音最主要的作用是什么？,A.帮助我们认字和读准字音|B.帮助我们算数学题|C.帮助我们画画,A,学会拼音就能自己认字、读准音。,拼音用处、理解,kg-pinyin-entry,UNDERSTANDING,TEXT,1,KG
+,chinese,拼音-入门,3,choice,小朋友不认识“苹果”的“苹”，他可以怎么做？,A.看旁边的拼音 píng 读出来|B.数一数有几个字|C.把字涂上颜色,A,拼音就写在字旁边，看着它能读出来。,拼音用处、生活情境,kg-pinyin-entry,UNDERSTANDING,CONTEXT,1,KG
+,chinese,拼音-入门,3,choice,书包上写着“bēi zi”，里面最可能装的是什么？,A.杯子|B.鞋子|C.帽子,A,bēi zi 是杯子，喝水用的。,拼读、生活情境,kg-pinyin-entry,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-入门,3,choice,图中有四个拼音宝宝：a、b、o、m。哪两个是韵母？,A.a 和 o|B.b 和 m|C.a 和 b,A,a 和 o 是韵母，b 和 m 是声母。,单韵母、分类,kg-pinyin-entry,APPLICATION,DIAGRAM,1,KG
+,chinese,拼音-入门,4,word,路牌上写着“公园”两个字，小朋友不认识。说说他可以怎样用拼音帮忙。,,可以看路牌上的拼音 gōng yuán 读出来。,看到拼音就能读出字音，认出路牌。,拼音用处、表达,kg-pinyin-entry,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-声母,1,choice,声母 b 是一个竖加一个半圆。下面哪个字母是这样写的？,A.b|B.d|C.p,A,b 的半圆在右边，竖在左边。,形近字母、认读,kg-pinyin-initial,MEMORY,DIAGRAM,1,KG
+,chinese,拼音-声母,2,choice,鼓声“咚咚”的“咚”，拼音 dōng 的声母是哪个字母？,A.d|B.b|C.q,A,dōng 开头的 d 就是声母。,声母、生活声音,kg-pinyin-initial,MEMORY,CONTEXT,1,KG
+,chinese,拼音-声母,2,choice,“牛奶”的“奶”拼音是 nǎi，它的声母是哪个？,A.n|B.l|C.m,A,nǎi 开头的 n 就是声母。,声母、n 和 l,kg-pinyin-initial,MEMORY,TEXT,1,KG
+,chinese,拼音-声母,2,choice,b 和 d 长得很像，怎样分清它们？,A.b 的半圆在右边，d 的半圆在左边|B.两个完全一样|C.b 有两竖,A,记住半圆的方向就不会认错了。,形近字母、辨析,kg-pinyin-initial,UNDERSTANDING,TEXT,1,KG
+,chinese,拼音-声母,3,choice,下面哪个词的两个字声母都是 d？,A.大豆|B.爸爸|C.皮球,A,大豆读 dà dòu，两个字都以 d 开头。,声母、组词,kg-pinyin-initial,UNDERSTANDING,CONTEXT,1,KG
+,chinese,拼音-声母,3,choice,“你、来、牛、老”四个字里，声母是 n 的有几个？,A.2 个|B.1 个|C.3 个,A,“你”和“牛”的声母是 n，另外两个是 l。,声母、n 和 l,kg-pinyin-initial,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-声母,4,fill,“老虎”的“老”拼音是 lǎo，它的声母是____。,,l,lǎo 开头的 l 就是声母。,声母、填空,kg-pinyin-initial,APPLICATION,TEXT,1,KG
+,chinese,拼音-声母,3,choice,图中有两扇门，左边写 n，右边写 l。“篮子”的“篮”lán 该进哪扇门？,A.写 l 的门|B.写 n 的门|C.两扇都可以,A,lán 的声母是 l，所以进写 l 的门。,声母、n 和 l,kg-pinyin-initial,APPLICATION,DIAGRAM,1,KG
+,chinese,拼音-韵母,1,choice,“白”的拼音是 bái，它的韵母是哪个？,A.ai|B.ei|C.ie,A,bái 后面的 ai 就是韵母。,韵母、ai,kg-pinyin-final,MEMORY,TEXT,1,KG
+,chinese,拼音-韵母,2,choice,“杯子”的“杯”读 bēi，它的韵母是哪个？,A.ei|B.ai|C.er,A,bēi 后面的 ei 就是韵母。,韵母、ei,kg-pinyin-final,MEMORY,TEXT,1,KG
+,chinese,拼音-韵母,2,choice,图上的小猫在“喵喵”叫，拼音 māo 的韵母是哪个？,A.ao|B.ou|C.an,A,māo 后面的 ao 就是韵母。,韵母、ao,kg-pinyin-final,MEMORY,DIAGRAM,1,KG
+,chinese,拼音-韵母,2,choice,ai 和 ei 读起来不一样，不同在哪里？,A.ai 开头嘴巴张得更大，ei 嘴巴扁一点|B.两个完全一样|C.只是声调不同,A,发 ai 时嘴巴先张大，再慢慢合上。,韵母、辨析,kg-pinyin-final,UNDERSTANDING,TEXT,1,KG
+,chinese,拼音-韵母,3,choice,“海”读 hǎi，“黑”读 hēi。哪个字读的时候嘴巴先张大？,A.海|B.黑|C.一样大,A,hǎi 里有 ai，嘴巴要先张大。,韵母、ai 和 ei,kg-pinyin-final,UNDERSTANDING,CONTEXT,1,KG
+,chinese,拼音-韵母,3,choice,小狗“汪汪”叫，拼音是 wāng wāng。它的韵母是 ang 还是 an？,A.ang|B.an|C.ai,A,wāng 后面的 ang 就是韵母。,韵母、后鼻音,kg-pinyin-final,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-韵母,4,fill,图上有头牛，拼音是 niú。请写出它的韵母____。,,iu,niú 后面的 iu 就是韵母。,韵母、书写,kg-pinyin-final,APPLICATION,DIAGRAM,1,KG
+,chinese,拼音-韵母,3,choice,下面哪个音节里藏着韵母 ou？,A.tóu|B.táo|C.tái,A,tóu 里藏着 ou。,韵母、ou,kg-pinyin-final,APPLICATION,TEXT,1,KG
+,chinese,拼音-声调,1,choice,“妈”读 mā，是第一声。第一声的声调符号是什么样子？,A.一横|B.往上升|C.一个小勾,A,第一声平平的，像一条横线。,声调、第一声,kg-pinyin-tone,MEMORY,TEXT,1,KG
+,chinese,拼音-声调,2,choice,“花”读 huā 是第一声，“画”读 huà 是第几声？,A.第四声|B.第一声|C.第二声,A,huà 上的 à 是第四声。,声调、第四声,kg-pinyin-tone,MEMORY,TEXT,1,KG
+,chinese,拼音-声调,2,choice,图上画着一匹马，“马”读 mǎ，声调符号像小船。它是第几声？,A.第三声|B.第一声|C.第四声,A,第三声先降后升，像一只小船。,声调、第三声,kg-pinyin-tone,MEMORY,DIAGRAM,1,KG
+,chinese,拼音-声调,2,choice,“妈”读 mā，“骂”读 mà。两个字读音哪里不一样？,A.声调不同，一个平稳一个往下落|B.声母不同|C.韵母不同,A,声母韵母都一样，只是声调不同。,声调、辨析,kg-pinyin-tone,UNDERSTANDING,TEXT,1,KG
+,chinese,拼音-声调,3,choice,老师说“把书放在桌子上”，“上”读 shàng。如果读成 shāng 会怎样？,A.听起来不像“上面”，意思就变了|B.完全一样|C.变成了“下面”,A,声调读错，词的意思就变了。,声调、生活情境,kg-pinyin-tone,UNDERSTANDING,CONTEXT,1,KG
+,chinese,拼音-声调,3,choice,小朋友喊“你好”，拼音是 nǐ hǎo。这里一共有几个第三声？,A.2 个|B.1 个|C.0 个,A,nǐ 和 hǎo 都是第三声。,声调、数一数,kg-pinyin-tone,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-声调,4,fill,“大”读 dà，它是第____声。,,四,dà 上的 à 是第四声。,声调、填空,kg-pinyin-tone,APPLICATION,TEXT,1,KG
+,chinese,拼音-声调,3,choice,图中有四个气球，分别标着 ā、á、ǎ、à。“雨”读 yǔ，它的 u 该找哪个气球？,A.ǎ|B.ā|C.à,A,yǔ 是第三声，所以找 ǎ。,声调、第三声,kg-pinyin-tone,APPLICATION,DIAGRAM,1,KG
+,chinese,拼音-拼读,1,choice,把 b 和 a 拼在一起，读什么？,A.bā|B.dā|C.pā,A,b 和 a 相拼就是 bā。,拼读、两拼,kg-pinyin-blend,MEMORY,TEXT,1,KG
+,chinese,拼音-拼读,2,choice,m 和 a 相拼，读 mā。这是哪个字的读音？,A.妈|B.马|C.骂,A,mā 是“妈”的读音。,拼读、组词,kg-pinyin-blend,MEMORY,TEXT,1,KG
+,chinese,拼音-拼读,2,choice,图上有一个大西瓜，“瓜”的拼音是 g-u-a，拼出来是？,A.guā|B.gā|C.huā,A,g、u、a 三个音快速连起来就是 guā。,拼读、三拼,kg-pinyin-blend,MEMORY,DIAGRAM,1,KG
+,chinese,拼音-拼读,2,choice,拼读“h-ǔ”时，为什么读成 hǔ 而不是 hú？,A.因为 ǔ 是第三声，拼出来还是第三声|B.因为 h 要读得重|C.因为 u 变成了别的音,A,声调跟着韵母走，ǔ 就是第三声。,拼读、声调,kg-pinyin-blend,UNDERSTANDING,TEXT,1,KG
+,chinese,拼音-拼读,3,choice,“p-í”拼成 pí。下面哪个词读 pí？,A.皮球|B.杯子|C.鼻子,A,pí 是“皮”，皮球的皮。,拼读、生活用词,kg-pinyin-blend,UNDERSTANDING,CONTEXT,1,KG
+,chinese,拼音-拼读,3,choice,小朋友想说“我要喝水”，其中“水”是 sh-u-ǐ。他拼成了 shuī，说出来的词对吗？,A.不对，应该是 shuǐ，第三声|B.对，完全一样|C.应该读 shuì,A,声调不能变，水读 shuǐ。,拼读、纠错,kg-pinyin-blend,APPLICATION,CONTEXT,1,KG
+,chinese,拼音-拼读,4,fill,把 k 和 ā 拼成音节，写作____。,,kā,k 和 ā 相拼就是 kā。,拼读、书写,kg-pinyin-blend,APPLICATION,TEXT,1,KG
+,chinese,拼音-拼读,3,choice,图上有只兔子，“兔”是 t-ù。如果拼成 t-ū，会变成哪个音？,A.tū|B.tù|C.dù,A,t-ū 拼出来是 tū，声调变了。,拼读、声调,kg-pinyin-blend,APPLICATION,DIAGRAM,1,KG
+,chinese,语文-常见字认读,1,choice,“日”这个字指的是什么？,A.太阳|B.月亮|C.星星,A,“日”就是太阳的意思。,常见字、字义,kg-char-recognize,MEMORY,TEXT,1,KG
+,chinese,语文-常见字认读,2,choice,图上画着弯弯的月亮，下面哪个字是“月”？,A.月|B.日|C.目,A,“月”字的样子就像弯弯的月亮。,形近字、认读,kg-char-recognize,MEMORY,DIAGRAM,1,KG
+,chinese,语文-常见字认读,2,choice,“大”和“太”只差一点，哪个字是“太阳”的“太”？,A.太|B.大|C.犬,A,“太”比“大”多一点。,形近字、辨析,kg-char-recognize,MEMORY,TEXT,1,KG
+,chinese,语文-常见字认读,2,choice,“口”和“日”哪里不一样？,A.日比口多一横|B.口比日多一横|C.两个字完全一样,A,“日”是在“口”里加了一横。,形近字、比较,kg-char-recognize,UNDERSTANDING,TEXT,1,KG
+,chinese,语文-常见字认读,3,choice,“他、她、它”三个字，说“妹妹”应该用哪个？,A.她|B.他|C.它,A,说女的用“她”，妹妹是女孩。,常用字、选字,kg-char-recognize,UNDERSTANDING,CONTEXT,1,KG
+,chinese,语文-常见字认读,3,choice,门口的牌子上，上面一个“日”，下面一个“月”，合起来是哪个字？,A.明|B.朋|C.阳,A,日和月合在一起就是“明”。,合体字、生活情境,kg-char-recognize,APPLICATION,CONTEXT,1,KG
+,chinese,语文-常见字认读,3,choice,超市的牌子上写着“大米”，妈妈要买米，她该认哪个字？,A.米|B.木|C.来,A,“米”字上面有两点，像米粒。,形近字、生活情境,kg-char-recognize,APPLICATION,DIAGRAM,1,KG
+,chinese,语文-常见字认读,4,choice,商场门口有“入口”和“出口”两个牌子，要进去该看哪个？,A.入口|B.出口|C.两个都行,A,“入”是进去，“出”是出来。,常用字、生活情境,kg-char-recognize,APPLICATION,CONTEXT,1,KG
+,chinese,语文-基本笔画,1,choice,“十”字一共有几笔？,A.2 笔|B.1 笔|C.3 笔,A,“十”先写横，再写竖，共两笔。,笔画、数笔画,kg-char-stroke,MEMORY,TEXT,1,KG
+,chinese,语文-基本笔画,2,choice,“口”字的第一笔是什么？,A.竖|B.横|C.横折,A,写“口”先写左边的竖。,笔顺、第一笔,kg-char-stroke,MEMORY,TEXT,1,KG
+,chinese,语文-基本笔画,2,choice,图上写着一个“大”字，它一共有几笔？,A.3 笔|B.2 笔|C.4 笔,A,“大”是横、撇、捺，共三笔。,笔画、数笔画,kg-char-stroke,MEMORY,DIAGRAM,1,KG
+,chinese,语文-基本笔画,2,choice,“人”和“大”的笔画有什么不同？,A.大比人多一横|B.大比人多一撇|C.两个完全一样,A,“大”是在“人”上面加了一横。,笔画、比较,kg-char-stroke,UNDERSTANDING,TEXT,1,KG
+,chinese,语文-基本笔画,3,choice,写“木”字时，最后一笔是什么？,A.捺|B.横|C.竖,A,“木”的顺序是横、竖、撇、捺。,笔顺、最后一笔,kg-char-stroke,UNDERSTANDING,CONTEXT,1,KG
+,chinese,语文-基本笔画,3,choice,小朋友写“日”字，先写外面的框，再在里面写一横。这个字一共几笔？,A.4 笔|B.3 笔|C.5 笔,A,“日”是竖、横折、横、横，共四笔。,笔画、数笔画,kg-char-stroke,APPLICATION,CONTEXT,1,KG
+,chinese,语文-基本笔画,4,fill,“上”字一共有____笔。,,3,“上”是竖、横、横，共三笔。,笔画、填空,kg-char-stroke,APPLICATION,TEXT,1,KG
+,chinese,语文-基本笔画,3,choice,图上有三个字：一、二、三。笔画最多的是哪个？,A.三|B.一|C.二,A,“三”有三横，笔画最多。,笔画、比较,kg-char-stroke,APPLICATION,DIAGRAM,1,KG
+,chinese,语文-词语理解,1,choice,“苹果”是一种什么？,A.水果|B.蔬菜|C.动物,A,苹果是甜甜的水果。,词语、生活常识,kg-word-meaning,MEMORY,TEXT,1,KG
+,chinese,语文-词语理解,2,choice,“高兴”是什么意思？,A.心里很快乐|B.很困|C.很生气,A,高兴就是心里乐开了花。,词语、心情,kg-word-meaning,MEMORY,TEXT,1,KG
+,chinese,语文-词语理解,2,choice,图上小朋友满头大汗，还拿着扇子扇。这个感觉可以用哪个词？,A.热|B.冷|C.饿,A,流汗扇扇子说明天气很热。,词语、生活情境,kg-word-meaning,MEMORY,DIAGRAM,1,KG
+,chinese,语文-词语理解,2,choice,“冰凉”和“温暖”，哪个词是说冷？,A.冰凉|B.温暖|C.两个都说冷,A,冰凉就是又冰又冷。,词语、反义,kg-word-meaning,UNDERSTANDING,TEXT,1,KG
+,chinese,语文-词语理解,3,choice,妈妈说“饭菜很香”。这里的“香”是说？,A.味道好闻、好吃|B.颜色好看|C.声音好听,A,说饭菜香，是说味道好。,词语、多义词,kg-word-meaning,UNDERSTANDING,CONTEXT,1,KG
+,chinese,语文-词语理解,3,choice,下雨了，地面湿湿的。用哪个词说最合适？,A.潮湿|B.干燥|C.炎热,A,湿湿的就是潮湿。,词语、生活情境,kg-word-meaning,APPLICATION,CONTEXT,1,KG
+,chinese,语文-词语理解,4,choice,“小鸟在枝头唱歌”。“唱歌”在这里是说小鸟在做什么？,A.在叫|B.真的在唱一首歌|C.在跳舞,A,这是把鸟叫说成唱歌，听起来很美。,词语、拟人,kg-word-meaning,APPLICATION,TEXT,1,KG
+,chinese,语文-词语理解,3,choice,小朋友把玩具都收好了，房间很整齐。用哪个词夸他？,A.干净整齐|B.乱七八糟|C.又脏又乱,A,收好玩具，房间就干净整齐。,词语、生活情境,kg-word-meaning,APPLICATION,CONTEXT,1,KG
+,chinese,语文-倾听与表达,1,choice,别人和你说话时，你应该怎么做？,A.看着对方认真听|B.低头玩玩具|C.大声打断,A,认真听别人说话是有礼貌的表现。,倾听、习惯,kg-listen-express,MEMORY,TEXT,1,KG
+,chinese,语文-倾听与表达,2,choice,老师说要排队洗手。小朋友应该先做什么？,A.到洗手池排队|B.先去玩滑梯|C.坐在原地不动,A,听清老师的要求，先去排队。,倾听、规则,kg-listen-express,MEMORY,CONTEXT,1,KG
+,chinese,语文-倾听与表达,2,choice,图中有个小朋友在洗手，水开得很大。老师说“水开小一点”，他该怎么做？,A.把水关小一些|B.把水开得更大|C.不洗手了,A,听清老师的话，把水关小。,倾听、生活情境,kg-listen-express,MEMORY,DIAGRAM,1,KG
+,chinese,语文-倾听与表达,2,choice,听别人说话时，为什么要看着对方的眼睛？,A.表示在认真听，也更容易听清|B.只是因为好玩|C.因为怕被批评,A,看着对方，说明你在认真听。,倾听、礼貌,kg-listen-express,UNDERSTANDING,TEXT,1,KG
+,chinese,语文-倾听与表达,3,choice,小朋友没听清老师说的作业，他应该怎么办？,A.有礼貌地请老师再说一遍|B.回家随便写|C.不问别人自己猜,A,没听清就问，别自己乱猜。,倾听、解决问题,kg-listen-express,UNDERSTANDING,CONTEXT,1,KG
+,chinese,语文-倾听与表达,3,word,妈妈说了三件事：先洗手、再喝水、最后收书包。请说出妈妈说的第一件事。,,先洗手。,按听的顺序记，第一件事是先洗手。,倾听、记忆顺序,kg-listen-express,APPLICATION,CONTEXT,1,KG
+,chinese,语文-倾听与表达,3,choice,下面哪句话说得最有礼貌？,A.请你把书递给我，好吗|B.把书给我|C.快把书拿来,A,加上“请”和“好吗”就有礼貌。,表达、礼貌用语,kg-listen-express,APPLICATION,TEXT,1,KG
+,chinese,语文-倾听与表达,4,word,小朋友想借同伴的彩笔，请说一句完整又有礼貌的话。,,我可以借你的彩笔用一下吗？谢谢！,先说“请”再说谢谢，别人更愿意借。,表达、礼貌用语,kg-listen-express,APPLICATION,CONTEXT,1,KG
+,chinese,语文-说完整句,1,choice,下面哪一句是完整的话？,A.小猫在睡觉|B.睡觉小猫在|C.在睡觉小猫,A,说清楚“谁在做什么”才是完整的话。,完整句、判断,kg-speak-sentence,MEMORY,TEXT,1,KG
+,chinese,语文-说完整句,2,choice,用“我、苹果、吃”三个词，能排成哪句通顺的话？,A.我吃苹果|B.苹果吃我|C.吃我苹果,A,按“谁做什么”排，就是我吃苹果。,组句、词序,kg-speak-sentence,MEMORY,TEXT,1,KG
+,chinese,语文-说完整句,2,choice,图上有个小朋友在跑步。用“谁在做什么”说一句，哪句最合适？,A.小明在跑步|B.跑步在小明|C.小明跑步在,A,先说谁，再说他在做什么。,完整句、看图说话,kg-speak-sentence,MEMORY,DIAGRAM,1,KG
+,chinese,语文-说完整句,2,choice,“花开了”和“花开了吗”两句哪里不一样？,A.后一句是在问问题|B.前一句更长|C.意思完全一样,A,句末加上“吗”就是在提问。,句子、语气,kg-speak-sentence,UNDERSTANDING,TEXT,1,KG
+,chinese,语文-说完整句,3,choice,小朋友只说“吃饭”两个字，怎样说才更完整？,A.我在家里吃饭|B.吃饭|C.饭,A,加上“谁”和“在哪里”就完整了。,完整句、扩句,kg-speak-sentence,UNDERSTANDING,CONTEXT,1,KG
+,chinese,语文-说完整句,3,word,图中有个小朋友在公园里放风筝。请说出“谁在哪里做什么”。,,小朋友在公园里放风筝。,说清谁、在哪里、做什么，句子就完整。,完整句、看图说话,kg-speak-sentence,APPLICATION,DIAGRAM,1,KG
+,chinese,语文-说完整句,4,choice,想请别人帮忙，下面哪句说得最清楚又礼貌？,A.请你帮我拿一下桌上的杯子，好吗|B.杯子|C.帮我,A,说清楚要拿什么，还加上“请”。,表达、礼貌用语,kg-speak-sentence,APPLICATION,CONTEXT,1,KG
+,chinese,语文-说完整句,3,fill,把句子补充完整：小鸟在树上____。,,唱歌,补充“在哪里做什么”，句子就完整了。,完整句、补充句子,kg-speak-sentence,APPLICATION,TEXT,1,KG
+,chinese,语文-看图讲述,1,choice,图中有个小朋友在洗手。他在做什么？,A.洗手|B.洗脸|C.洗脚,A,他手上有泡泡，是在洗手。,看图、说图意,kg-story-picture,MEMORY,DIAGRAM,1,KG
+,chinese,语文-看图讲述,2,choice,图中有三只小鸭子跟着鸭妈妈过马路。图里有几只小鸭子？,A.3 只|B.2 只|C.4 只,A,数一数，跟着妈妈的是三只小鸭。,看图、数数,kg-story-picture,MEMORY,DIAGRAM,1,KG
+,chinese,语文-看图讲述,2,choice,图中下着雨，小朋友撑着一把红伞。天气怎么样？,A.下雨|B.下雪|C.晴天,A,有雨点和伞，就是下雨天。,看图、天气,kg-story-picture,MEMORY,DIAGRAM,1,KG
+,chinese,语文-看图讲述,2,choice,图中小朋友先穿袜子，再穿鞋子。他先做的是哪件事？,A.穿袜子|B.穿鞋子|C.两件一起做,A,先穿袜子，再穿鞋子。,看图、先后顺序,kg-story-picture,UNDERSTANDING,DIAGRAM,1,KG
+,chinese,语文-看图讲述,3,choice,图中妈妈在厨房做饭，小朋友在摆碗筷。他们分别在做什么？,A.妈妈做饭，小朋友摆碗筷|B.两个人都在做饭|C.两个人都在看电视,A,看清每个人在做的事再回答。,看图、说图意,kg-story-picture,UNDERSTANDING,DIAGRAM,1,KG
+,chinese,语文-看图讲述,3,word,小朋友在小区里把地上的纸捡起来放进垃圾桶。请说一句夸他的话。,,你真爱干净，会把垃圾送回家。,说出他做得好的地方，就是夸他。,生活情境、评价表达,kg-story-picture,APPLICATION,CONTEXT,1,KG
+,chinese,语文-看图讲述,3,word,早上太阳升起来了，小朋友背上书包准备出门。请用一句话说说时间和事情。,,早上，小朋友背着书包去上学。,先说时间，再说他去做什么。,生活情境、讲述,kg-story-picture,APPLICATION,CONTEXT,1,KG
+,chinese,语文-看图讲述,4,word,图中有两只小蚂蚁一起搬一粒米。请讲讲它们在做什么，结果会怎样。,,两只小蚂蚁一起搬米，合作就能把米搬回洞里。,一起用力，小蚂蚁也能搬动大米粒。,看图、推理讲述,kg-story-picture,APPLICATION,DIAGRAM,1,KG
+,math,数学-认识时间,1,choice,太阳升起来，天亮了，这是一天中的什么时候？,A.早上|B.晚上|C.半夜,A,太阳升起、天亮就是早上。,时间、早上,kg-time-day,MEMORY,TEXT,1,KG
+,math,数学-认识时间,2,choice,小朋友上床睡觉，一般是哪个时候？,A.晚上|B.中午|C.早上,A,天黑以后，晚上才睡觉。,时间、晚上,kg-time-day,MEMORY,TEXT,1,KG
+,math,数学-认识时间,2,choice,图上的钟，短针指着 7，长针指着 12。这是几点？,A.7 点|B.12 点|C.5 点,A,长针指 12，短针指几就是几点。,认识钟面、整点,kg-time-day,MEMORY,DIAGRAM,1,KG
+,math,数学-认识时间,2,choice,先吃早饭，再去上学，最后睡觉。哪件事最早发生？,A.吃早饭|B.上学|C.睡觉,A,一天里先吃早饭，再上学。,时间、先后顺序,kg-time-day,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-认识时间,3,choice,中午太阳在头顶，我们一般在这个时候做什么？,A.吃午饭、午休|B.吃早饭|C.起床,A,中午是吃午饭和休息的时间。,时间、中午,kg-time-day,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-认识时间,3,choice,小明 8 点上学，1 个小时后开始做课间操。课间操是几点？,A.9 点|B.8 点|C.10 点,A,8 点再过 1 个小时就是 9 点。,时间、过一小时,kg-time-day,APPLICATION,CONTEXT,1,KG
+,math,数学-认识时间,4,fill,妈妈 6 点下班，路上走了 1 个小时，她____点到家。,,7,6 点再过 1 个小时就是 7 点。,时间、过一小时,kg-time-day,APPLICATION,EXPRESSION,1,KG
+,math,数学-认识时间,3,choice,图中有太阳和月亮。白天过去以后，接着来的是什么？,A.黑夜|B.早上|C.中午,A,白天过完就是黑夜。,时间、白天和黑夜,kg-time-day,APPLICATION,DIAGRAM,1,KG
+,math,数学-认识人民币,1,choice,我们国家用的钱叫什么？,A.人民币|B.美元|C.欧元,A,我们国家用的钱是人民币。,认识人民币、常识,kg-money-awareness,MEMORY,TEXT,1,KG
+,math,数学-认识人民币,2,choice,图上有一张纸币，上面写着 1 元。这张钱是多少？,A.1 元|B.10 元|C.1 角,A,纸币上写着 1 元，就是一元钱。,认识人民币、面值,kg-money-awareness,MEMORY,DIAGRAM,1,KG
+,math,数学-认识人民币,2,choice,1 元等于多少角？,A.10 角|B.100 角|C.1 角,A,一元等于十角。,人民币、换算,kg-money-awareness,MEMORY,TEXT,1,KG
+,math,数学-认识人民币,2,choice,5 角和 1 元，哪个钱更多？,A.1 元|B.5 角|C.一样多,A,1 元等于 10 角，比 5 角多。,人民币、比较,kg-money-awareness,UNDERSTANDING,TEXT,1,KG
+,math,数学-认识人民币,3,choice,一瓶水 2 元，一包饼干 3 元。哪个更贵？,A.饼干|B.水|C.一样贵,A,3 元比 2 元多，饼干更贵。,人民币、比较,kg-money-awareness,UNDERSTANDING,CONTEXT,1,KG
+,math,数学-认识人民币,3,choice,小朋友有 5 元，买 3 元的本子，还剩几元？,A.2 元|B.3 元|C.8 元,A,5 元去掉 3 元，还剩 2 元。,人民币、简单计算,kg-money-awareness,APPLICATION,CONTEXT,1,KG
+,math,数学-认识人民币,4,choice,一支笔 4 元，一块橡皮 1 元。买这两样一共要几元？,A.5 元|B.4 元|C.3 元,A,4 元加 1 元是 5 元。,人民币、简单计算,kg-money-awareness,APPLICATION,EXPRESSION,1,KG
+,math,数学-认识人民币,3,choice,妈妈给 10 元买 6 元的画册，找回的钱够买 1 元一支的铅笔吗？,A.够，找回 4 元|B.不够|C.刚好 0 元,A,10 元减 6 元找回 4 元，买 1 元的笔够用。,人民币、生活应用,kg-money-awareness,APPLICATION,CONTEXT,1,KG

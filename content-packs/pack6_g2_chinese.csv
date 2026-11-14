@@ -1,0 +1,81 @@
+id,subject,knowledgePoint,difficulty,type,content,options,answer,explanation,tags,anchorCode,cognitiveLevel,variantType,enabled,stage
+,chinese,语文-多音字,1,choice,“长大”的“长”应该读什么？,A.zhǎng|B.cháng|C.zhàng,A,“长”在这里表示生长，读 zhǎng。,多音字、语境,chinese-pinyin-polyphone,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,1,choice,“行走”的“行”应该读什么？,A.xíng|B.háng|C.hàng,A,走路、行走的“行”读 xíng。,多音字、语境,chinese-pinyin-polyphone,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,2,choice,图上写着“快乐”两个字，这里的“乐”读什么？,A.lè|B.yuè|C.yào,A,快乐表示高兴，读 lè。,多音字、看图,chinese-pinyin-polyphone,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-多音字,2,choice,“音乐”的“乐”和“快乐”的“乐”，读音一样吗？,A.不一样，音乐读 yuè，快乐读 lè|B.一样，都读 lè|C.一样，都读 yuè,A,同一个字在不同词语里读音可能不同。,多音字、比较,chinese-pinyin-polyphone,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,2,choice,妈妈去“银行”取钱，这里的“行”读什么？,A.háng|B.xíng|C.héng,A,银行、行业里的“行”读 háng。,多音字、生活情境,chinese-pinyin-polyphone,UNDERSTANDING,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,3,choice,“得到”的“得”和“跑得快”的“得”，读音一样吗？,A.不一样，得到读 dé，跑得快读 de|B.一样，都读 dé|C.一样，都读 děi,A,前一个“得”是得到，后一个读得轻。,多音字、比较,chinese-pinyin-polyphone,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,3,choice,小明说“我长高了”，这里的“长”读 zhǎng。哪句话里的“长”也读 zhǎng？,A.柳条很长|B.小树长大了|C.长江很长,B,小树长大和长高一样，都表示生长。,多音字、辨读,chinese-pinyin-polyphone,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,3,choice,“他只想要一支铅笔”里的“只”读 zhǐ。哪句里的“只”也读 zhǐ？,A.一只小鸟|B.只有三个人|C.两只手,B,“只有”的“只”读 zhǐ，“一只”的“只”读 zhī。,多音字、辨读,chinese-pinyin-polyphone,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,4,choice,“他笑着走进来”里的“着”读 zhe。哪句里的“着”读法相同？,A.着火了吗|B.她唱着歌|C.铅笔找不着了,B,唱着歌的“着”也读轻声 zhe。,多音字、辨读,chinese-pinyin-polyphone,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-多音字,3,fill,“头发”的“发”读 fà，“发现”的“发”读 fā。请写出“出发”的“发”的读音____。,,fā,出发的“发”和发现一样，读 fā。,多音字、填写,chinese-pinyin-polyphone,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,1,choice,“明天____见”应该填哪个字？,A.再|B.在|C.才,A,“再见”的“再”表示又一次见面。,同音字、再和在,g2-pinyin-similar,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,1,choice,“我____教室里读书”应该填哪个字？,A.在|B.再|C.才,A,“在”表示地点，人就在教室里。,同音字、再和在,g2-pinyin-similar,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,2,choice,图上小朋友正趴在书桌前写作业。句子“小明____作业”该填哪个字？,A.做|B.作|C.坐,A,写作业、做事情用提手旁的“做”。,同音字、做和作,g2-pinyin-similar,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-音近字,2,choice,“开心____笑”应该填哪个字？,A.地|B.的|C.得,A,后面是动作“笑”，前面用“地”。,的、地、得、填写,g2-pinyin-similar,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,2,choice,“再”和“在”的意思不同。下面哪句话说得对？,A.“再”表示又一次，“在”表示地点或正在|B.两个都表示地点|C.两个都表示又一次,A,分清意思，用字才不会出错。,同音字、比较,g2-pinyin-similar,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,3,choice,老师站在教室门口，请同学们走进来。哪句话用字正确？,A.请进教室上课|B.我家离学校很进|C.他冲近了教室,A,走进来用“进”，距离短用“近”。,同音字、进和近,g2-pinyin-similar,UNDERSTANDING,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,3,choice,下面哪句话没有错别字？,A.我们坐在教室里认真地读书|B.我们座在教室里认真地读书|C.我们坐在教室里认真的读书,A,坐下的“坐”和“认真”后的“地”都对。,同音字、错别字,g2-pinyin-similar,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,3,choice,妈妈在厨房忙碌，我想去帮忙。哪句话用字正确？,A.我帮妈妈做家务|B.我帮妈妈作家务|C.我帮妈妈坐家务,A,做事情用“做”，写文章才用“作”。,同音字、做和作,g2-pinyin-similar,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,3,fill,“弟弟高兴____跳起来”中，横线上应填“地”还是“得”？,,地,后面是动作“跳”，前面用“地”。,的、地、得、填写,g2-pinyin-similar,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-音近字,4,fill,老师讲完了，请你把这句话____说一遍。横线上填哪个字表示“又一次”？,,再,“再说一遍”就是又说一次。,同音字、填写,g2-pinyin-similar,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,1,choice,“晴”可以组成下面哪个词？,A.晴天|B.眼睛|C.清水,A,晴天的“晴”是日字旁，和太阳有关。,组词、日字旁,g2-char-recognize,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,2,choice,“篮”字的偏旁是竹字头，说明它和什么有关？,A.竹子|B.水|C.火,A,竹字头的字大多和竹子、竹器有关。,偏旁、识字,g2-char-recognize,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,2,choice,“蜻蜓”的“蜻”是什么偏旁？,A.虫字旁|B.米字旁|C.三点水,A,虫字旁的字大多和小昆虫有关。,偏旁、昆虫,g2-char-recognize,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,2,choice,“清”“晴”“情”都有“青”，哪个字和水有关？,A.清|B.晴|C.情,A,三点水的“清”和水有关。,形声字、偏旁,g2-char-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,3,choice,“蜜蜂”的“蜂”和“山峰”的“峰”，哪个和昆虫有关？,A.蜂|B.峰|C.两个都有关,A,虫字旁的“蜂”才是昆虫。,形声字、辨义,g2-char-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,3,choice,“挑”和“跳”都有“兆”，怎样分清它们？,A.提手旁和手的动作有关，足字旁和脚有关|B.两个字意思完全一样|C.两个字都和水有关,A,看偏旁想意思，就不会用错。,形近字、偏旁,g2-char-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,3,choice,春天来了，我想摘一朵花。下面哪个词中的“采”用对了？,A.采花|B.采作业|C.采电视,A,采花、采茶都用“采”。,组词、词语搭配,g2-char-recognize,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,4,choice,图上公园里有一个圆圆的花坛。句子“公园里有一个____形花坛”该填哪个字？,A.圆|B.园|C.员,A,圆形的“圆”表示形状。,同音字、形状,g2-char-recognize,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-识字组词,3,fill,用“球”组一个词，填进句子：“弟弟在操场上拍____。”,,皮球,拍皮球是一个完整的词语搭配。,组词、搭配,g2-char-recognize,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-识字组词,4,word,请用“亮”组两个词，再选一个词说一句完整的话。,,明亮、月亮；例：教室里的灯很明亮。,组词要说得出意思，句子要完整。,组词、表达,g2-char-recognize,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,1,choice,“自____的事情自己做”中，横线上应填哪个字？,A.己|B.已|C.巳,A,“自己”的“己”不出头。,形近字、易错,g2-char-form,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,1,choice,“____经”表示事情已经过去，横线上该填哪个字？,A.已|B.己|C.巳,A,“已经”的“已”上面露一点头。,形近字、易错,g2-char-form,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,2,choice,“____光”是太阳照下来的光，横线上该填哪个字？,A.日|B.目|C.曰,A,日字旁瘦瘦的，里面只有一横。,形近字、日字旁,g2-char-form,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,2,choice,图上写着“未”和“末”两个字，哪个字上面一横更长？,A.末|B.未|C.一样长,A,“末”表示末端，上面一横写得长。,形近字、看图,g2-char-form,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-形近字,3,choice,“土”和“士”怎样区分？,A.“士”上面一横长，“土”下面一横长|B.两个字完全一样|C.“土”上面一横长,A,士兵的“士”上横长，泥土的“土”下横长。,形近字、比较,g2-char-form,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,3,choice,“天”和“夫”只差一点点，哪句话说得对？,A.“夫”的撇从上面穿出来，“天”不出头|B.两个字一模一样|C.“天”比“夫”多一横,A,大夫的“夫”撇要出头。,形近字、比较,g2-char-form,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,3,choice,老师请我们说说自己的事。哪句话用字正确？,A.自己的事情自己做|B.自已的事情自已做|C.自已的事情自己做,A,自己的“己”不出头，别写成“已”。,形近字、错别字,g2-char-form,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,3,choice,一个星期上五天学，最后两天休息。“周____”该填哪个字？,A.末|B.未|C.木,A,周末是一个星期的最后。,形近字、生活情境,g2-char-form,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,3,fill,“____兵”是保卫国家的士兵，横线上应填“士”还是“土”？,,士,士兵的“士”上面一横长。,形近字、填写,g2-char-form,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-形近字,4,word,请用“己”和“已”各说一句话，让别人听出两个字的不同。,,例：自己的书包自己收；我已经八岁了。,“己”是自己，“已”是已经。,形近字、表达,g2-char-form,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,1,choice,“明亮的____”后面填什么最合适？,A.眼睛|B.石头|C.泥土,A,眼睛亮亮的，可以说明亮的眼睛。,词语搭配、形容词,g2-word-accumulate,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,2,choice,“轻轻地____”后面填什么最合适？,A.走|B.打雷|C.敲鼓,A,走路可以很轻，打雷敲鼓声音很大。,词语搭配、副词,g2-word-accumulate,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,1,choice,“弯弯的____”后面填什么最合适？,A.月亮|B.太阳|C.桌子,A,月亮弯弯的，像一只小船。,词语搭配、形容词,g2-word-accumulate,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,2,choice,“茂密的树林”里的“茂密”是什么意思？,A.树很多，叶子很密|B.树很矮|C.树林很亮,A,茂密就是又多又密。,词语理解、积累,g2-word-accumulate,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,3,choice,下面哪组词语搭配不合适？,A.甜甜的笑容|B.高高的米饭|C.静静地听,B,米饭不能说高高的，可以说满满的。,词语搭配、判断,g2-word-accumulate,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,2,choice,“哗哗”和“沙沙”都是声音，哪个更像小雨落在树叶上的声音？,A.沙沙|B.哗哗|C.咚咚,A,小雨轻轻落下，声音细细的。,象声词、积累,g2-word-accumulate,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,3,choice,妈妈在厨房炒菜，香味飘到了客厅。这时用哪个词最合适？,A.香喷喷|B.亮晶晶|C.绿油油,A,炒菜的香味用香喷喷。,词语搭配、生活情境,g2-word-accumulate,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,3,choice,图中小朋友在图书馆看书，谁也不说话。哪句话最合适？,A.图书馆里静悄悄的|B.图书馆里闹哄哄的|C.图书馆里冷冰冰的,A,大家安静看书，用静悄悄。,词语搭配、看图,g2-word-accumulate,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-词语搭配,3,fill,请填一个表示水很清的词：“____的河水从桥下流过。”,,清清,清清表示水干净、看得见底。,词语搭配、描写,g2-word-accumulate,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-词语搭配,4,word,请用“蓝蓝的”和“雪白的”各说一个短语，再连成一句完整的话。,,例：蓝蓝的天空；雪白的云朵；蓝蓝的天空飘着雪白的云朵。,先想事物，再把两个短语连成句子。,词语搭配、表达,g2-word-accumulate,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「早晨，奶奶在院子里给花浇水。她一边浇一边说：“你们喝饱了水，就会开出更美的花。”小孙女也提来小水壶，学着奶奶的样子帮忙。太阳升起来了，院子里飘着淡淡的花香。」这段话主要写了什么？,A.奶奶和小孙女一起给花浇水|B.奶奶去市场买菜|C.小孙女在写作业,A,短文写的是祖孙俩一起浇花这件事。,短文、主旨,chinese-reading-main-idea,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「下课了，小明发现同桌的铅笔断了。他悄悄把自己的铅笔递过去。同桌接过铅笔，笑着说了声谢谢。上课铃响了，两个人坐得端端正正，一起认真听讲。老师看见了，也笑着点点头。」这段话主要写了小明做的哪件事？,A.把铅笔借给同桌|B.帮老师收作业|C.自己去买铅笔,A,主要事件是把铅笔借给同桌。,短文、概括,chinese-reading-main-idea,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「夏天的午后，天空忽然阴了下来。小雨点从云里跳下来，落在屋顶上，滴答滴答。它又落进小河里，和小鱼做游戏。太阳出来了，小雨点慢慢飞上天空，又变成了白云。」这段话主要写了什么？,A.小雨点从云里落下，又回到天空|B.小雨点在屋顶上睡觉|C.小雨点和小鸟一起飞,A,短文顺着小雨点的变化来写。,短文、主旨,chinese-reading-main-idea,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「妈妈每天下班回家，先给爷爷倒一杯热水，再陪他说说话。小丽看见了，也学着给妈妈捶背。妈妈摸摸她的头说：“你真是个懂事的好孩子。”一家人围坐在桌边，屋子里暖融融的。」这段话主要想告诉我们什么？,A.小丽学会了关心家人|B.妈妈不爱说话|C.爷爷喜欢喝热水,A,小丽学着妈妈的样子关心家人。,短文、主旨,chinese-reading-main-idea,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「夏天的午后，一只小蚂蚁在路边找食物。它找到一粒米，自己搬不动。它跑回家叫来伙伴，大家一起用力，把米搬回了洞里。蚂蚁妈妈笑着说：“人多力量大。”」这段话想告诉我们什么？,A.大家团结起来力量大|B.蚂蚁最喜欢吃米|C.一个人做事更快,A,蚂蚁妈妈的话点明了道理。,短文、道理,chinese-reading-main-idea,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「春天到了，小草从土里钻出来。公园里的花开了，红的、黄的、白的，引来许多蜜蜂。小朋友脱下厚棉衣，在草地上放风筝。柳条在风里轻轻摆动，燕子也从南方飞回来了。」这段话主要写了什么？,A.春天来了，公园里充满生机|B.冬天很冷，大家不出门|C.小朋友在家里写作业,A,花草、蜜蜂和放风筝都写出春天的生机。,短文、主旨,chinese-reading-main-idea,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「放学路上，小华看见一位老奶奶提着两袋菜，走得很慢。路边的树叶被风吹得沙沙作响。他跑过去说：“奶奶，我帮您提一袋吧。”老奶奶笑着说：“谢谢你，好孩子。”」读了这段话，我们应该向小华学习什么？,A.主动帮助有困难的人|B.放学要快点跑回家|C.提东西要用两只手,A,小华主动帮老人提东西。,短文、道理,chinese-reading-main-idea,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「放学的时候，操场上的同学已经不多了。小林在操场捡到一个铅笔盒，里面有五支铅笔和一块橡皮。他没有拿回家，而是交给了老师。第二天，同学找回了铅笔盒，对小林说了声谢谢。」小林这样做，最值得我们学习的是什么？,A.捡到东西要交给老师、还给失主|B.铅笔盒里的东西很多|C.操场上的东西不能乱捡,A,捡到东西要想办法还给失主。,短文、道理,chinese-reading-main-idea,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,4,choice,「星期天，爸爸带小东去种树。小东挖坑、扶树苗、浇水，累得满头大汗。爸爸说：“小树长大要很多年，我们要好好照顾它。”小东点点头，给小树挂上了自己的名字牌。」这段话主要告诉我们什么？,A.种树要出力，也要用心照顾|B.种树只要浇一次水就行|C.星期天不用写作业,A,爸爸的话说明种树要长期照顾。,短文、主旨,chinese-reading-main-idea,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,4,choice,「下雪了，屋顶和树上都白了。小朋友们戴上手套，跑到院子里堆雪人。他们用胡萝卜做鼻子，用纽扣做眼睛。雪人笑眯眯地站在雪地里，好像在说：“谢谢你们！”」给这段话选一个最合适的题目。,A.快乐的雪天|B.春天的花园|C.夏天的池塘,A,短文写的是下雪天堆雪人的快乐。,短文、拟题,chinese-reading-main-idea,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-短文阅读,1,choice,「早上七点，妈妈叫小文起床。小文穿好衣服，刷了牙，洗了脸，坐到桌前吃了一个鸡蛋、喝了一杯牛奶。七点半，他背上书包高高兴兴地去上学。妈妈站在门口，笑着向他挥手。」小文几点去上学？,A.七点|B.七点半|C.八点,B,短文中说七点半背上书包去上学。,提取信息、时间,g2-reading-detail,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「放学后，爷爷来接小雨。路上，小雨看见一只小猫蹲在树下，就停下脚步。爷爷说：“小猫可能饿了。”小雨把书包里的饼干掰了一半，放在小猫面前。小猫低下头，一口一口地吃起来。」谁把饼干给了小猫？,A.小雨|B.爷爷|C.老师,A,是短文中的小雨掰了饼干。,提取信息、人物,g2-reading-detail,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「星期天上午，阳光照在阳台上，暖洋洋的。妈妈在阳台上晾衣服。小红搬来小凳子，站在旁边帮妈妈递衣架。妈妈晾完衣服，摸摸小红的头，两个人一起把凳子搬回屋里。」图上小红帮妈妈做了什么？,A.递衣架|B.擦桌子|C.扫地,A,短文写的是小红递衣架。,提取信息、看图,g2-reading-detail,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-短文阅读,2,choice,「体育课上，老师让大家跳绳。小刚跳了几下就被绳子绊住了脚。他捡起绳子，看了看别人怎么跳，又试了一次，这次一口气跳了二十下。同学们在旁边大声数着数。」小刚后来为什么能跳二十下？,A.他看别人怎么跳，又认真练习|B.他换了一根新绳子|C.老师帮他跳完了,A,小刚看别人跳，又试了一次。,提取信息、原因,g2-reading-detail,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「奶奶把一盆花放在窗台上，天天给它浇水。过了几天，花盆里长出了绿绿的小芽。奶奶说：“别急，它还要晒晒太阳。”于是，小芽被搬到了阳光最好的地方。奶奶每天都来看它好几遍。」奶奶为什么把小芽搬到阳光最好的地方？,A.小芽需要晒太阳才能长大|B.窗台上太挤了|C.小芽怕水,A,奶奶说小芽还要晒晒太阳。,提取信息、原因,g2-reading-detail,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「图书角是大家最喜欢去的地方。图书角里，一本故事书被撕破了一页。小林拿来胶带，小心地把那一页粘好。旁边的同学问：“是你撕的吗？”小林摇摇头说：“不是，不过它现在能看了。”」小林为什么把书粘好？,A.他不想让同学们看不成书|B.书是他撕坏的|C.他想把书带回家,A,小林想让大家还能看这本书。,提取信息、原因,g2-reading-detail,UNDERSTANDING,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「星期六下午，社区组织打扫卫生。王阿姨带着明明来到小花园，明明负责捡纸屑，王阿姨负责擦长椅。大家干得满头大汗，谁也不喊累。一个小时后，小花园变得干干净净。」星期六下午，明明在哪里做了什么？,A.在小花园里捡纸屑|B.在家里写作业|C.在教室擦黑板,A,时间、地点和事情都在短文中。,提取信息、要素,g2-reading-detail,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,4,choice,「周五放学时，老师提醒大家：下周一要带一张全家福，还要准备一分钟的自我介绍。小美回家后，把这两件事写在便签上，贴在书桌前，还让妈妈提醒自己。」小美用什么办法记住老师说的两件事？,A.写在便签上贴在书桌前|B.请同桌帮她记|C.第二天再问老师,A,小美把两件事写在便签上。,提取信息、方法,g2-reading-detail,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-短文阅读,3,choice,「菜市场里，一位老爷爷提着篮子买菜。他先买了三根黄瓜，又买了两斤西红柿，最后在门口买了一把青菜，篮子装得满满的。他提着满满的篮子，慢慢走回家。」老爷爷最后买的是什么？,A.一把青菜|B.三根黄瓜|C.两斤西红柿,A,短文写最后买了一把青菜。,提取信息、顺序,g2-reading-detail,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-短文阅读,4,word,「操场上彩旗飘飘，十分热闹。运动会上，二年级三班的接力赛跑到最后一棒。小雨接过接力棒，咬着牙往前冲，终于第一个冲过终点。同学们围上来，又跳又笑。」请用一句话说清楚：什么时候、谁、做了什么、结果怎样。,,运动会接力赛上，小雨接过最后一棒往前冲，第一个冲过终点。,说清楚时间、人物、事情和结果。,提取信息、表达,g2-reading-detail,APPLICATION,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,1,choice,“妈妈一边做饭，一边____。”横线上填什么最合适？,A.听广播|B.睡着|C.飞起来,A,做饭和听广播可以同时做。,造句、一边一边,g2-writing-sentence,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,2,choice,“下课了，同学们有的跳绳，有的____。”横线上填什么最合适？,A.踢毽子|B.上课铃|C.教室,A,踢毽子和跳绳都是课间活动。,造句、有的有的,g2-writing-sentence,MEMORY,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,2,choice,图中有三个小朋友，一个在读书，一个在画画，还有一个在唱歌。请补全句子：同学们有的读书，有的画画，还有的____。,A.唱歌|B.跑步|C.写字,A,图上第三个小朋友在唱歌。,看图写话、有的有的,g2-writing-sentence,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-写话,2,choice,“一边……一边……”表示什么？,A.两个动作同时做|B.先做一件事再做另一件|C.只做一件事,A,两件事一起做才用“一边……一边……”。,句式理解、一边一边,g2-writing-sentence,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,3,choice,下面哪句话用“一边……一边……”写得不合适？,A.小明一边跑步，一边睡觉|B.妈妈一边做饭，一边听音乐|C.我一边走路，一边唱歌,A,跑步和睡觉不能同时做。,句式判断、一边一边,g2-writing-sentence,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,2,choice,“有的……有的……”通常用来写什么？,A.不同的人在做不同的事|B.一个人做很多件事|C.一件事的原因,A,用“有的……有的……”把大家做的事分开说。,句式理解、有的有的,g2-writing-sentence,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,chinese,语文-写话,3,word,教室里，同学们正在打扫卫生。请用“有的……有的……”写一句话。,,同学们有的擦桌子，有的扫地，还有的擦窗户。,先写大家在做的事，再用“有的……有的……”分开说。,造句、生活情境,g2-writing-sentence,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,chinese,语文-写话,3,word,图中一只小鸟站在枝头唱歌。请用“一边……一边……”写一句话。,,小鸟一边拍着翅膀，一边唱歌。,两个动作要能同时发生。,看图写话、一边一边,g2-writing-sentence,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-写话,3,fill,下课了，操场上真热闹：有的跑步，有的____，有的跳绳。请填一个课间活动。,,踢球,踢球和跑步、跳绳一样，都是课间活动。,造句、词语填空,g2-writing-sentence,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,chinese,语文-写话,4,word,图中小朋友在公园里放风筝，天上有白云。请写两句话，用上“一边……一边……”和“有的……有的……”。,,例：星期天，小朋友们在公园里放风筝。他们有的拉线，有的举风筝，一边跑一边笑。,先看清图，再把两个句式都用上。,看图写话、句式运用,g2-writing-sentence,APPLICATION,DIAGRAM,1,PRIMARY_LOW

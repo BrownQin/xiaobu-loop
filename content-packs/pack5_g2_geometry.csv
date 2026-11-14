@@ -1,0 +1,51 @@
+id,subject,knowledgePoint,difficulty,type,content,options,answer,explanation,tags,anchorCode,cognitiveLevel,variantType,enabled,stage
+,math,数学-认识图形,1,choice,一个四边形，四条边一样长，四个角都是直角。它是什么图形？,A.长方形|B.正方形|C.平行四边形,B,四边一样长、四角都是直角的是正方形。,正方形、图形辨认,g2-shape-recognize,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-认识图形,1,fill,长方形有（ ）条边，还有（ ）个直角。,,4条边和4个直角,长方形有四条边，四个角都是直角。,长方形、图形特征,g2-shape-recognize,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-认识图形,2,fill,一个四边形，两组对边分别平行，四个角都不是直角。它叫什么图形？,,平行四边形,两组对边分别平行、角不是直角的是平行四边形。,平行四边形、图形辨认,g2-shape-recognize,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-认识图形,2,choice,下面三句话中，正确的一句是哪一句？,A.正方形的四条边都相等|B.长方形的四条边都相等|C.平行四边形的四个角都是直角,A,长方形只有对边相等，平行四边形的角不一定是直角。,图形特征、判断,g2-shape-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-认识图形,3,choice,小步说正方形是特殊的长方形。下面哪种解释最合适？,A.正方形的四条边相等，四个角也是直角|B.正方形看起来比长方形大|C.正方形没有直角,A,正方形有长方形的全部特点，四条边还都相等。,正方形、长方形、说理,g2-shape-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-认识图形,3,choice,一个长方形，长不变，把宽增加到和长一样长。它会变成什么图形？,A.正方形|B.平行四边形|C.三角形,A,宽和长一样时四边相等，四个角是直角，就是正方形。,图形变化、推理,g2-shape-recognize,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-认识图形,3,word,教室里的一块黑板面是长方形，长4米，宽1米。沿着黑板面的四条边走一圈，一共走多少米？,,10米,4加1等于5，5乘2等于10米。,长方形、周长、生活,g2-shape-recognize,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-认识图形,3,choice,妈妈买回一块手帕，它的四条边一样长，四个角都是直角。这块手帕是什么形状？,A.正方形|B.长方形|C.平行四边形,A,四条边一样长、四角是直角，是正方形。,正方形、生活,g2-shape-recognize,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-认识图形,4,fill,用4根一样长的小棒首尾相接摆一个图形，要求四个角都是直角。摆出的是什么图形？,,正方形,四根一样长的小棒摆成直角，就是正方形。,正方形、操作,g2-shape-recognize,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-认识图形,4,fill,一个长方形的长是6厘米，宽是4厘米。把它剪成两个完全一样的正方形，每个正方形的边长是多少厘米？,,4厘米,宽是4厘米，剪出的正方形边长就是4厘米。,长方形、正方形、切分,g2-shape-recognize,APPLICATION,EXPRESSION,1,PRIMARY_LOW
+,math,数学-角的初步认识,1,fill,一个角有（ ）个顶点，有（ ）条边。,,1个顶点和2条边,角由一个顶点和两条边组成。,角、顶点、边,g2-angle,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-角的初步认识,1,choice,一个角张开的大小和三角尺上的直角完全一样。它是什么角？,A.锐角|B.直角|C.钝角,B,和三角尺的直角完全一样，就是直角。,直角、辨认,g2-angle,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-角的初步认识,2,choice,一个角比直角小，两条边张开得比较窄。它是什么角？,A.锐角|B.直角|C.钝角,A,比直角小的角叫锐角。,锐角、辨认,g2-angle,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-角的初步认识,2,choice,下面说法正确的是哪一句？,A.角的两条边画得越长，角就越大|B.角的大小要看两条边张开的大小|C.角的大小和边张开的多少没有关系,B,角的大小只看两边张开多少，和边画多长无关。,角的大小、易错,g2-angle,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-角的初步认识,3,choice,把直角的两条边都画长一倍，这个角变成什么角？,A.锐角|B.直角|C.钝角,B,边画长了，张开的程度没变，还是直角。,直角、角的大小,g2-angle,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-角的初步认识,3,choice,小步用三角尺量一个角，发现这个角比直角大。下面判断正确的是哪一句？,A.这个角是钝角|B.这个角是锐角|C.这个角一定是直角,A,比直角大的角是钝角。,钝角、判断,g2-angle,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-角的初步认识,3,word,一块红领巾上有3个角，其中1个是钝角，其余都是锐角。这块红领巾上有几个锐角？,,2个,3个角去掉1个钝角，还剩2个锐角。,锐角、生活,g2-angle,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-角的初步认识,3,choice,钟面上3点整的时候，时针和分针正好组成一个角。这个角是什么角？,A.锐角|B.直角|C.钝角,B,3点整时两针正好成直角。,直角、钟面,g2-angle,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-角的初步认识,4,fill,一张长方形纸有4个直角。剪去其中一个角，剩下的图形最多有几个角？,,5个角,剪去一个角会多出一个角，4减1加2等于5。,直角、剪角,g2-angle,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,math,数学-角的初步认识,4,word,爸爸要把两根木条钉成直角，手边只有一把三角尺。他该怎样检查这个角是不是直角？,,把三角尺的直角顶点对准两根木条的连接处，看两条边是否和三角尺的两条直角边重合。,用三角尺的直角去比，两条边都重合了才是直角。,直角、操作,g2-angle,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,1,choice,下面哪个汉字沿中间竖着对折后，两边能完全重合？,A.中|B.上|C.子,A,中左右两边一样，对折能重合。,对称、汉字,g2-symmetry-move,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,2,choice,一只蝴蝶左右两边的花纹完全一样，沿着身体中间对折能重合。这只蝴蝶是什么图形？,A.对称图形|B.平移图形|C.旋转图形,A,对折后两边完全重合，就是对称图形。,对称、蝴蝶,g2-symmetry-move,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-对称与运动,2,choice,推拉窗沿着直线慢慢移动，窗子的方向一直没有改变。这种运动叫什么？,A.平移|B.旋转|C.对称,A,沿直线移动、方向不变，叫平移。,平移、生活,g2-symmetry-move,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,2,choice,风扇的叶片绕着中心转动，电梯门直着开关。下面说法正确的是哪一句？,A.风扇叶片是旋转，电梯门是平移|B.两个都是平移|C.两个都是旋转,A,绕中心转动是旋转，直着移动是平移。,平移、旋转、比较,g2-symmetry-move,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,3,choice,数字8沿着中间的竖线对折，左右两边能完全重合。下面说法正确的是哪一句？,A.8是对称的|B.8只能平移|C.8不能对折,A,8左右两边一样，对折能重合，是对称的。,对称、数字,g2-symmetry-move,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,3,choice,字母A沿着中间竖线对折能重合。把字母A向右平移一格后，它还是对称图形吗？,A.还是对称图形|B.不再是对称图形|C.变成了旋转图形,A,平移只改变位置，不改变样子，照样对称。,对称、平移、推理,g2-symmetry-move,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-对称与运动,3,choice,小明把一张正方形纸对折一次，剪出一棵小树，打开后得到两棵一样的小树。这利用了纸的什么特点？,A.对称|B.平移|C.旋转,A,对折后剪开，两边一样，用的是对称。,对称、剪纸,g2-symmetry-move,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,3,word,妈妈拖地时，拖把沿着地面来回直着擦。拖把做的是平移还是旋转？,,平移,拖把沿直线来回移动，方向不变，是平移。,平移、生活,g2-symmetry-move,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-对称与运动,4,fill,一个图形绕着一个固定的点转了半圈，形状和大小都没有改变。这种运动叫什么？,,旋转,绕一个点转动、形状大小不变，叫旋转。,旋转、图形运动,g2-symmetry-move,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,math,数学-对称与运动,4,word,电梯从1楼升到5楼，电梯里的箱子跟着一起上升。箱子做的是什么运动？请说明理由。,,箱子做平移运动，因为它沿着直线上升，方向没有改变。,沿直线上升、方向不变，是平移。,平移、说理,g2-symmetry-move,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-数据整理,1,fill,用画正字的方法记录数据，一个正字是5笔，表示（ ）个。,,5个,一个正字五笔，就表示5个。,正字、数据整理,g2-data-collect,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数据整理,1,choice,画正字记录：苹果 正正、香蕉 正、梨 正正正。哪种水果最多？,A.苹果|B.香蕉|C.梨,C,梨有3个正字也就是15个，最多。,正字、最多,g2-data-collect,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数据整理,2,choice,画正字记录：红花 正、黄花 正正、蓝花 正正正。黄花有多少朵？,A.5朵|B.10朵|C.15朵,B,黄花有2个正字，2个5是10朵。,正字、数数,g2-data-collect,MEMORY,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数据整理,2,choice,画正字记录：男生 正正、女生 正正正。下面说法正确的是哪一句？,A.女生比男生多5人|B.男生比女生多5人|C.男生和女生一样多,A,女生15人，男生10人，女生多5人。,正字、比较,g2-data-collect,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数据整理,3,choice,记录数据时，用画正字的方法有什么好处？,A.一个正字正好5笔，可以五个五个地数|B.正字的写法最好看|C.一个正字只有4笔,A,五笔一组，五个五个地数，又快又清楚。,正字、说理,g2-data-collect,UNDERSTANDING,TEXT,1,PRIMARY_LOW
+,math,数学-数据整理,3,choice,画正字记录：跳绳 正正、踢球 正、跑步 正正。参加人数最少的是哪一项？,A.跳绳|B.踢球|C.跑步,B,踢球只有5人，是三项中最少的。,最少、数据整理,g2-data-collect,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-数据整理,3,word,画正字记录：苹果 正正、香蕉 正、梨 正正正。三种水果一共有多少个？,,30个,10加5加15等于30个。,正字、求和,g2-data-collect,APPLICATION,EXPRESSION,1,PRIMARY_LOW
+,math,数学-数据整理,3,word,班级投票选班长，小红得 正正、小刚得 正、小丽得 正正正。小丽比小红多几票？,,5票,小丽15票，小红10票，多5票。,正字、比较,g2-data-collect,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-数据整理,4,word,小组记录一周的阅读本数：周一 正、周二 正正、周三 正正正、周四 正。这一周一共读了多少本？,,35本,5加10加15加5等于35本。,正字、连加,g2-data-collect,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-数据整理,4,fill,画正字记录：红球 正正、黄球 正正正、蓝球 正。蓝球再添几个就和红球一样多？,,5个,红球10个，蓝球5个，还差5个。,正字、相差,g2-data-collect,APPLICATION,DIAGRAM,1,PRIMARY_LOW
+,math,数学-规律探索,1,fill,按规律填数：2、4、6、8、（ ）。,,10,每次加2，8后面是10。,数列、等差,g2-pattern,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-规律探索,2,fill,按规律填数：1、2、4、8、（ ）。,,16,每个数是前一个的2倍，8的2倍是16。,数列、2倍,g2-pattern,MEMORY,EXPRESSION,1,PRIMARY_LOW
+,math,数学-规律探索,2,choice,按规律排列：红、黄、红、黄、红、（ ）。下一个是什么颜色？,A.红色|B.黄色|C.蓝色,B,红黄两个一组重复，红后面是黄。,周期、规律,g2-pattern,MEMORY,TEXT,1,PRIMARY_LOW
+,math,数学-规律探索,2,choice,数列3、6、9、12、15是按什么规律排列的？,A.每次加3|B.每次加2|C.每次乘2,A,后一个数都比前一个多3。,等差、说理,g2-pattern,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-规律探索,3,choice,数列1、3、9、27是按什么规律排列的？,A.每次加2|B.每次乘3|C.每次加6,B,后一个数都是前一个数的3倍。,倍数、规律,g2-pattern,UNDERSTANDING,EXPRESSION,1,PRIMARY_LOW
+,math,数学-规律探索,3,choice,图形按三角形、圆形、圆形、三角形、圆形、圆形的顺序一直排下去。第7个是什么图形？,A.三角形|B.圆形|C.不能确定,A,三个一组重复，第7个是下一组的第一个，是三角形。,周期、推理,g2-pattern,UNDERSTANDING,DIAGRAM,1,PRIMARY_LOW
+,math,数学-规律探索,3,word,小明每天存钱，第一天存2元，第二天存4元，第三天存6元。照这样存下去，第五天存多少元？,,10元,每天多存2元，第五天是2乘5等于10元。,等差、生活,g2-pattern,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-规律探索,3,fill,一串彩灯按红、红、黄、蓝的顺序重复挂着。从左往右数，第11盏灯是什么颜色？,,黄色,四盏一组，第11盏是第三组的第三盏，是黄色。,周期、彩灯,g2-pattern,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-规律探索,4,word,一棵小树第一天长高2厘米，以后每天都比前一天多长1厘米。这棵小树第三天长高多少厘米？,,4厘米,第二天长3厘米，第三天长4厘米。,等差、推理,g2-pattern,APPLICATION,CONTEXT,1,PRIMARY_LOW
+,math,数学-规律探索,4,word,数列1、2、3、5、8、13接着往下排，下一个数是多少？请说出你的想法。,,21，因为每个数等于前面两个数相加。,前两个数相加得下一个数，8加13等于21。,规律、说理,g2-pattern,APPLICATION,TEXT,1,PRIMARY_LOW

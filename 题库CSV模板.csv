@@ -1,0 +1,4 @@
+id,subject,knowledgePoint,difficulty,type,content,options,answer,explanation,tags,enabled
+,,,,choice,下面哪个字读作 mā？,A.妈|B.马|C.骂,A,妈妈的「妈」读第一声。,,1
+,,chinese-拼音-多音字,2,fill,「长」在「长大」中读什么？,,zhǎng,「长」是多音字：cháng / zhǎng。,,1
+,,math-乘法-口诀,2,choice,三五得多少？,A.十五|B.十二|C.十八,A,三五十五。,口诀,1
