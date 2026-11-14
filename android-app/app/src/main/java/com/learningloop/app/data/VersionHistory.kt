@@ -15,6 +15,14 @@ object VersionHistory {
 
     val entries: List<VersionEntry> = listOf(
         VersionEntry(
+            version = "0.13.1",
+            date = "2026-11-14",
+            highlights = listOf(
+                "修复：进入「题目质量」页面闪退（Compose 组合分组错位）",
+                "新增页面渲染回归测试，防止同类问题再次出现"
+            )
+        ),
+        VersionEntry(
             version = "0.13.0",
             date = "2026-11-14",
             highlights = listOf(

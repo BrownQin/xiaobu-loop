@@ -41,6 +41,14 @@ MVP 阶段统一 `0.x.y`，正式发布后升级为 `1.0.0`。
 
 ---
 
+## v0.13.1 — 2026-11-14
+
+### 修复
+- 进入「题目质量」页面闪退。根因是页面在 `Column` 内容 lambda 中使用 `return@Column` 提前返回，导致 Compose 组合分组（slot table）错位，抛 `ArrayIndexOutOfBoundsException`。改为 `if / else` 分支结构。
+- 补充页面渲染回归测试（`QuestionQualityRenderTest`），用内存数据库覆盖 Room 聚合查询与页面组合。
+
+---
+
 ## v0.13.0 — 2026-11-14
 
 ### 新增（题库结构模型）

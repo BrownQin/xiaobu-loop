@@ -82,57 +82,55 @@ fun QuestionQualityScreen(
                 CircularProgressIndicator()
                 Text("正在整理作答证据…", fontSize = 13.sp, modifier = Modifier.padding(top = 10.dp))
             }
-            return@Column
-        }
-
-        Card(
-            modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(16.dp),
-            colors = CardDefaults.cardColors(containerColor = LearningColors.PrimaryLight.copy(alpha = 0.12f))
-        ) {
-            Column(
-                modifier = Modifier.padding(14.dp),
-                verticalArrangement = Arrangement.spacedBy(6.dp)
+        } else {
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = LearningColors.PrimaryLight.copy(alpha = 0.12f))
             ) {
-                Row(horizontalArrangement = Arrangement.spacedBy(24.dp)) {
-                    QStat("有作答的题", "${items.size}")
-                    QStat("样本足够", "${sampled.size}")
-                    QStat("建议调整", "${flagged.size}")
+                Column(
+                    modifier = Modifier.padding(14.dp),
+                    verticalArrangement = Arrangement.spacedBy(6.dp)
+                ) {
+                    Row(horizontalArrangement = Arrangement.spacedBy(24.dp)) {
+                        QStat("有作答的题", "${items.size}")
+                        QStat("样本足够", "${sampled.size}")
+                        QStat("建议调整", "${flagged.size}")
+                    }
+                    Text(
+                        "每道题至少作答 ${ItemQualityAnalyzer.MIN_ATTEMPTS} 次才下结论，样本不足时保持原样。",
+                        fontSize = 12.sp,
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f)
+                    )
                 }
+            }
+
+            if (items.isEmpty()) {
                 Text(
-                    "每道题至少作答 ${ItemQualityAnalyzer.MIN_ATTEMPTS} 次才下结论，样本不足时保持原样。",
-                    fontSize = 12.sp,
+                    "还没有作答记录。让孩子做几轮题，这里就会长出证据。",
+                    fontSize = 14.sp,
                     color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f)
+                )
+            } else {
+                if (flagged.isEmpty()) {
+                    Text(
+                        "目前没有需要调整的题目。继续积累样本，结论会更稳。",
+                        fontSize = 14.sp,
+                        color = LearningColors.CorrectGreen
+                    )
+                } else {
+                    Text("需要关注", fontSize = 17.sp, fontWeight = FontWeight.Bold)
+                    flagged.forEach { QualityCard(it) }
+                }
+
+                Text(
+                    "这类证据接下来会用于三件事：识别「猜对」、判断该升还是该降层级、给大模型提供归因依据。",
+                    fontSize = 12.sp,
+                    lineHeight = 18.sp,
+                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f)
                 )
             }
         }
-
-        if (items.isEmpty()) {
-            Text(
-                "还没有作答记录。让孩子做几轮题，这里就会长出证据。",
-                fontSize = 14.sp,
-                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f)
-            )
-            return@Column
-        }
-
-        if (flagged.isEmpty()) {
-            Text(
-                "目前没有需要调整的题目。继续积累样本，结论会更稳。",
-                fontSize = 14.sp,
-                color = LearningColors.CorrectGreen
-            )
-        } else {
-            Text("需要关注", fontSize = 17.sp, fontWeight = FontWeight.Bold)
-            flagged.forEach { QualityCard(it) }
-        }
-
-        Text(
-            "这类证据接下来会用于三件事：识别「猜对」、判断该升还是该降层级、给大模型提供归因依据。",
-            fontSize = 12.sp,
-            lineHeight = 18.sp,
-            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.5f)
-        )
     }
 }
 
@@ -167,7 +165,7 @@ private fun QualityCard(item: ItemQualityAnalyzer.ItemQuality) {
                 Text(item.issueLabel, fontSize = 13.sp, fontWeight = FontWeight.Bold, color = color)
                 Text(
                     text = buildString {
-                        AnchorCatalog.nameOf(item.question.anchorCode)?.let { append(it); append(" · ") }
+                        AnchorCatalog.nameOf(item.question.anchorCode).let { append(it); append(" · ") }
                         append(AnchorCatalog.levelLabel(item.question.cognitiveLevel))
                     },
                     fontSize = 11.sp,
