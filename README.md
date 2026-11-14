@@ -13,6 +13,15 @@
 
 小步不预设孩子的成绩起点，也不把「补差」当作唯一场景：刚起步、稳步巩固、学有余力想拓展，都按当前掌握水平推送。当前内容覆盖语文与数学基础能力，题库的 **领域 → 主题 → 锚点** 结构可直接扩展到常识、科学素养、儿童心理成长等通识板块。
 
+## 开源仓库与下载
+
+- **GitHub**：[BrownQin/xiaobu-loop](https://github.com/BrownQin/xiaobu-loop)
+- **Gitee**：[nmd568/xiaobu-loop](https://gitee.com/nmd568/xiaobu-loop)
+- **当前版本**：v0.17.0（versionCode 18）
+- **APK 下载**：[GitHub Release（公开下载）](https://github.com/BrownQin/xiaobu-loop/releases/download/v0.17.0/app-release.apk) · [飞书文件](https://my.feishu.cn/file/VJ30bfx84oPSvtxiFWfcKgEE6bc)
+
+外部下载建议优先使用 GitHub Release；飞书文件的访问范围取决于组织与分享权限。
+
 ## 面向的孩子
 
 | 阶段 | 使用方式 |
@@ -89,6 +98,7 @@ lean-canvas/        商业模式画布
 - [变更日志](project-docs/CHANGELOG.md)
 - [AI 智能测评演进方案](project-docs/AI-EVOLUTION.md)
 - [诊断日志：导出、读取与分析方法](project-docs/DIAGNOSTICS.md)
+- [飞书项目管理与版本规划](https://my.feishu.cn/docx/UviHdb60Ho4Rz7xUBFAcjisi6Pg)
 
 ## 路线图
 

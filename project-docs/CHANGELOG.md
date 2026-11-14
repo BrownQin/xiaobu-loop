@@ -5,17 +5,19 @@ MVP 阶段统一 `0.x.y`，正式发布后升级为 `1.0.0`。
 
 ## 版本管理约定
 
-### 唯一发布渠道
+### 发布渠道
 
-所有安装包**只发布到飞书云空间**，不再通过聊天工具、临时网盘或本地目录分发，避免版本错乱。
+安装包同时发布到**飞书项目文件夹与 GitHub Releases**。聊天交付只发送可访问的 HTTPS 地址，不使用仅在沙箱有效的 `computer://` 本地路径；外部下载优先提供 GitHub Release，飞书文件用于项目内归档与协作。
 
-| 内容 | 飞书位置 | 命名规范 |
+| 内容 | 发布位置 | 命名规范 |
 |---|---|---|
-| 安装包 | `智能伴学-LoopLearning/dist/` | `LearningLoop-v{版本}.apk` |
-| 源码包 | `智能伴学-LoopLearning/src/` | `LearningLoop-src-v{版本}.zip` |
-| 项目文档 | `智能伴学-LoopLearning/` 根目录 | `README.md` / `ARCHITECTURE.md` / `CHANGELOG.md` |
+| 安装包 | 飞书 `智能伴学-LoopLearning/dist/` + GitHub Releases | `LearningLoop-v{版本}.apk` |
+| 源码包 | 飞书 `智能伴学-LoopLearning/src/` | `LearningLoop-src-v{版本}.zip` |
+| 项目文档 | 飞书项目文件夹 + 仓库 `project-docs/` | `README.md` / `ARCHITECTURE.md` / `CHANGELOG.md` |
+| 项目管理 | [飞书项目管理与版本规划](https://my.feishu.cn/docx/UviHdb60Ho4Rz7xUBFAcjisi6Pg) | 当前进度、发布结果、风险与后续版本候选 |
 
-项目文件夹：[智能伴学-LoopLearning](https://my.feishu.cn/drive/folder/Em56fTdn9ldDY4dwzi4c82mD6Wc)
+- 开源仓库：[GitHub](https://github.com/BrownQin/xiaobu-loop) · [Gitee](https://gitee.com/nmd568/xiaobu-loop)
+- 项目文件夹：[智能伴学-LoopLearning](https://my.feishu.cn/drive/folder/Em56fTdn9ldDY4dwzi4c82mD6Wc)
 
 ### 版本号规则
 
@@ -26,16 +28,17 @@ MVP 阶段统一 `0.x.y`，正式发布后升级为 `1.0.0`。
 
 ### 每次发版固定动作
 
-1. 代码合入并编译通过（`gradle :app:assembleDebug`）；
-2. 更新本文件新增版本段落 + 同步 `README.md` 版本总表；
+1. 代码合入，并通过 `gradle :app:testDebugUnitTest :app:assembleRelease`；
+2. 更新本文件新增版本段落，同步 `README.md` 版本总表和 App 内 `VersionHistory`；
 3. 打包源码 `src/LearningLoop-src-v{版本}.zip`（排除 `build/`、`.gradle/`、`local.properties`）；
-4. 上传 APK 到 `dist/`、源码到 `src/`；
-5. 记录 SHA-256；
-6. 同名覆盖升级时使用飞书文件版本历史（`drive +version-history` 查看、`+version-revert` 回滚）。
+4. 上传 APK 到飞书 `dist/` 和对应 GitHub Release，源码包上传到飞书 `src/`；
+5. 记录 SHA-256 与 HTTPS 下载地址，并更新飞书项目管理文档；
+6. 同名覆盖升级时使用飞书文件版本历史（`drive +version-history` 查看、`+version-revert` 回滚）；
+7. 聊天只交付 HTTPS 链接，交付后实际下载并核验安装包，不发送 `computer://` 本地路径。
 
 ### 历史版本留存
 
-- `dist/` 保留每个版本的 APK，不删除旧版本；
+- 飞书 `dist/` 与 GitHub Releases 保留每个版本的 APK，不删除旧版本；
 - 若需覆盖同名文件，先确认旧版本已在 `dist/` 有独立版本号存档；
 - 飞书原生文件历史作为第二层兜底。
 
@@ -50,6 +53,14 @@ MVP 阶段统一 `0.x.y`，正式发布后升级为 `1.0.0`。
 - 奖励新增与编辑改为常用 emoji 网格选择；已有自定义图标会保留在候选项中。
 - 关于页新增 GitHub / Gitee 仓库入口，使用户可跳转查看源码、提交 Issue 与反馈交流。
 - 版本号 0.17.0 / versionCode 18。
+
+### 发布与协作
+- 4 个单元测试、Release 构建与 APK v2 签名验证通过。
+- [GitHub](https://github.com/BrownQin/xiaobu-loop) 与 [Gitee](https://gitee.com/nmd568/xiaobu-loop) 仓库均已公开并同步。
+- APK 已归档到飞书 `dist/`，并发布到 [GitHub Release](https://github.com/BrownQin/xiaobu-loop/releases/tag/v0.17.0)；聊天交付改用 HTTPS 链接。
+- 飞书下载：[LearningLoop-v0.17.0.apk](https://my.feishu.cn/file/VJ30bfx84oPSvtxiFWfcKgEE6bc)；[公开 APK 直链](https://github.com/BrownQin/xiaobu-loop/releases/download/v0.17.0/app-release.apk)。
+- APK SHA-256：`ff7618e559eb1624651824309c9b7791546110ccee97e64cb5e7e55ca35c86bd`。
+- 项目进度、发布约定和后续候选版本见[飞书项目管理与版本规划](https://my.feishu.cn/docx/UviHdb60Ho4Rz7xUBFAcjisi6Pg)。
 
 ---
 
