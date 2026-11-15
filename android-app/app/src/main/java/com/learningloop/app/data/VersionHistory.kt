@@ -15,7 +15,7 @@ object VersionHistory {
 
     val entries: List<VersionEntry> = listOf(
         VersionEntry(
-            version = "0.18.0",
+            version = "0.17.1",
             date = "2026-11-15",
             highlights = listOf(
                 "填空题全面下线：幼儿园和低年级不用再打字，也不用输入声调等字符",
