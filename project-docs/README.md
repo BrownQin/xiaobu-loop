@@ -3,7 +3,7 @@
 > 一个把 **Loop Engineering（闭环工程）** 落到产品端的端侧伴学引擎与 Android App。
 > 面向幼小衔接与小学低年级（约 4–8 岁），不题海、不按分数分层，让孩子在「精炼测评 → 诊断 → 精准改进 → 即时激励 → 再测评」的循环里按自己的节奏进步。
 
-- **当前版本**：v0.17.1（versionCode 19，开发中）
+- **当前版本**：v0.17.1（versionCode 19）
 - **平台**：Android 手机 / 平板（本地优先，无服务器依赖）
 - **适用人群**：幼小衔接 + 小学低年级（1–2 年级），不预设成绩起点
 - **内容范围**：当前覆盖语文、数学基础能力；题库的「领域 → 主题 → 锚点」结构可扩展到常识、科学素养、儿童心理成长等通识板块
@@ -11,7 +11,7 @@
 - **文档维护**：本目录即项目唯一事实来源，每次迭代更新 CHANGELOG
 - **开源仓库**：[GitHub](https://github.com/BrownQin/xiaobu-loop) · [Gitee](https://gitee.com/nmd568/xiaobu-loop)
 - **项目管理**：[飞书项目管理与版本规划](https://my.feishu.cn/docx/UviHdb60Ho4Rz7xUBFAcjisi6Pg)
-- **最近发布 APK**（v0.17.0）：[GitHub 公开下载](https://github.com/BrownQin/xiaobu-loop/releases/download/v0.17.0/app-release.apk) · [飞书文件](https://my.feishu.cn/file/VJ30bfx84oPSvtxiFWfcKgEE6bc)
+- **最近发布 APK**（v0.17.1）：[GitHub 公开下载](https://github.com/BrownQin/xiaobu-loop/releases/download/v0.17.1/app-release.apk) · [飞书文件](https://my.feishu.cn/file/L9zqbIXnLosFQyxVYeJcOR626Xb)
 
 ---
 
@@ -80,7 +80,7 @@
 
 | 版本 | 日期 | 主要变更 | 产物 |
 |---|---|---|---|
-| v0.17.1 | 2026-11-15 | 填空题全面下线：组卷、摸底、错题重做与题库导入均不再出现填空题；家长题库不再新建填空题 | 待发布 |
+| v0.17.1 | 2026-11-15 | 填空题全面下线：组卷、摸底、错题重做与题库导入均不再出现填空题；家长题库不再新建填空题 | `dist/LearningLoop-v0.17.1.apk` |
 | v0.17.0 | 2026-11-14 | 移除首屏隐私确认，统计开关并入隐私政策页；星星颗数与奖励图标改为点选；新增 GitHub / Gitee 反馈入口 | `dist/LearningLoop-v0.17.0.apk` |
 | v0.16.0 | 2026-11-14 | 首次启动隐私同意（同意前不采集）；release 开启 R8 混淆与资源裁剪、支持签名配置；移除未使用录音权限、关闭云备份与明文流量；新增 SECURITY.md 与上架材料清单；UX 对比度与触控目标修复 | `dist/LearningLoop-v0.16.0.apk` |
 | v0.15.0 | 2026-11-14 | 隐私政策（App 内可读）；匿名使用统计最小采集（4 类事件 / 6 个字段），默认开启可关闭；统计端点由构建参数配置 | `dist/LearningLoop-v0.15.0.apk` |
@@ -103,11 +103,11 @@
 > 详细变更说明见 [CHANGELOG.md](CHANGELOG.md)。
 > v0.16.0 起使用独立的 release 签名，与旧 debug 包签名不同：升级前请先导出备份，卸载旧版后再安装并恢复。
 
-### 最近发布基线（2026-11-14）
+### 最近发布基线（2026-11-16）
 
-- v0.17.1 / versionCode 19 为开发版本：填空题下线已合入，尚未打包 Release 或发布 APK。
-- v0.17.0 / versionCode 18 的 4 个单元测试、Release 构建和 APK v2 签名验证均已通过。
-- GitHub `main` 与 Gitee `master` 均已公开并保持同步；功能代码基线为 `2be525c`，后续文档提交不改变 APK 内容。
+- v0.17.1 / versionCode 19 已发布：填空题下线，Release 构建与 APK v2 签名验证通过，沿用既有 Release 签名，老用户可覆盖安装。
+- APK SHA-256：`6e9e76a2b72379f024b4327b099d0e7e3fe12ce286349245ffa5e67ab2a2170c`。
+- GitHub `main` 与 Gitee `master` 均已公开并保持同步；功能代码基线为 `2c377b2`。
 - APK 同时归档到飞书 `dist/` 和 GitHub Release；外部公开下载优先使用 GitHub，飞书访问范围取决于组织与分享权限。
 - 聊天交付只发送 HTTPS 地址，不再把仅在当前沙箱有效的 `computer://` 本地路径当作用户下载链接。
 - 项目进度、发布结果、风险与后续候选版本统一记录在飞书管理文档；本目录与 App 内 `VersionHistory` 继续保存可随源码分发的项目记忆。

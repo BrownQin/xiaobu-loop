@@ -54,9 +54,10 @@ MVP 阶段统一 `0.x.y`，正式发布后升级为 `1.0.0`。
 - 版本号 0.17.1 / versionCode 19。
 
 ### 验证
-- 4 个单元测试通过，`assembleDebug` 构建通过。
+- 4 个单元测试通过，`assembleRelease`（R8 混淆 + 资源裁剪）构建通过，APK v2 签名验证通过。
+- 沿用既有 Release 签名，老用户可覆盖安装；APK SHA-256：`6e9e76a2b72379f024b4327b099d0e7e3fe12ce286349245ffa5e67ab2a2170c`。
 - 移除填空题后可用题量：幼儿园 197 / 224，小学低年级 284 / 360；61 个锚点均仍有至少 3 道非填空题。
-- 本版本尚未打包 Release、未发布 APK，飞书版本记录待发布时同步。
+- 发布渠道：GitHub Release `v0.17.1`（app-release.apk）与飞书项目文件夹 `LearningLoop-v0.17.1.apk`；飞书项目管理文档已同步。
 
 ---
 

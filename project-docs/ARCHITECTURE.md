@@ -165,7 +165,7 @@ gradle :app:assembleDebug
 | applicationId | `com.learningloop.app` |
 | versionCode / versionName | 19 / 0.17.1 |
 | minSdk / targetSdk | 24 / 34 |
-| 签名 | debug 自动签名（未配置 release keystore） |
+| 签名 | release 签名（`keystore.properties` + jks，均不入库）；debug 自动签名 |
 
 安装：平板开启「允许安装未知来源」→ 点击 APK 安装。覆盖安装保留数据。
 

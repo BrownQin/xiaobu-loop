@@ -17,8 +17,8 @@
 
 - **GitHub**：[BrownQin/xiaobu-loop](https://github.com/BrownQin/xiaobu-loop)
 - **Gitee**：[nmd568/xiaobu-loop](https://gitee.com/nmd568/xiaobu-loop)
-- **当前版本**：v0.17.1（versionCode 19，开发中）
-- **APK 下载**（最近发布 v0.17.0）：[GitHub Release（公开下载）](https://github.com/BrownQin/xiaobu-loop/releases/download/v0.17.0/app-release.apk) · [飞书文件](https://my.feishu.cn/file/VJ30bfx84oPSvtxiFWfcKgEE6bc)
+- **当前版本**：v0.17.1（versionCode 19）
+- **APK 下载**：[GitHub Release（公开下载）](https://github.com/BrownQin/xiaobu-loop/releases/download/v0.17.1/app-release.apk) · [飞书文件](https://my.feishu.cn/file/L9zqbIXnLosFQyxVYeJcOR626Xb)
 
 外部下载建议优先使用 GitHub Release；飞书文件的访问范围取决于组织与分享权限。
 
