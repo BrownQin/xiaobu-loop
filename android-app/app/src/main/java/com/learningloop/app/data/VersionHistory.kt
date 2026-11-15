@@ -15,6 +15,15 @@ object VersionHistory {
 
     val entries: List<VersionEntry> = listOf(
         VersionEntry(
+            version = "0.18.0",
+            date = "2026-11-15",
+            highlights = listOf(
+                "填空题全面下线：幼儿园和低年级不用再打字，也不用输入声调等字符",
+                "组卷、错题重做、摸底测评和题库导入都不会再出现填空题",
+                "家长题库不再提供新建填空题，历史填空题标记为「已停用」"
+            )
+        ),
+        VersionEntry(
             version = "0.17.0",
             date = "2026-11-14",
             highlights = listOf(
