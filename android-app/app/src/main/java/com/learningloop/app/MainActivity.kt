@@ -507,7 +507,7 @@ class LearningViewModel : ViewModel() {
                         subject = subject, targetCount = 8, userId = uid, stage = stage
                     )
                 }
-            }
+            }.filter { it.type != Question.TYPE_FILL }
             _quizLoading.value = false
             if (qs.isEmpty()) {
                 _quizQuestions.value = emptyList()
@@ -543,7 +543,7 @@ class LearningViewModel : ViewModel() {
             _quizError.value = null
             val qs = withContext(Dispatchers.IO) {
                 DiagnosticEngine.generate(d, stage, DiagnosticEngine.DEFAULT_COUNT)
-            }
+            }.filter { it.type != Question.TYPE_FILL }
             _quizLoading.value = false
             if (qs.isEmpty()) {
                 _quizQuestions.value = emptyList()

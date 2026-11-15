@@ -16,7 +16,9 @@ object AssetQuestions {
 
     fun load(context: Context): List<Question> = try {
         val text = context.assets.open(ASSET_NAME).bufferedReader().use { it.readText() }
-        QuestionCsv.parse(text).questions.map { it.copy(source = Question.SOURCE_BUILTIN) }
+        QuestionCsv.parse(text).questions
+            .filter { it.type != Question.TYPE_FILL }
+            .map { it.copy(source = Question.SOURCE_BUILTIN) }
     } catch (_: Exception) {
         emptyList()
     }

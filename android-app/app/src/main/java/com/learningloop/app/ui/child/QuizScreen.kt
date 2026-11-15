@@ -271,7 +271,7 @@ private fun AnswerArea(question: Question, value: String, onValueChange: (String
             OutlinedTextField(
                 value = value,
                 onValueChange = onValueChange,
-                label = { Text(if (question.type == Question.TYPE_FILL) "请填写答案" else "请写出你的解答") },
+                label = { Text("请写出你的解答") },
                 modifier = Modifier.fillMaxWidth().height(120.dp),
                 shape = RoundedCornerShape(14.dp),
                 colors = OutlinedTextFieldDefaults.colors(
@@ -302,7 +302,6 @@ private fun subjectLabel(subject: String, stage: String): String = when (subject
 
 private fun typeLabel(type: String): String = when (type) {
     Question.TYPE_CHOICE -> "选择题"
-    Question.TYPE_FILL -> "填空题"
     Question.TYPE_WORD -> "应用题"
     else -> type
 }

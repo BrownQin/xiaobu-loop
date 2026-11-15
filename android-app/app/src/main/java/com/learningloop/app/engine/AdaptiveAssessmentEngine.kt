@@ -68,7 +68,9 @@ class AdaptiveAssessmentEngine(
         // 2a. 先直接放入错题（最有针对性）——最多 3 题
         wrongQuestionIds.take(3).forEach { qid ->
             questionDao.getById(qid)?.let { q ->
-                if (q.stage == stage && (q.subject == subject || subject == null)) {
+                if (q.stage == stage && q.type != Question.TYPE_FILL &&
+                    (q.subject == subject || subject == null)
+                ) {
                     picked += q
                     seenIds += q.id
                 }
@@ -98,11 +100,11 @@ class AdaptiveAssessmentEngine(
         // 否则会返回空列表，界面就会永久停在“题库准备中”。
         val remain = targetCount - picked.size
         if (remain > 0) {
-            val pool = if (subject != null) {
+            val pool = (if (subject != null) {
                 questionDao.listBySubjectAndStage(subject, stage)
             } else {
                 questionDao.listByStage(stage)
-            }
+            }).filter { it.type != Question.TYPE_FILL }
             pool.shuffled()
                 .filter { it.id !in seenIds && it.difficulty in 2..4 }
                 .take(remain)

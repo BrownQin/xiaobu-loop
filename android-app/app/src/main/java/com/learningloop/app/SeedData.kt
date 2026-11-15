@@ -23,7 +23,9 @@ import com.learningloop.app.data.entity.Question
  */
 object SeedData {
 
-    fun all(): List<Question> = chinese() + math() + kindergarten()
+    // 填空题需要键盘输入，不适合幼儿园和低年级孩子，统一不再进入题库
+    fun all(): List<Question> =
+        (chinese() + math() + kindergarten()).filter { it.type != Question.TYPE_FILL }
 
     // ==================== 语文 87 题 ====================
 

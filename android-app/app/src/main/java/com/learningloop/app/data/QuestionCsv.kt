@@ -47,7 +47,7 @@ object QuestionCsv {
     fun template(): String = buildString {
         appendLine(HEADER.joinToString(","))
         appendLine(",,,,choice,下面哪个字读作 mā？,A.妈|B.马|C.骂,A,妈妈的「妈」读第一声。,,chinese-pinyin-polyphone,MEMORY,TEXT,1,PRIMARY_LOW")
-        appendLine(",,chinese-拼音-多音字,2,fill,「长」在「长大」中读什么？,,zhǎng,长有多音：cháng / zhǎng。,,chinese-pinyin-polyphone,UNDERSTANDING,TEXT,1,PRIMARY_LOW")
+        appendLine(",,chinese-拼音-多音字,2,choice,「长」在「长大」中读什么？,A.zhǎng|B.cháng|C.两个读音都对,A,长有多音：cháng / zhǎng。,,chinese-pinyin-polyphone,UNDERSTANDING,TEXT,1,PRIMARY_LOW")
         appendLine(",,,,choice,数一数，这里有几个苹果？,A.2 个|B.3 个|C.4 个,B,一个一个数：1、2、3。,,kg-count-10,MEMORY,TEXT,1,KG")
     }
 
@@ -114,9 +114,10 @@ object QuestionCsv {
             }
 
             val type = col("type").ifBlank { Question.TYPE_CHOICE }
-            if (type !in listOf(Question.TYPE_CHOICE, Question.TYPE_FILL, Question.TYPE_WORD)) {
+            // 填空题需要键盘输入，不适合幼儿园和低年级孩子，导入时不再接受
+            if (type !in listOf(Question.TYPE_CHOICE, Question.TYPE_WORD)) {
                 skipped++
-                errors += "第 $lineNo 行：type 只能是 choice / fill / word"
+                errors += "第 $lineNo 行：type 只能是 choice / word（填空题已停用）"
                 return@forEachIndexed
             }
 

@@ -74,7 +74,8 @@ object DiagnosticEngine {
 
         // 兜底：从本学段题库补齐，优先中等难度
         if (picked.size < count) {
-            val pool = db.questionDao().listByStage(stage).filter { it.enabled && it.id !in used }
+            val pool = db.questionDao().listByStage(stage)
+                .filter { it.enabled && it.type != Question.TYPE_FILL && it.id !in used }
             pool.filter { it.difficulty in 2..4 }.shuffled()
                 .take(count - picked.size)
                 .forEach { picked += it; used += it.id }
