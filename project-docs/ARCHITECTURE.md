@@ -163,7 +163,7 @@ gradle :app:assembleDebug
 | 配置项 | 值 |
 |---|---|
 | applicationId | `com.learningloop.app` |
-| versionCode / versionName | 19 / 0.17.1 |
+| versionCode / versionName | 20 / 0.17.2 |
 | minSdk / targetSdk | 24 / 34 |
 | 签名 | release 签名（`keystore.properties` + jks，均不入库）；debug 自动签名 |
 

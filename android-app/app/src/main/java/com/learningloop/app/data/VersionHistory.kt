@@ -15,6 +15,15 @@ object VersionHistory {
 
     val entries: List<VersionEntry> = listOf(
         VersionEntry(
+            version = "0.17.2",
+            date = "2026-11-17",
+            highlights = listOf(
+                "启用匿名使用统计：首次安装、每日打开、练习与测评完成会写入飞书多维表格",
+                "统计只包含事件、安装随机标识、版本、渠道、学段和时间，不含姓名与设备信息",
+                "统计开关仍在隐私政策页，关闭后不再产生或发送任何统计事件"
+            )
+        ),
+        VersionEntry(
             version = "0.17.1",
             date = "2026-11-15",
             highlights = listOf(
