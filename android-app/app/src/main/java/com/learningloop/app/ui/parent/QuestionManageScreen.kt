@@ -256,9 +256,9 @@ private fun QuestionEditor(
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             val typeOptions = buildList {
                 add(Question.TYPE_CHOICE to "选择")
-                // 仅保留历史填空题的管理入口，新建题目不再提供填空
+                // 仅保留历史填空题、应用题的管理入口，新建题目只提供选择题
                 if (type == Question.TYPE_FILL) add(Question.TYPE_FILL to "填空（已停用）")
-                add(Question.TYPE_WORD to "应用/开放")
+                if (type == Question.TYPE_WORD) add(Question.TYPE_WORD to "应用/开放（已停用）")
             }
             typeOptions.forEach { (v, label) ->
                 FilterChip(
@@ -399,5 +399,6 @@ private fun subjectLabel(subject: String): String =
 private fun typeLabel(type: String): String = when (type) {
     Question.TYPE_CHOICE -> "选择"
     Question.TYPE_FILL -> "填空（已停用）"
+    Question.TYPE_WORD -> "应用/开放（已停用）"
     else -> "开放"
 }

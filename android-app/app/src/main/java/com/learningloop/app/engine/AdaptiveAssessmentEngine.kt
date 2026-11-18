@@ -68,7 +68,7 @@ class AdaptiveAssessmentEngine(
         // 2a. 先直接放入错题（最有针对性）——最多 3 题
         wrongQuestionIds.take(3).forEach { qid ->
             questionDao.getById(qid)?.let { q ->
-                if (q.stage == stage && q.type != Question.TYPE_FILL &&
+                if (q.stage == stage && q.type == Question.TYPE_CHOICE &&
                     (q.subject == subject || subject == null)
                 ) {
                     picked += q
@@ -104,7 +104,7 @@ class AdaptiveAssessmentEngine(
                 questionDao.listBySubjectAndStage(subject, stage)
             } else {
                 questionDao.listByStage(stage)
-            }).filter { it.type != Question.TYPE_FILL }
+            }).filter { it.type == Question.TYPE_CHOICE }
             pool.shuffled()
                 .filter { it.id !in seenIds && it.difficulty in 2..4 }
                 .take(remain)

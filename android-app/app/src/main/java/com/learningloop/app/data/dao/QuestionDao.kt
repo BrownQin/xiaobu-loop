@@ -37,7 +37,7 @@ interface QuestionDao {
 
     @Query(
         "SELECT * FROM question WHERE subject = :subject AND knowledge_point = :kp " +
-            "AND stage = :stage AND enabled = 1 AND type != 'fill' ORDER BY RANDOM() LIMIT :limit"
+            "AND stage = :stage AND enabled = 1 AND type = 'choice' ORDER BY RANDOM() LIMIT :limit"
     )
     suspend fun randomBySubjectKpStage(
         subject: String,
@@ -48,11 +48,11 @@ interface QuestionDao {
 
     @Query(
         "SELECT * FROM question WHERE knowledge_point = :kp AND stage = :stage " +
-            "AND enabled = 1 AND type != 'fill' ORDER BY RANDOM() LIMIT :limit"
+            "AND enabled = 1 AND type = 'choice' ORDER BY RANDOM() LIMIT :limit"
     )
     suspend fun randomByKpStage(kp: String, stage: String, limit: Int): List<Question>
 
-    @Query("SELECT * FROM question WHERE knowledge_point = :kp AND difficulty BETWEEN :minDiff AND :maxDiff AND enabled = 1 AND type != 'fill'")
+    @Query("SELECT * FROM question WHERE knowledge_point = :kp AND difficulty BETWEEN :minDiff AND :maxDiff AND enabled = 1 AND type = 'choice'")
     suspend fun listByKnowledgePointAndDifficulty(
         kp: String,
         minDiff: Int,
@@ -60,11 +60,11 @@ interface QuestionDao {
     ): List<Question>
 
     /** 从指定范围内随机抽题，limit 题 */
-    @Query("SELECT * FROM question WHERE subject = :subject AND knowledge_point = :kp AND enabled = 1 AND type != 'fill' ORDER BY RANDOM() LIMIT :limit")
+    @Query("SELECT * FROM question WHERE subject = :subject AND knowledge_point = :kp AND enabled = 1 AND type = 'choice' ORDER BY RANDOM() LIMIT :limit")
     suspend fun randomBySubjectAndKp(subject: String, kp: String, limit: Int): List<Question>
 
     /** 跨学科按知识点随机抽题（subject 为 null 时使用） */
-    @Query("SELECT * FROM question WHERE knowledge_point = :kp AND enabled = 1 AND type != 'fill' ORDER BY RANDOM() LIMIT :limit")
+    @Query("SELECT * FROM question WHERE knowledge_point = :kp AND enabled = 1 AND type = 'choice' ORDER BY RANDOM() LIMIT :limit")
     suspend fun randomByKp(kp: String, limit: Int): List<Question>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -98,14 +98,14 @@ interface QuestionDao {
     /** 按锚点 + 认知层级取启用题目（自动排除质量异常的题） */
     @Query(
         "SELECT * FROM question WHERE anchor_code = :code AND cognitive_level = :level " +
-            "AND enabled = 1 AND type != 'fill' AND quality_state NOT IN ('TOO_HARD','FAST_GUESS')"
+            "AND enabled = 1 AND type = 'choice' AND quality_state NOT IN ('TOO_HARD','FAST_GUESS')"
     )
     suspend fun listByAnchorLevel(code: String, level: String): List<Question>
 
     /** 按锚点 + 层级 + 学段取题：幼儿园与小学的锚点题互不串场 */
     @Query(
         "SELECT * FROM question WHERE anchor_code = :code AND cognitive_level = :level " +
-            "AND stage = :stage AND enabled = 1 AND type != 'fill' " +
+            "AND stage = :stage AND enabled = 1 AND type = 'choice' " +
             "AND quality_state NOT IN ('TOO_HARD','FAST_GUESS')"
     )
     suspend fun listByAnchorLevelStage(code: String, level: String, stage: String): List<Question>
@@ -113,13 +113,13 @@ interface QuestionDao {
     /** 某锚点下全部已标注题目，用于无题时降级 */
     @Query(
         "SELECT * FROM question WHERE anchor_code = :code AND enabled = 1 " +
-            "AND type != 'fill' AND quality_state NOT IN ('TOO_HARD','FAST_GUESS')"
+            "AND type = 'choice' AND quality_state NOT IN ('TOO_HARD','FAST_GUESS')"
     )
     suspend fun listByAnchor(code: String): List<Question>
 
     @Query(
         "SELECT * FROM question WHERE anchor_code = :code AND stage = :stage AND enabled = 1 " +
-            "AND type != 'fill' AND quality_state NOT IN ('TOO_HARD','FAST_GUESS')"
+            "AND type = 'choice' AND quality_state NOT IN ('TOO_HARD','FAST_GUESS')"
     )
     suspend fun listByAnchorStage(code: String, stage: String): List<Question>
 

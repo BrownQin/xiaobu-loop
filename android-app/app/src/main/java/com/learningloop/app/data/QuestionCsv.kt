@@ -114,10 +114,10 @@ object QuestionCsv {
             }
 
             val type = col("type").ifBlank { Question.TYPE_CHOICE }
-            // 填空题需要键盘输入，不适合幼儿园和低年级孩子，导入时不再接受
-            if (type !in listOf(Question.TYPE_CHOICE, Question.TYPE_WORD)) {
+            // 填空题和应用题都需要键盘输入，不适合幼儿园和低年级孩子，导入时只接受选择题
+            if (type != Question.TYPE_CHOICE) {
                 skipped++
-                errors += "第 $lineNo 行：type 只能是 choice / word（填空题已停用）"
+                errors += "第 $lineNo 行：type 只能是 choice（填空题、应用题已停用）"
                 return@forEachIndexed
             }
 

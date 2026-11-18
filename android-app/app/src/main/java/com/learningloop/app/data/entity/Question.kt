@@ -11,7 +11,7 @@ import com.learningloop.app.data.Stage
  *
  * subject："chinese" 语文 / "math" 数学
  * difficulty：1 (易) ~ 5 (难)
- * type：choice 选择题 / fill 填空题 / word 应用题
+ * type：choice 选择题 / fill 填空题（已停用）/ word 应用题（已停用）
  * options：JSON 字符串，存储选择题的选项；非选择题可为空
  */
 @Entity(
