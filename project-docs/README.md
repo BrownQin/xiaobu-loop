@@ -7,11 +7,11 @@
 - **平台**：Android 手机 / 平板（本地优先，无服务器依赖）
 - **适用人群**：幼小衔接 + 小学低年级（1–2 年级），不预设成绩起点
 - **内容范围**：当前覆盖语文、数学基础能力；题库的「领域 → 主题 → 锚点」结构可扩展到常识、科学素养、儿童心理成长等通识板块
-- **题库规模**：18 个主题、61 个锚点、584 道带标签题目（其中 103 道填空题已停用，不进入组卷）
+- **题库规模**：18 个主题、61 个锚点、584 道带标签题目（其中 196 道填空题/应用题已停用，不进入组卷）
 - **文档维护**：本目录即项目唯一事实来源，每次迭代更新 CHANGELOG
 - **开源仓库**：[GitHub](https://github.com/BrownQin/xiaobu-loop) · [Gitee](https://gitee.com/nmd568/xiaobu-loop)
 - **项目管理**：[飞书项目管理与版本规划](https://my.feishu.cn/docx/UviHdb60Ho4Rz7xUBFAcjisi6Pg)
-- **最近发布 APK**（v0.17.1）：[GitHub 公开下载](https://github.com/BrownQin/xiaobu-loop/releases/download/v0.17.1/app-release.apk) · [飞书文件](https://my.feishu.cn/file/L9zqbIXnLosFQyxVYeJcOR626Xb)
+- **最近发布 APK**（v0.17.2）：[GitHub 公开下载](https://github.com/BrownQin/xiaobu-loop/releases/download/v0.17.2/app-release.apk) · [飞书文件](https://my.feishu.cn/file/QUD5b3EjaovxqJxjQ58cYpCJ6Df)
 
 ---
 
@@ -104,11 +104,11 @@
 > 详细变更说明见 [CHANGELOG.md](CHANGELOG.md)。
 > v0.16.0 起使用独立的 release 签名，与旧 debug 包签名不同：升级前请先导出备份，卸载旧版后再安装并恢复。
 
-### 最近发布基线（2026-11-16）
+### 最近发布基线（2026-11-18）
 
-- v0.17.1 / versionCode 19 已发布：填空题下线，Release 构建与 APK v2 签名验证通过，沿用既有 Release 签名，老用户可覆盖安装。
-- APK SHA-256：`6e9e76a2b72379f024b4327b099d0e7e3fe12ce286349245ffa5e67ab2a2170c`。
-- GitHub `main` 与 Gitee `master` 均已公开并保持同步；功能代码基线为 `2c377b2`。
+- v0.17.2 / versionCode 20 已发布：填空题与应用题（`word`）全部下线，所有抽题链路只接受选择题；Release 构建与 APK v2 签名验证通过，沿用既有 Release 签名，老用户可覆盖安装。
+- APK SHA-256：`63a8508b01e82db095dc122d099b1a9fcd79e773888a0ff7ef686d1528b3bf43`。
+- GitHub `main` 与 Gitee `master` 均已公开并保持同步；功能代码基线为 `856dbb9`。
 - APK 同时归档到飞书 `dist/` 和 GitHub Release；外部公开下载优先使用 GitHub，飞书访问范围取决于组织与分享权限。
 - 聊天交付只发送 HTTPS 地址，不再把仅在当前沙箱有效的 `computer://` 本地路径当作用户下载链接。
 - 项目进度、发布结果、风险与后续候选版本统一记录在飞书管理文档；本目录与 App 内 `VersionHistory` 继续保存可随源码分发的项目记忆。

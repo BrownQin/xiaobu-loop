@@ -54,7 +54,8 @@ MVP 阶段统一 `0.x.y`，正式发布后升级为 `1.0.0`。
 
 ### 验证
 - 排除 `fill` / `word` 后可用题量：幼儿园 190 题，小学低年级 198 题；61 个锚点均仍有至少 3 道选择题。
-- 沿用既有 Release 签名，老用户可覆盖安装。
+- 沿用既有 Release 签名，老用户可覆盖安装；APK SHA-256：`63a8508b01e82db095dc122d099b1a9fcd79e773888a0ff7ef686d1528b3bf43`。
+- 发布渠道：GitHub Release `v0.17.2`（app-release.apk）与飞书项目文件夹 `LearningLoop-v0.17.2.apk`。
 - 匿名统计启用顺延至 v0.17.3，需先在多维表格生成 Webhook 地址。
 
 ---
